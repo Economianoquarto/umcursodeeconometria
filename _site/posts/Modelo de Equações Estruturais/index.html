@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Caio Matteucci">
+<meta name="dcterms.date" content="2025-07-17">
+
+<title>blog - Modelo de Equações Estruturais</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">blog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">About</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Modelo de Equações Estruturais</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Aulas</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Caio Matteucci </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 17, 2025</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="introdução" class="level1">
+<h1>Introdução</h1>
+<p>Este material aborda os <strong>Modelos de Equações Estruturais (SEM)</strong>, uma técnica de modelagem estatística multivariada de caráter geral, amplamente utilizada nas Ciências Humanas e Sociais, incluindo a Economia [1, 2].</p>
+<section id="o-que-é-e-por-que-utilizar-o-sem" class="level2">
+<h2 class="anchored" data-anchor-id="o-que-é-e-por-que-utilizar-o-sem">O que é e por que utilizar o SEM?</h2>
+<p>Os Modelos de Equações Estruturais (SEM) são uma <strong>estrutura de modelo linear que permite modelar equações de regressão simultâneas com variáveis latentes</strong> [3, 4]. Eles englobam uma ampla gama de modelos, como regressão linear, regressão multivariada, análise de trajetória (path analysis), análise fatorial confirmatória (CFA) e regressão estrutural, todos considerados casos especiais do SEM [3-5]. Essencialmente, o SEM pode ser visto como uma <strong>combinação de análise fatorial e regressão</strong> [1]. O SEM implica uma estrutura para as covariâncias entre as variáveis observadas [1].</p>
+<p>A utilização do SEM oferece diversas <strong>vantagens</strong> [6]: * <strong>Permite trabalhar simultaneamente com estimação e mensuração</strong>: O SEM consegue integrar modelos de mensuração (como variáveis latentes são medidas) e modelos estruturais (as relações causais entre elas) [6, 7]. * <strong>Estimação de efeitos diretos e indiretos</strong>: O SEM possibilita a decomposição de efeitos estatísticos entre efeitos diretos e indiretos de variáveis explicativas sobre variáveis de resposta [6, 8, 9]. * <strong>Robustez</strong>: É uma técnica bastante robusta devido ao relaxamento de pressupostos, especialmente quando comparado à regressão de mínimos quadrados ordinários (MQO), pois <strong>não exige a satisfação do pressuposto de independência dos erros</strong> (em modelos não-recursivos) [6, 10]. * <strong>Facilidade interpretativa</strong>: A visualização através de <strong>diagramas de trajetória</strong> simplifica a interpretação dos modelos complexos [6, 11, 12].</p>
+</section>
+<section id="contextualização-quando-usar-o-sem" class="level2">
+<h2 class="anchored" data-anchor-id="contextualização-quando-usar-o-sem">Contextualização: Quando usar o SEM?</h2>
+<p>O SEM é, fundamentalmente, uma <strong>técnica de análise estatística confirmatória</strong> [13, 14]. Isso significa que ele <strong>não se presta à exploração de dados</strong> [13, 14]. Pelo contrário, o SEM exige que o pesquisador tenha uma <strong>sólida confiança teórica no modelo inicial a ser estimado</strong> [15]. É a ferramenta ideal quando o analista já possui um conhecimento aprofundado sobre a questão que está analisando, incluindo as relações esperadas entre variáveis observadas e construtos latentes, e a forma como esses construtos são medidos [16].</p>
+</section>
+<section id="breve-histórico-do-sem" class="level2">
+<h2 class="anchored" data-anchor-id="breve-histórico-do-sem">Breve histórico do SEM</h2>
+<p>Os fundamentos técnicos de todos os modelos SEM são baseados na notação clássica LISREL (linear structural relations) em homenagem a <strong>Karl Joreskög</strong>, que a inventou em 1969 e 1973 [11, 17, 18]. Embora o SEM seja considerado um campo relativamente novo na estatística, com base em 1976 [11], todas as implementações modernas do SEM são derivações do LISREL, seja expandindo suas capacidades ou simplificando sua complexidade [17]. A compreensão da notação LISREL é, portanto, fundamental para entender as estruturas mais recentes do SEM [17, 19].</p>
+</section>
+</section>
+<section id="conceitos-e-a-caixa-de-ferramentas" class="level1">
+<h1>Conceitos e a Caixa de Ferramentas</h1>
+<p>Para trabalhar com SEM, é essencial compreender seus componentes e a terminologia específica [20].</p>
+<section id="variáveis-observadas-vs.-variáveis-latentes" class="level2">
+<h2 class="anchored" data-anchor-id="variáveis-observadas-vs.-variáveis-latentes">Variáveis Observadas vs.&nbsp;Variáveis Latentes</h2>
+<p>No SEM, distinguimos entre dois tipos principais de variáveis [21]: * <strong>Variáveis Observadas (ou Manifestas / Itens)</strong>: São variáveis que <strong>existem diretamente nos dados</strong> e podem ser medidas sem erro [21-23]. Exemplos do conjunto de dados utilizado no seminário da UCLA incluem Motivação, Harmonia, Estabilidade, Psicologia Parental Negativa, SES (Status Socioeconômico), QI Verbal, Leitura, Aritmética e Ortografia [24-26]. * <strong>Variáveis Latentes (ou Construtos / Fatores)</strong>: São variáveis <strong>construídas e que não existem diretamente nos dados</strong>; são hipóteses teóricas [21-23, 27]. Elas são mensuradas indiretamente através de suas variáveis observadas (indicadores) por meio de análise fatorial confirmatória [28]. Exemplos no contexto do seminário incluem Ajustamento, Risco e Desempenho (Achievement), cada uma medida por um conjunto de variáveis observadas [24-26].</p>
+<p>Além disso, as variáveis podem ser classificadas como: * <strong>Variável Exógena</strong>: Uma variável <strong>independente</strong> que explica uma variável endógena. Pode ser observada (representada por ‘x’) ou latente (representada por ‘<span class="math inline">\(\xi\)</span>’) [21, 22, 28]. * <strong>Variável Endógena</strong>: Uma variável <strong>dependente</strong> que é explicada por outras variáveis no modelo. Pode ser observada (representada por ‘y’) ou latente (representada por ‘<span class="math inline">\(\eta\)</span>’) [21, 22, 28]. Em modelos de análise de trajetória, uma variável endógena pode predizer outra variável endógena [29].</p>
+</section>
+<section id="diagramas-de-trajetória" class="level2">
+<h2 class="anchored" data-anchor-id="diagramas-de-trajetória">Diagramas de Trajetória</h2>
+<p>Os <strong>diagramas de trajetória</strong> são representações visuais essenciais dos modelos SEM, facilitando a compreensão das relações complexas que podem ser difíceis de visualizar apenas com equações matriciais [11, 12, 30].</p>
+<p>Os símbolos utilizados nos diagramas são padronizados [11, 30]: * <strong>Círculos</strong>: Representam <strong>variáveis latentes</strong> (fatores ou construtos). * <strong>Quadrados</strong>: Representam <strong>variáveis observadas</strong> (indicadores ou itens). * <strong>Triângulos</strong>: Representam <strong>interceptos</strong> ou médias (geralmente não explicitados por padrão no <code>lavaan</code> a menos que solicitados) [11, 31]. * <strong>Setas únicas (de uma via)</strong>: Indicam <strong>caminhos de regressão</strong> ou relações causais diretas (ex: uma variável predizendo outra) [11, 30, 32]. * <strong>Setas duplas (de duas vias)</strong>: Indicam <strong>variâncias</strong> (se a seta aponta para a própria variável, formando um loop) ou <strong>covariâncias</strong> (se a seta conecta duas variáveis) [11, 30, 32].</p>
+<p><strong>Exemplo de leitura de um diagrama</strong> [11, 33]: * Uma seta de um círculo para um quadrado indica que uma variável latente (fator) prediz uma variável observada (indicador), o que é parte de um <strong>modelo de mensuração</strong>. * Uma seta dupla em um círculo ou quadrado representa a variância daquela variável (latente ou observada). * Uma seta dupla entre dois círculos ou dois quadrados indica a covariância entre essas duas variáveis.</p>
+</section>
+<section id="modelo-de-mensuração-e-modelo-estrutural" class="level2">
+<h2 class="anchored" data-anchor-id="modelo-de-mensuração-e-modelo-estrutural">Modelo de Mensuração e Modelo Estrutural</h2>
+<p>O SEM é singular por abranger tanto <strong>modelos de mensuração</strong> quanto <strong>modelos estruturais</strong> [24, 34]:</p>
+<ul>
+<li><strong>Modelo de Mensuração</strong>: É a parte do SEM que <strong>liga variáveis observadas a variáveis latentes</strong> [7, 21, 34, 35]. Sua função é mensurar construtos latentes a partir de variáveis observadas [36]. Envolve a <strong>Análise Fatorial Confirmatória (AFC)</strong> [24, 37, 38].
+<ul>
+<li>Neste modelo, as variáveis observadas que medem um fator são chamadas de <strong>indicadores</strong> [21, 35].</li>
+<li>No contexto LISREL, variáveis latentes exógenas (x-side) têm setas de mensuração apontando para a esquerda, e variáveis latentes endógenas (y-side) têm setas de mensuração apontando para a direita [39, 40].</li>
+<li>Um fator (variável latente) é definido por seus indicadores [21]. A relação entre um indicador e um fator é chamada de <strong>carga fatorial (loading)</strong> [21, 35].</li>
+</ul></li>
+<li><strong>Modelo Estrutural</strong>: A parte do SEM que <strong>especifica as relações causais entre variáveis</strong>, sejam elas observadas ou latentes [7, 34, 35]. Pode envolver relações de variáveis exógenas para endógenas, e até mesmo de variáveis endógenas para outras variáveis endógenas [35].
+<ul>
+<li>O tipo mais abrangente de modelo estrutural, a <strong>regressão estrutural</strong>, lida com as relações entre <strong>variáveis latentes</strong> [3, 24, 41, 42].</li>
+<li>As relações são definidas por coeficientes de regressão: <span class="math inline">\(\Gamma\)</span> (Gamma) para relações de variáveis exógenas para endógenas, e <span class="math inline">\(B\)</span> (Beta) para relações de variáveis endógenas para outras variáveis endógenas [19, 43, 44].</li>
+</ul></li>
+</ul>
+</section>
+<section id="estimação-máxima-verossimilhança-e-teste-de-modelos-goodness-of-fit" class="level2">
+<h2 class="anchored" data-anchor-id="estimação-máxima-verossimilhança-e-teste-de-modelos-goodness-of-fit">Estimação (Máxima Verossimilhança) e Teste de Modelos (Goodness-of-Fit)</h2>
+<section id="estimação" class="level3">
+<h3 class="anchored" data-anchor-id="estimação">Estimação</h3>
+<p>No SEM, os modelos são tipicamente estimados utilizando o método de <strong>Máxima Verossimilhança (ML)</strong> [10, 45]. A ML busca os parâmetros que tornam a amostra observada mais provável, ou seja, maximiza a função de verossimilhança para determinar os parâmetros que têm maior probabilidade de produzir os dados observados [46]. É importante notar que, embora os coeficientes de regressão de uma estimação por Mínimos Quadrados Ordinários (MQO) sejam equivalentes aos da Máxima Verossimilhança, as <strong>variâncias residuais podem diferir ligeiramente</strong> devido às diferentes bases de cálculo (divisão por <span class="math inline">\(N-k\)</span> para MQO e <span class="math inline">\(N\)</span> para ML) [45, 47, 48].</p>
+<p>O componente mais essencial de um modelo de equações estruturais é a <strong>matriz de covariância</strong> [26, 49]. O objetivo do SEM é <strong>reproduzir a matriz de covariância da população (<span class="math inline">\(\Sigma\)</span>) usando os parâmetros que o modelo hipotetiza (<span class="math inline">\(\Sigma(\theta)\)</span>)</strong>, conhecida como matriz de covariância implicada pelo modelo [50-52]. Se o modelo se ajusta perfeitamente, então <span class="math inline">\(\Sigma = \Sigma(\theta)\)</span> [50].</p>
+</section>
+<section id="identificação-do-modelo" class="level3">
+<h3 class="anchored" data-anchor-id="identificação-do-modelo">Identificação do Modelo</h3>
+<p>A identificação de um modelo SEM é crucial para garantir que os parâmetros possam ser estimados de forma única. Modelos podem ser classificados como [53-55]: * <strong>Sub-identificados</strong>: O número de valores conhecidos é menor que o número de parâmetros livres (<span class="math inline">\(df &lt; 0\)</span>). <strong>Não há solução única para a estimação</strong> [55, 56]. * <strong>Justamente Identificados (ou Saturados)</strong>: O número de valores conhecidos é igual ao número de parâmetros livres (<span class="math inline">\(df = 0\)</span>). <strong>O modelo se ajusta perfeitamente aos dados</strong> [53-55]. Modelos de regressão linear simples e múltipla são exemplos de modelos saturados [57, 58]. * <strong>Sobre-identificados</strong>: O número de valores conhecidos é maior que o número de parâmetros livres (<span class="math inline">\(df &gt; 0\)</span>). <strong>O modelo não se ajusta perfeitamente, mas permite a avaliação da qualidade do ajuste</strong> [53-55]. <strong>Modelos sobre-identificados são considerados “bons”</strong>, pois permitem avaliar o ajuste do modelo [56, 57].</p>
+<p>Para modelos de análise fatorial (medida), a identificação do fator é particularmente importante, pois variáveis latentes não são observadas diretamente. Para um modelo com três ou mais indicadores, existem duas abordagens principais para identificação [59-61]: 1. <strong>Método do Marcador (Marker Method)</strong>: Fixa a <strong>primeira carga fatorial de cada fator em 1</strong>. Este é o método padrão no <code>lavaan</code> [59, 61, 62]. 2. <strong>Método de Padronização da Variância (Variance Standardization Method)</strong>: Fixa a <strong>variância de cada fator em 1</strong>, mas estima livremente todas as cargas fatoriais [59, 61, 63]. Este método é considerado mais padronizado e útil para interpretação [59].</p>
+</section>
+<section id="estatísticas-de-qualidade-do-ajuste-model-fit-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="estatísticas-de-qualidade-do-ajuste-model-fit-statistics">Estatísticas de Qualidade do Ajuste (Model Fit Statistics)</h3>
+<p>As estatísticas de qualidade do ajuste avaliam o quão bem o modelo hipotetizado se ajusta aos dados observados [52, 64]. A hipótese nula no SEM é que <strong>a matriz de covariância implicada pelo modelo (<span class="math inline">\(\Sigma(\theta)\)</span>) é igual à matriz de covariância da população (<span class="math inline">\(\Sigma\)</span>)</strong> (<span class="math inline">\(H_0: \Sigma(\theta)=\Sigma\)</span>) [65]. Rejeitar esta hipótese é geralmente <strong>indesejável</strong> no SEM, pois significaria que o modelo proposto não se ajusta bem aos dados [65, 66].</p>
+<ul>
+<li><p><strong>Covariância Residual</strong>: A diferença entre a matriz de covariância amostral (<span class="math inline">\(S\)</span>) e a matriz de covariância implicada pelo modelo (<span class="math inline">\(\Sigma(\hat{\theta})\)</span>), ou seja, <span class="math inline">\(S - \Sigma(\hat{\theta})\)</span> [67]. Valores próximos de zero indicam um bom ajuste [67].</p></li>
+<li><p><strong>Teste Chi-quadrado do Modelo (<span class="math inline">\(\chi^2\)</span>)</strong>: É a estatística de teste principal que mede a discrepância entre a matriz de covariância observada e a matriz de covariância implicada pelo modelo [28, 66, 68, 69].</p>
+<ul>
+<li>Um <strong>valor de chi-quadrado maior indica uma maior diferença</strong> (pior ajuste) entre as matrizes e, consequentemente, uma maior probabilidade de rejeitar a hipótese nula [68, 70].</li>
+<li><strong>Sensibilidade ao tamanho da amostra</strong>: O teste chi-quadrado é <strong>altamente sensível a amostras grandes</strong> [68, 70-72]. Em amostras grandes (e.g., mais de 400 casos), é comum que o teste seja estatisticamente significativo mesmo para modelos com bom ajuste prático [70, 71]. Por isso, o chi-quadrado sozinho não deve ser o único critério de avaliação de ajuste [70].</li>
+</ul></li>
+<li><p><strong>Modelo de Linha de Base (Baseline Model)</strong>: Considerado o <strong>modelo de “pior ajuste”</strong> [73-75]. Ele assume que não há covariância entre quaisquer variáveis, estimando apenas as variâncias de cada uma [73, 74]. Serve como ponto de comparação para os índices de ajuste incrementais [73, 75].</p></li>
+<li><p><strong>Índices de Ajuste Aproximados</strong>: Desenvolvidos para complementar o teste chi-quadrado, atenuando sua sensibilidade ao tamanho da amostra [73, 75].</p>
+<ul>
+<li><strong>Índices de Ajuste Incrementais (ou Relativos)</strong>: Avaliam a melhoria do ajuste do modelo do usuário em relação ao modelo de linha de base.
+<ul>
+<li><strong>CFI (Comparative Fit Index)</strong>: Varia de 0 a 1. Valores <strong>maiores que 0.90 (conservadoramente 0.95) indicam bom ajuste</strong> [69, 76, 77]. Quanto mais próximo de 1, melhor o ajuste [77, 78].</li>
+<li><strong>TLI (Tucker-Lewis Index)</strong>: Também varia de 0 a 1 (valores maiores que 1 são arredondados para 1). Valores <strong>maiores que 0.90 indicam bom ajuste</strong> [69, 76, 79]. O TLI utiliza a “chi-quadrado relativa” (<span class="math inline">\(\chi^2/df\)</span>), onde <span class="math inline">\(\chi^2/df = 1\)</span> indica ajuste perfeito, e valores acima de 2 ou 5 podem indicar ajuste inadequado [77].</li>
+</ul></li>
+<li><strong>Índices de Ajuste Absolutos</strong>: Avaliam o ajuste do modelo diretamente em relação aos dados observados, sem comparação com um modelo de linha de base.
+<ul>
+<li><strong>RMSEA (Root Mean Square Error of Approximation)</strong>: Mede o erro de aproximação. Valores <strong><span class="math inline">\(\le 0.05\)</span> indicam um ajuste próximo</strong>, entre <span class="math inline">\(0.05\)</span> e <span class="math inline">\(0.08\)</span> indicam um ajuste razoável, e <strong><span class="math inline">\(\ge 0.10\)</span> indicam um ajuste ruim</strong> [69, 76, 80].</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Índice de Modificação (MI)</strong>: É um teste de qui-quadrado de 1 grau de liberdade que avalia o quanto o chi-quadrado do modelo mudaria se um parâmetro específico fosse incluído [81-83]. MIs elevados sugerem um grande impacto na melhoria do ajuste.</p>
+<ul>
+<li><strong>Cuidado</strong>: A modificação do modelo com base exclusivamente no MI <strong>deve ser feita com justificativa teórica</strong>, para evitar a superestimação do ajuste e o aumento do Erro Tipo I (falsos positivos) [84-87].</li>
+</ul></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="aplicações-do-sem-na-economia" class="level1">
+<h1>Aplicações do SEM na Economia</h1>
+<p>O SEM, com sua capacidade de modelar relações complexas e variáveis latentes, tem diversas aplicações [88].</p>
+<section id="exemplos-de-aplicações" class="level2">
+<h2 class="anchored" data-anchor-id="exemplos-de-aplicações">Exemplos de Aplicações</h2>
+<p>Dois exemplos clássicos de aplicação são [89-91]: * <strong>Modelo de Realização de Status Socioeconômico</strong>: Um modelo da teoria da estratificação social que investiga como a origem socioeconômica (variáveis como escolaridade dos pais e status socioeconômico da ocupação do pai) influencia o destino socioeconômico (medido por variáveis como escolaridade do próprio indivíduo, status socioeconômico da ocupação e rendimento do trabalho) [92-96]. Este modelo é relevante para entender a <strong>transmissão intergeracional da desigualdade</strong>, muitas vezes revelando que os efeitos indiretos são mais proeminentes que os diretos [93, 94, 96]. * <strong>Modelo de Determinação do Índice de Gestão Descentralizada Municipal (IGD-M)</strong>: Aplicado na área de políticas sociais, este modelo busca explicar os fatores que determinam a qualidade da gestão de programas sociais em nível municipal. Pode incluir variáveis como renda per capita, PIB per capita e a proporção de beneficiários de programas sociais, revelando a dependência municipal de recursos externos e a complexa relação entre desenvolvimento econômico e qualidade da gestão social [97-101].</p>
+</section>
+<section id="hands-on-aplicação-do-sem-em-software-estatístico" class="level2">
+<h2 class="anchored" data-anchor-id="hands-on-aplicação-do-sem-em-software-estatístico">Hands-on: Aplicação do SEM em Software Estatístico</h2>
+<p>A aplicação prática do SEM é comumente realizada em softwares estatísticos. O pacote <strong><code>lavaan</code> no R</strong> é amplamente utilizado por ser <strong>gratuito, de código aberto e relativamente fácil de usar</strong> [34, 102]. Outros softwares incluem Mplus, EQS, SAS PROC CALIS e o próprio <code>sem</code> do Stata [34, 103].</p>
+<p>A sintaxe no <code>lavaan</code> é intuitiva [32]: * <code>~</code>: Usado para <strong>previsão</strong> (regressão), onde o resultado observado é previsto por preditores observados (e.g., <code>y ~ x</code>) [32]. * <code>=~</code>: Usado para <strong>indicadores</strong> em modelos de mensuração, ligando uma variável latente aos seus indicadores observados (e.g., <code>f =~ q + r + s</code>) [32, 104]. * <code>~~</code>: Usado para <strong>covariância</strong> (e.g., <code>x ~~ x</code> para variância, <code>x ~~ y</code> para covariância) [32]. * <code>~1</code>: Usado para estimar o <strong>intercepto</strong> ou média de uma variável (e.g., <code>x ~ 1</code>) [31, 32].</p>
+</section>
+<section id="análise-e-interpretação-dos-parâmetros-estimados" class="level2">
+<h2 class="anchored" data-anchor-id="análise-e-interpretação-dos-parâmetros-estimados">Análise e Interpretação dos Parâmetros Estimados</h2>
+<p>A interpretação dos resultados de um modelo SEM envolve a análise de diferentes tipos de coeficientes e estatísticas:</p>
+<ul>
+<li><strong>Coeficientes de Regressão (Caminhos Estruturais)</strong>:
+<ul>
+<li><strong>Caminhos <span class="math inline">\(\Gamma\)</span> (Gamma)</strong>: Representam a relação entre <strong>variáveis exógenas e variáveis endógenas</strong> (observadas ou latentes) [44, 105-107].</li>
+<li><strong>Caminhos <span class="math inline">\(B\)</span> (Beta)</strong>: Representam a relação entre <strong>variáveis endógenas e outras variáveis endógenas</strong> (observadas ou latentes) [43, 44, 108, 109].</li>
+</ul></li>
+<li><strong>Cargas Fatoriais (Loadings, <span class="math inline">\(\Lambda\)</span>)</strong>:
+<ul>
+<li>Indicam a <strong>associação específica entre os fatores (variáveis latentes) e suas variáveis observadas (indicadores)</strong> [33, 35, 37, 110].</li>
+<li>Em termos padronizados (similar a correlações), cargas fatoriais <strong>próximas de 0.8 são consideradas boas</strong>, enquanto valores próximos de 0.4 podem ser questionáveis [62]. Cargas elevadas (e.g., &gt; 0.70 ou 0.80) são geralmente desejáveis e indicam que as variáveis observadas convergem satisfatoriamente para formar o construto [111-113].</li>
+</ul></li>
+<li><strong>Variâncias e Covariâncias</strong>:
+<ul>
+<li><strong>Variância de variáveis exógenas (<span class="math inline">\(\Phi\)</span>)</strong>: A variância de uma variável exógena (observada ou latente) [105, 106].</li>
+<li><strong>Variância Residual de variáveis endógenas (<span class="math inline">\(\Psi\)</span>)</strong>: A variância não explicada da variável endógena após considerar a influência de seus preditores [105, 106, 114]. É o que “sobra” da previsão [115, 116].</li>
+<li><strong>Variância Residual de Indicadores (<span class="math inline">\(\Theta\)</span>)</strong>: No modelo de mensuração, é a variância não explicada dos indicadores após a influência do fator latente [39, 110].</li>
+<li>A presença de um “.” (ponto) antes do nome da variável na saída do <code>lavaan</code> geralmente indica uma variável endógena ou uma variância residual [114, 117].</li>
+</ul></li>
+<li><strong>Coeficientes Padronizados</strong>: Facilitam a interpretação e a comparação da magnitude dos efeitos entre diferentes variáveis, pois transformam as variáveis para uma mesma escala (desvios padrão) [9, 71].</li>
+</ul>
+</section>
+<section id="discussão-limitações-e-desafios-do-sem" class="level2">
+<h2 class="anchored" data-anchor-id="discussão-limitações-e-desafios-do-sem">Discussão: Limitações e Desafios do SEM</h2>
+<p>Apesar de suas muitas vantagens, a aplicação do SEM também apresenta desafios e limitações [88, 118]:</p>
+<ul>
+<li><strong>Requisito de Teoria Forte</strong>: O SEM é uma abordagem confirmatória, o que significa que ele exige uma <strong>sólida base teórica</strong> para a especificação do modelo inicial [13, 15]. O sucesso de uma análise SEM depende da adequação da teoria subjacente; <strong>erros teóricos ou conceituais não podem ser corrigidos apenas por análises estatísticas</strong> [119].</li>
+<li><strong>Desafio da Causalidade</strong>: Embora o SEM seja amplamente utilizado para análises causais [120, 121], estabelecer a causalidade definitiva requer a satisfação de três condições principais: associação estatística, precedência temporal e eliminação de causas concorrentes [122]. A última, em particular, é difícil de ser plenamente garantida com dados observacionais [123].</li>
+<li><strong>Sensibilidade ao Tamanho da Amostra</strong>: O teste chi-quadrado do modelo, um dos principais indicadores de ajuste, é <strong>muito sensível a amostras grandes</strong>, o que pode levar à sua rejeição mesmo para modelos bem ajustados na prática [68, 70-72]. Recomenda-se uma proporção de 20 observações para cada parâmetro estimado no modelo (<span class="math inline">\(N:q\)</span> rule) [124].</li>
+<li><strong>Uso Criterioso dos Índices de Modificação</strong>: Embora os índices de modificação possam sugerir melhorias no modelo, seu <strong>uso excessivo ou sem justificativa teórica pode levar a modelos espúrios</strong> e aumentar o Erro Tipo I (falsos positivos), comprometendo a replicabilidade dos resultados [84-87].</li>
+<li><strong>Complexidade de Interpretação (LISREL)</strong>: A notação LISREL original pode ser complexa [12, 17]. No entanto, softwares modernos como <code>lavaan</code> simplificaram essa complexidade, tornando o SEM mais acessível [17, 103].</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="referências" class="level1">
+<h1>Referências</h1>
+<ul>
+<li>[125] NEVES, J. A. B. <strong>Modelo de equações estruturais: uma introdução aplicada</strong>. Brasília: Enap, 2018.</li>
+<li>[5] UNIVERSITY OF CALIFORNIA, LOS ANGELES. Statistical Consulting Group. <strong>Introduction to Structural Equation Modeling (SEM) in R with lavaan</strong>. Disponível em: https://stats.oarc.ucla.edu/r/seminars/rsem/introduction-to-sem-in-r-with-lavaan/. Acesso em: 9 jul. 2025.</li>
+<li>[126] UCLA Office of Advanced Research Computing (OARC). <strong>Introduction to Structural Equation Modeling</strong>. [Vídeo no YouTube]</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
