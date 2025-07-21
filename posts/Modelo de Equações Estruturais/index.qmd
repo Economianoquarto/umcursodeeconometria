@@ -6,16 +6,20 @@ categories: [Aulas]
 ---
 # Introdução
 
-Este material aborda os **Modelos de Equações Estruturais (SEM)**, uma técnica de modelagem estatística multivariada de caráter geral, amplamente utilizada nas Ciências Humanas e Sociais, incluindo a Economia [1, 2].
+Este material aborda os **Modelos de Equações Estruturais (SEM)**, uma técnica de modelagem estatística multivariada de caráter geral, amplamente utilizada nas Ciências Humanas e Sociais, incluindo a Economia.
 
 ## O que é e por que utilizar o SEM?
 
 Os Modelos de Equações Estruturais (SEM) são uma **estrutura de modelo linear que permite modelar equações de regressão simultâneas com variáveis latentes** [3, 4]. Eles englobam uma ampla gama de modelos, como regressão linear, regressão multivariada, análise de trajetória (path analysis), análise fatorial confirmatória (CFA) e regressão estrutural, todos considerados casos especiais do SEM [3-5]. Essencialmente, o SEM pode ser visto como uma **combinação de análise fatorial e regressão** [1]. O SEM implica uma estrutura para as covariâncias entre as variáveis observadas [1].
 
 A utilização do SEM oferece diversas **vantagens** [6]:
+
 *   **Permite trabalhar simultaneamente com estimação e mensuração**: O SEM consegue integrar modelos de mensuração (como variáveis latentes são medidas) e modelos estruturais (as relações causais entre elas) [6, 7].
+
 *   **Estimação de efeitos diretos e indiretos**: O SEM possibilita a decomposição de efeitos estatísticos entre efeitos diretos e indiretos de variáveis explicativas sobre variáveis de resposta [6, 8, 9].
+
 *   **Robustez**: É uma técnica bastante robusta devido ao relaxamento de pressupostos, especialmente quando comparado à regressão de mínimos quadrados ordinários (MQO), pois **não exige a satisfação do pressuposto de independência dos erros** (em modelos não-recursivos) [6, 10].
+
 *   **Facilidade interpretativa**: A visualização através de **diagramas de trajetória** simplifica a interpretação dos modelos complexos [6, 11, 12].
 
 ## Contextualização: Quando usar o SEM?
