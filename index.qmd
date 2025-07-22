@@ -1,5 +1,5 @@
 ---
-title: "Um Curso de Econometria bbb"
+title: "Um Curso de Econometria"
 listing:
   contents: posts
   sort: "date desc"

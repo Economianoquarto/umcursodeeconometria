@@ -1,12 +1,13 @@
 ---
 title: "Modelo de Equações Estruturais"
-author: "Caio Matteucci"
+author: "Caio Lopes"
 date: "2025-07-17"
 categories: [Aulas]
+image: "image.jpg"
 ---
 # Introdução
 
-Este material aborda os **Modelos de Equações Estruturais (SEM)**, uma técnica de modelagem estatística multivariada de caráter geral, amplamente utilizada nas Ciências Humanas e Sociais, incluindo a Economia.
+Este material aborda os Modelos de Equações Estruturais (SEM)
 
 ## O que é e por que utilizar o SEM?
 

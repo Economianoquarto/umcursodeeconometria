@@ -2,16 +2,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Um Curso de Econometria bbb",
+    "title": "Um Curso de Econometria",
     "section": "",
-    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 20, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAulas\n\n\n\n\n\n\n\n\n\n\n\nJul 17, 2025\n\n\nCaio Matteucci\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 17, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 20, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nAulas\n\n\n\n\n\n\n\n\n\n\n\nJul 17, 2025\n\n\nCaio Lopes\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 17, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "blog",
     "section": "",
-    "text": "About this blog"
+    "text": "Caio Lopes é professor da Universidade Federal do Piauí desde 2028\n\n\nDoutorado em Desenvolvimento Econômico. Universidade Federal do Paraná, UFPR, Brasil | 2016 - 2020\nMestrado em Economia. Universidade de São Paulo, USP-RP, Brasil | 2013 - 2015\nGraduação em Ciências Econômicas. Universidade de São Paulo, USP, Brasil | 2009 - 2012"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -32,7 +32,7 @@
     "href": "posts/Modelo de Equações Estruturais/index.html",
     "title": "Modelo de Equações Estruturais",
     "section": "",
-    "text": "Este material aborda os Modelos de Equações Estruturais (SEM), uma técnica de modelagem estatística multivariada de caráter geral, amplamente utilizada nas Ciências Humanas e Sociais, incluindo a Economia.\n\n\nOs Modelos de Equações Estruturais (SEM) são uma estrutura de modelo linear que permite modelar equações de regressão simultâneas com variáveis latentes [3, 4]. Eles englobam uma ampla gama de modelos, como regressão linear, regressão multivariada, análise de trajetória (path analysis), análise fatorial confirmatória (CFA) e regressão estrutural, todos considerados casos especiais do SEM [3-5]. Essencialmente, o SEM pode ser visto como uma combinação de análise fatorial e regressão [1]. O SEM implica uma estrutura para as covariâncias entre as variáveis observadas [1].\nA utilização do SEM oferece diversas vantagens [6]:\n\nPermite trabalhar simultaneamente com estimação e mensuração: O SEM consegue integrar modelos de mensuração (como variáveis latentes são medidas) e modelos estruturais (as relações causais entre elas) [6, 7].\nEstimação de efeitos diretos e indiretos: O SEM possibilita a decomposição de efeitos estatísticos entre efeitos diretos e indiretos de variáveis explicativas sobre variáveis de resposta [6, 8, 9].\nRobustez: É uma técnica bastante robusta devido ao relaxamento de pressupostos, especialmente quando comparado à regressão de mínimos quadrados ordinários (MQO), pois não exige a satisfação do pressuposto de independência dos erros (em modelos não-recursivos) [6, 10].\nFacilidade interpretativa: A visualização através de diagramas de trajetória simplifica a interpretação dos modelos complexos [6, 11, 12].\n\n\n\n\nO SEM é, fundamentalmente, uma técnica de análise estatística confirmatória [13, 14]. Isso significa que ele não se presta à exploração de dados [13, 14]. Pelo contrário, o SEM exige que o pesquisador tenha uma sólida confiança teórica no modelo inicial a ser estimado [15]. É a ferramenta ideal quando o analista já possui um conhecimento aprofundado sobre a questão que está analisando, incluindo as relações esperadas entre variáveis observadas e construtos latentes, e a forma como esses construtos são medidos [16].\n\n\n\nOs fundamentos técnicos de todos os modelos SEM são baseados na notação clássica LISREL (linear structural relations) em homenagem a Karl Joreskög, que a inventou em 1969 e 1973 [11, 17, 18]. Embora o SEM seja considerado um campo relativamente novo na estatística, com base em 1976 [11], todas as implementações modernas do SEM são derivações do LISREL, seja expandindo suas capacidades ou simplificando sua complexidade [17]. A compreensão da notação LISREL é, portanto, fundamental para entender as estruturas mais recentes do SEM [17, 19]."
+    "text": "Este material aborda os Modelos de Equações Estruturais (SEM)\n\n\nOs Modelos de Equações Estruturais (SEM) são uma estrutura de modelo linear que permite modelar equações de regressão simultâneas com variáveis latentes [3, 4]. Eles englobam uma ampla gama de modelos, como regressão linear, regressão multivariada, análise de trajetória (path analysis), análise fatorial confirmatória (CFA) e regressão estrutural, todos considerados casos especiais do SEM [3-5]. Essencialmente, o SEM pode ser visto como uma combinação de análise fatorial e regressão [1]. O SEM implica uma estrutura para as covariâncias entre as variáveis observadas [1].\nA utilização do SEM oferece diversas vantagens [6]:\n\nPermite trabalhar simultaneamente com estimação e mensuração: O SEM consegue integrar modelos de mensuração (como variáveis latentes são medidas) e modelos estruturais (as relações causais entre elas) [6, 7].\nEstimação de efeitos diretos e indiretos: O SEM possibilita a decomposição de efeitos estatísticos entre efeitos diretos e indiretos de variáveis explicativas sobre variáveis de resposta [6, 8, 9].\nRobustez: É uma técnica bastante robusta devido ao relaxamento de pressupostos, especialmente quando comparado à regressão de mínimos quadrados ordinários (MQO), pois não exige a satisfação do pressuposto de independência dos erros (em modelos não-recursivos) [6, 10].\nFacilidade interpretativa: A visualização através de diagramas de trajetória simplifica a interpretação dos modelos complexos [6, 11, 12].\n\n\n\n\nO SEM é, fundamentalmente, uma técnica de análise estatística confirmatória [13, 14]. Isso significa que ele não se presta à exploração de dados [13, 14]. Pelo contrário, o SEM exige que o pesquisador tenha uma sólida confiança teórica no modelo inicial a ser estimado [15]. É a ferramenta ideal quando o analista já possui um conhecimento aprofundado sobre a questão que está analisando, incluindo as relações esperadas entre variáveis observadas e construtos latentes, e a forma como esses construtos são medidos [16].\n\n\n\nOs fundamentos técnicos de todos os modelos SEM são baseados na notação clássica LISREL (linear structural relations) em homenagem a Karl Joreskög, que a inventou em 1969 e 1973 [11, 17, 18]. Embora o SEM seja considerado um campo relativamente novo na estatística, com base em 1976 [11], todas as implementações modernas do SEM são derivações do LISREL, seja expandindo suas capacidades ou simplificando sua complexidade [17]. A compreensão da notação LISREL é, portanto, fundamental para entender as estruturas mais recentes do SEM [17, 19]."
   },
   {
     "objectID": "posts/Modelo de Equações Estruturais/index.html#variáveis-observadas-vs.-variáveis-latentes",
@@ -110,5 +110,19 @@
     "title": "Modelo de Equações Estruturais",
     "section": "",
     "text": "Os fundamentos técnicos de todos os modelos SEM são baseados na notação clássica LISREL (linear structural relations) em homenagem a Karl Joreskög, que a inventou em 1969 e 1973 [11, 17, 18]. Embora o SEM seja considerado um campo relativamente novo na estatística, com base em 1976 [11], todas as implementações modernas do SEM são derivações do LISREL, seja expandindo suas capacidades ou simplificando sua complexidade [17]. A compreensão da notação LISREL é, portanto, fundamental para entender as estruturas mais recentes do SEM [17, 19]."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Sobre",
+    "section": "Education",
+    "text": "Education\nDoutorado em Desenvolvimento Econômico. Universidade Federal do Paraná, UFPR, Brasil | 2016 - 2020\nMestrado em Economia. Universidade de São Paulo, USP-RP, Brasil | 2013 - 2015\nGraduação em Ciências Econômicas. Universidade de São Paulo, USP, Brasil | 2009 - 2012"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "Sobre",
+    "section": "Experience",
+    "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
   }
 ]

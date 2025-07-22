@@ -1,19 +1,26 @@
 ---
-title: "About"
+title: ""
 image: profile.jpg
-about:
-  template: jolla
+about: 
+  template: trestles
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com
     - icon: github
       text: Github
-      href: https://github.com
-
+      href: https://github.com/Economianoquarto/umcursodeeconometria
 ---
 
-About this blog
+# Sobre este Blog
+
+Caio Lopes é professor da Universidade Federal do Piauí desde 2028
+
+## Formação
+
+Doutorado em Desenvolvimento Econômico.
+Universidade Federal do Paraná, UFPR, Brasil | 2016 - 2020
+
+Mestrado em Economia.
+Universidade de São Paulo, USP-RP, Brasil | 2013 - 2015
+
+Graduação em Ciências Econômicas.
+Universidade de São Paulo, USP, Brasil | 2009 - 2012
+
