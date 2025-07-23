@@ -2,8 +2,14 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/welcome/index.html",
-      "/posts/post-with-code/index.html",
+      "/posts/Diagnostico e previsao/index.html",
+      "/posts/Endogeneidade e variaveis instrumentais/index.html",
+      "/posts/Especificacao e interpretacao/index.html",
+      "/posts/Heteroscedasticidade/index.html",
+      "/posts/Inferencia e testes de Hipoteses/index.html",
+      "/posts/MCRL/index.html",
+      "/posts/Propriedades grandes e pequenas amostras/index.html",
+      "/posts/Variaveis binarias/index.html",
       "/posts/Modelo de Equações Estruturais/index.html"
     ]
   }
