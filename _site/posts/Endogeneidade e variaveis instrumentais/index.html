@@ -9,7 +9,7 @@
 <meta name="author" content="Caio Lopes">
 <meta name="dcterms.date" content="2025-07-22">
 
-<title>Econometria no Quarto - Modelo Clássico de Regressão MCRL</title>
+<title>Econometria no Quarto - Endogeneidade e Variáveis Instrumentais</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Modelo Clássico de Regressão MCRL</h1>
+      <h1 class="title">Endogeneidade e Variáveis Instrumentais</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Aulas</div>
               </div>
@@ -139,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introdução" class="level1">
 <h1>Introdução</h1>
-<p>Hipóteses do Modelo Clássico de Regressão Linear Múltipla (MCRLM)</p>
+<p>Endogeneidade e Variaveis Instrumentais</p>
 <p><strong>Equação do Modelo</strong>: O modelo é definido como <span class="math inline">\(y_i = f(x_{i1}, x_{i2}, ..., x_{ik}) + \epsilon_i\)</span>, que pode ser expresso de forma linear como <span class="math inline">\(y_i = \beta_1 x_{i1} + \beta_2 x_{i2} + ... + \beta_k x_{ik} + \epsilon_i\)</span>, para <span class="math inline">\(i = 1, ..., n\)</span>.</p>
 <p><strong>Representação Matricial</strong>: O modelo também pode ser representado em forma matricial como <span class="math inline">\(y = X\beta + \epsilon\)</span>, onde: <span class="math inline">\(y = \begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{pmatrix}\)</span> é o vetor das variáveis dependentes (n x 1). <span class="math inline">\(X = \begin{pmatrix} 1 &amp; x_{12} &amp; \cdots &amp; x_{1k} \\ 1 &amp; x_{22} &amp; \cdots &amp; x_{2k} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 1 &amp; x_{n2} &amp; \cdots &amp; x_{nk} \end{pmatrix}\)</span> é a matriz das variáveis independentes (n x k+1), assumindo <span class="math inline">\(x_{i1} = 1\)</span> para o intercepto. <span class="math inline">\(\beta = \begin{pmatrix} \beta_1 \\ \beta_2 \\ \vdots \\ \beta_k \end{pmatrix}\)</span> é o vetor dos parâmetros (k+1 x 1). <span class="math inline">\(\epsilon = \begin{pmatrix} \epsilon_1 \\ \epsilon_2 \\ \vdots \\ \epsilon_n \end{pmatrix}\)</span> é o vetor dos erros (n x 1).</p>
 <p><strong>Hipóteses</strong>: O modelo clássico de regressão linear múltipla se baseia nas seguintes hipóteses: <strong>H1) Linearidade</strong>: A relação entre a variável dependente e as variáveis independentes é linear nos parâmetros. <strong>H2) Identificação (posto completo)</strong>: A matriz das variáveis independentes <span class="math inline">\(X\)</span> tem posto completo, ou seja, <span class="math inline">\(posto(X) = K\)</span> (onde <span class="math inline">\(K = k+1\)</span>). Isso garante que as colunas de <span class="math inline">\(X\)</span> são linearmente independentes, permitindo a identificação única dos parâmetros. <strong>H3) Valor esperado dos erros é nulo</strong>: O valor esperado do vetor de erros é zero, <span class="math inline">\(E[\epsilon] = \begin{pmatrix} E[\epsilon_1] \\ \vdots \\ E[\epsilon_n] \end{pmatrix} = \begin{pmatrix} 0 \\ \vdots \\ 0 \end{pmatrix}\)</span>.</p>
