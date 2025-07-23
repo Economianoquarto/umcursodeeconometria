@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Um Curso de Econometria"
+  title: "Econometria no Quarto"
   navbar:
     right:
       - about.qmd
@@ -11,7 +11,7 @@ website:
       
 format:
   html:
-    theme: cosmo
+    theme: default 
     css: styles.css
 
 editor: visual

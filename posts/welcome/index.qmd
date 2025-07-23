@@ -1,12 +1,29 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
-date: "2025-07-17"
-categories: [news]
+title: "Modelo Clássico de Regressão MCRL"
+author: "Caio Lopes"
+date: "2025-07-22"
+categories: [Aulas]
+image: "thumbnail.jpg"
 ---
 
-This is the first post in a Quarto blog. Welcome!
+# Introdução 
 
-![](thumbnail.jpg)
+Hipóteses do Modelo Clássico de Regressão Linear Múltipla (MCRLM)
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+**Equação do Modelo**: O modelo é definido como $y_i = f(x_{i1}, x_{i2}, ..., x_{ik}) + \epsilon_i$, que pode ser expresso de forma linear como $y_i = \beta_1 x_{i1} + \beta_2 x_{i2} + ... + \beta_k x_{ik} + \epsilon_i$, para $i = 1, ..., n$.
+
+**Representação Matricial**: O modelo também pode ser representado em forma matricial como $y = X\beta + \epsilon$, onde:
+$y = \begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{pmatrix}$ é o vetor das variáveis dependentes (n x 1).
+$X = \begin{pmatrix} 1 & x_{12} & \cdots & x_{1k} \\ 1 & x_{22} & \cdots & x_{2k} \\ \vdots & \vdots & \ddots & \vdots \\ 1 & x_{n2} & \cdots & x_{nk} \end{pmatrix}$ é a matriz das variáveis independentes (n x k+1), assumindo $x_{i1} = 1$ para o intercepto.
+$\beta = \begin{pmatrix} \beta_1 \\ \beta_2 \\ \vdots \\ \beta_k \end{pmatrix}$ é o vetor dos parâmetros (k+1 x 1).
+$\epsilon = \begin{pmatrix} \epsilon_1 \\ \epsilon_2 \\ \vdots \\ \epsilon_n \end{pmatrix}$ é o vetor dos erros (n x 1).
+
+**Hipóteses**: O modelo clássico de regressão linear múltipla se baseia nas seguintes hipóteses:
+**H1) Linearidade**: A relação entre a variável dependente e as variáveis independentes é linear nos parâmetros.
+**H2) Identificação (posto completo)**: A matriz das variáveis independentes $X$ tem posto completo, ou seja, $posto(X) = K$ (onde $K = k+1$). Isso garante que as colunas de $X$ são linearmente independentes, permitindo a identificação única dos parâmetros.
+**H3) Valor esperado dos erros é nulo**: O valor esperado do vetor de erros é zero, $E[\epsilon] = \begin{pmatrix} E[\epsilon_1] \\ \vdots \\ E[\epsilon_n] \end{pmatrix} = \begin{pmatrix} 0 \\ \vdots \\ 0 \end{pmatrix}$.
+
+**Implicações da H3 (Valor Esperado dos Erros é Nulo)**:
+    1.  Se a média condicional do erro dado $X$ é zero ($E[\epsilon|X] = 0$), então a média não condicional do erro também é zero ($E[\epsilon] = E[E[\epsilon|X]] = E = 0$).
+    2.  A hipótese $E[\epsilon|X] = 0$ implica que $E[y|X] = E[X\beta + \epsilon|X] = E[X\beta|X] + E[\epsilon|X] = X\beta + 0 = X\beta$. Portanto, $E[y|X] - X\beta = 0$, o que implica $E[y - X\beta|X] = E[\epsilon|X] = 0$.
+    3.  Além disso, se $\epsilon$ e $X$ são independentes, então $E[X'\epsilon] = E[X']E[\epsilon] = E[X'] \cdot 0 = 0$. Consequentemente, a covariância entre $X$ e $\epsilon$ é $Cov(X, \epsilon) = E[X\epsilon'] - E[X]E[\epsilon'] = E[X\epsilon'] - E[X] \cdot 0 = E[X\epsilon'] = (E[X'\epsilon])' = 0' = 0$.

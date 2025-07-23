@@ -2,9 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/welcome/index.html",
       "/posts/post-with-code/index.html",
-      "/posts/Modelo de Equações Estruturais/index.html",
-      "/posts/welcome/index.html"
+      "/posts/Modelo de Equações Estruturais/index.html"
     ]
   }
 ]
