@@ -9,7 +9,7 @@
 <meta name="author" content="Caio Lopes">
 <meta name="dcterms.date" content="2025-07-17">
 
-<title>Econometria no Quarto - Modelo de Equações Estruturais</title>
+<title>Economia no Quarto - Modelo de Equações Estruturais</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Econometria no Quarto</span>
+    <span class="navbar-title">Economia no Quarto</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -139,9 +139,15 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introdução" class="level1">
 <h1>Introdução</h1>
-<p>Este material aborda os Modelos de Equações Estruturais (SEM)</p>
-<section id="o-que-é-e-por-que-utilizar-o-sem" class="level2">
-<h2 class="anchored" data-anchor-id="o-que-é-e-por-que-utilizar-o-sem">O que é e por que utilizar o SEM?</h2>
+<p>Este material aborda os Modelos de Equações Estruturais (MEE) ou <em>Structural Equation Model</em> (SEM)</p>
+<section id="o-que-é-o-sem" class="level2">
+<h2 class="anchored" data-anchor-id="o-que-é-o-sem">O que é o SEM?</h2>
+<p>A Modelagem de Equações Estruturais (SEM) é uma técnica estatística multivariada extremamente poderosa usada para testar e estimar relações de causalidade entre múltiplas variáveis. Ela combina aspectos da análise fatorial (que lida com variáveis latentes, ou seja, conceitos não observáveis diretamente, como “satisfação” ou “inteligência”) e da análise de regressão múltipla (que analisa as relações de dependência entre variáveis).</p>
+<p>Um modelo SEM é geralmente representado por um diagrama que mostra as relações hipotéticas entre:</p>
+<ul>
+<li><p><strong>Variáveis Latentes</strong>: Conceitos abstratos que não podem ser medidos diretamente (ex: bem-estar, inteligência, burnout).</p></li>
+<li><p><strong>Variáveis Observadas (ou Indicadores)</strong>: Dados que podem ser medidos diretamente e que servem como indicadores das variáveis latentes (ex: respostas a perguntas de um questionário).</p></li>
+</ul>
 <p>Os Modelos de Equações Estruturais (SEM) são uma <strong>estrutura de modelo linear que permite modelar equações de regressão simultâneas com variáveis latentes</strong> [3, 4]. Eles englobam uma ampla gama de modelos, como regressão linear, regressão multivariada, análise de trajetória (path analysis), análise fatorial confirmatória (CFA) e regressão estrutural, todos considerados casos especiais do SEM [3-5]. Essencialmente, o SEM pode ser visto como uma <strong>combinação de análise fatorial e regressão</strong> [1]. O SEM implica uma estrutura para as covariâncias entre as variáveis observadas [1].</p>
 <p>A utilização do SEM oferece diversas <strong>vantagens</strong> [6]:</p>
 <ul>
@@ -196,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="estimação" class="level3">
 <h3 class="anchored" data-anchor-id="estimação">Estimação</h3>
 <p>No SEM, os modelos são tipicamente estimados utilizando o método de <strong>Máxima Verossimilhança (ML)</strong> [10, 45]. A ML busca os parâmetros que tornam a amostra observada mais provável, ou seja, maximiza a função de verossimilhança para determinar os parâmetros que têm maior probabilidade de produzir os dados observados [46]. É importante notar que, embora os coeficientes de regressão de uma estimação por Mínimos Quadrados Ordinários (MQO) sejam equivalentes aos da Máxima Verossimilhança, as <strong>variâncias residuais podem diferir ligeiramente</strong> devido às diferentes bases de cálculo (divisão por <span class="math inline">\(N-k\)</span> para MQO e <span class="math inline">\(N\)</span> para ML) [45, 47, 48].</p>
-<p>O componente mais essencial de um modelo de equações estruturais é a <strong>matriz de covariância</strong> [26, 49]. O objetivo do SEM é <strong>reproduzir a matriz de covariância da população (<span class="math inline">\(\Sigma\)</span>) usando os parâmetros que o modelo hipotetiza (<span class="math inline">\(\Sigma(\theta)\)</span>)</strong>, conhecida como matriz de covariância implicada pelo modelo [50-52]. Se o modelo se ajusta perfeitamente, então <span class="math inline">\(\Sigma = \Sigma(\theta)\)</span> [50].</p>
+<p>O componente mais essencial de um modelo de equações estruturais é a <strong>matriz de covariância</strong> [26, 49]. O objetivo do SEM é <strong>reproduzir a matriz de covariância da população (</strong><span class="math inline">\(\Sigma\)</span>) usando os parâmetros que o modelo hipotetiza (<span class="math inline">\(\Sigma(\theta)\)</span>), conhecida como matriz de covariância implicada pelo modelo [50-52]. Se o modelo se ajusta perfeitamente, então <span class="math inline">\(\Sigma = \Sigma(\theta)\)</span> [50].</p>
 </section>
 <section id="identificação-do-modelo" class="level3">
 <h3 class="anchored" data-anchor-id="identificação-do-modelo">Identificação do Modelo</h3>
@@ -205,10 +211,10 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="estatísticas-de-qualidade-do-ajuste-model-fit-statistics" class="level3">
 <h3 class="anchored" data-anchor-id="estatísticas-de-qualidade-do-ajuste-model-fit-statistics">Estatísticas de Qualidade do Ajuste (Model Fit Statistics)</h3>
-<p>As estatísticas de qualidade do ajuste avaliam o quão bem o modelo hipotetizado se ajusta aos dados observados [52, 64]. A hipótese nula no SEM é que <strong>a matriz de covariância implicada pelo modelo (<span class="math inline">\(\Sigma(\theta)\)</span>) é igual à matriz de covariância da população (<span class="math inline">\(\Sigma\)</span>)</strong> (<span class="math inline">\(H_0: \Sigma(\theta)=\Sigma\)</span>) [65]. Rejeitar esta hipótese é geralmente <strong>indesejável</strong> no SEM, pois significaria que o modelo proposto não se ajusta bem aos dados [65, 66].</p>
+<p>As estatísticas de qualidade do ajuste avaliam o quão bem o modelo hipotetizado se ajusta aos dados observados [52, 64]. A hipótese nula no SEM é que <strong>a matriz de covariância implicada pelo modelo (</strong><span class="math inline">\(\Sigma(\theta)\)</span>) é igual à matriz de covariância da população (<span class="math inline">\(\Sigma\)</span>) (<span class="math inline">\(H_0: \Sigma(\theta)=\Sigma\)</span>) [65]. Rejeitar esta hipótese é geralmente <strong>indesejável</strong> no SEM, pois significaria que o modelo proposto não se ajusta bem aos dados [65, 66].</p>
 <ul>
 <li><p><strong>Covariância Residual</strong>: A diferença entre a matriz de covariância amostral (<span class="math inline">\(S\)</span>) e a matriz de covariância implicada pelo modelo (<span class="math inline">\(\Sigma(\hat{\theta})\)</span>), ou seja, <span class="math inline">\(S - \Sigma(\hat{\theta})\)</span> [67]. Valores próximos de zero indicam um bom ajuste [67].</p></li>
-<li><p><strong>Teste Chi-quadrado do Modelo (<span class="math inline">\(\chi^2\)</span>)</strong>: É a estatística de teste principal que mede a discrepância entre a matriz de covariância observada e a matriz de covariância implicada pelo modelo [28, 66, 68, 69].</p>
+<li><p><strong>Teste Chi-quadrado do Modelo (</strong><span class="math inline">\(\chi^2\)</span>): É a estatística de teste principal que mede a discrepância entre a matriz de covariância observada e a matriz de covariância implicada pelo modelo [28, 66, 68, 69].</p>
 <ul>
 <li>Um <strong>valor de chi-quadrado maior indica uma maior diferença</strong> (pior ajuste) entre as matrizes e, consequentemente, uma maior probabilidade de rejeitar a hipótese nula [68, 70].</li>
 <li><strong>Sensibilidade ao tamanho da amostra</strong>: O teste chi-quadrado é <strong>altamente sensível a amostras grandes</strong> [68, 70-72]. Em amostras grandes (e.g., mais de 400 casos), é comum que o teste seja estatisticamente significativo mesmo para modelos com bom ajuste prático [70, 71]. Por isso, o chi-quadrado sozinho não deve ser o único critério de avaliação de ajuste [70].</li>
@@ -223,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><strong>Índices de Ajuste Absolutos</strong>: Avaliam o ajuste do modelo diretamente em relação aos dados observados, sem comparação com um modelo de linha de base.
 <ul>
-<li><strong>RMSEA (Root Mean Square Error of Approximation)</strong>: Mede o erro de aproximação. Valores <strong><span class="math inline">\(\le 0.05\)</span> indicam um ajuste próximo</strong>, entre <span class="math inline">\(0.05\)</span> e <span class="math inline">\(0.08\)</span> indicam um ajuste razoável, e <strong><span class="math inline">\(\ge 0.10\)</span> indicam um ajuste ruim</strong> [69, 76, 80].</li>
+<li><strong>RMSEA (Root Mean Square Error of Approximation)</strong>: Mede o erro de aproximação. Valores <span class="math inline">\(\le 0.05\)</span> indicam um ajuste próximo, entre <span class="math inline">\(0.05\)</span> e <span class="math inline">\(0.08\)</span> indicam um ajuste razoável, e <span class="math inline">\(\ge 0.10\)</span> indicam um ajuste ruim [69, 76, 80].</li>
 </ul></li>
 </ul></li>
 <li><p><strong>Índice de Modificação (MI)</strong>: É um teste de qui-quadrado de 1 grau de liberdade que avalia o quanto o chi-quadrado do modelo mudaria se um parâmetro específico fosse incluído [81-83]. MIs elevados sugerem um grande impacto na melhoria do ajuste.</p>
@@ -252,19 +258,19 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Coeficientes de Regressão (Caminhos Estruturais)</strong>:
 <ul>
-<li><strong>Caminhos <span class="math inline">\(\Gamma\)</span> (Gamma)</strong>: Representam a relação entre <strong>variáveis exógenas e variáveis endógenas</strong> (observadas ou latentes) [44, 105-107].</li>
-<li><strong>Caminhos <span class="math inline">\(B\)</span> (Beta)</strong>: Representam a relação entre <strong>variáveis endógenas e outras variáveis endógenas</strong> (observadas ou latentes) [43, 44, 108, 109].</li>
+<li><strong>Caminhos</strong> <span class="math inline">\(\Gamma\)</span> (Gamma): Representam a relação entre <strong>variáveis exógenas e variáveis endógenas</strong> (observadas ou latentes) [44, 105-107].</li>
+<li><strong>Caminhos</strong> <span class="math inline">\(B\)</span> (Beta): Representam a relação entre <strong>variáveis endógenas e outras variáveis endógenas</strong> (observadas ou latentes) [43, 44, 108, 109].</li>
 </ul></li>
-<li><strong>Cargas Fatoriais (Loadings, <span class="math inline">\(\Lambda\)</span>)</strong>:
+<li><strong>Cargas Fatoriais (Loadings,</strong> <span class="math inline">\(\Lambda\)</span>):
 <ul>
 <li>Indicam a <strong>associação específica entre os fatores (variáveis latentes) e suas variáveis observadas (indicadores)</strong> [33, 35, 37, 110].</li>
 <li>Em termos padronizados (similar a correlações), cargas fatoriais <strong>próximas de 0.8 são consideradas boas</strong>, enquanto valores próximos de 0.4 podem ser questionáveis [62]. Cargas elevadas (e.g., &gt; 0.70 ou 0.80) são geralmente desejáveis e indicam que as variáveis observadas convergem satisfatoriamente para formar o construto [111-113].</li>
 </ul></li>
 <li><strong>Variâncias e Covariâncias</strong>:
 <ul>
-<li><strong>Variância de variáveis exógenas (<span class="math inline">\(\Phi\)</span>)</strong>: A variância de uma variável exógena (observada ou latente) [105, 106].</li>
-<li><strong>Variância Residual de variáveis endógenas (<span class="math inline">\(\Psi\)</span>)</strong>: A variância não explicada da variável endógena após considerar a influência de seus preditores [105, 106, 114]. É o que “sobra” da previsão [115, 116].</li>
-<li><strong>Variância Residual de Indicadores (<span class="math inline">\(\Theta\)</span>)</strong>: No modelo de mensuração, é a variância não explicada dos indicadores após a influência do fator latente [39, 110].</li>
+<li><strong>Variância de variáveis exógenas (</strong><span class="math inline">\(\Phi\)</span>): A variância de uma variável exógena (observada ou latente) [105, 106].</li>
+<li><strong>Variância Residual de variáveis endógenas (</strong><span class="math inline">\(\Psi\)</span>): A variância não explicada da variável endógena após considerar a influência de seus preditores [105, 106, 114]. É o que “sobra” da previsão [115, 116].</li>
+<li><strong>Variância Residual de Indicadores (</strong><span class="math inline">\(\Theta\)</span>): No modelo de mensuração, é a variância não explicada dos indicadores após a influência do fator latente [39, 110].</li>
 <li>A presença de um “.” (ponto) antes do nome da variável na saída do <code>lavaan</code> geralmente indica uma variável endógena ou uma variância residual [114, 117].</li>
 </ul></li>
 <li><strong>Coeficientes Padronizados</strong>: Facilitam a interpretação e a comparação da magnitude dos efeitos entre diferentes variáveis, pois transformam as variáveis para uma mesma escala (desvios padrão) [9, 71].</li>
