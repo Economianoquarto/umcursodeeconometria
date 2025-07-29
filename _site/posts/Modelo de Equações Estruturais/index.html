@@ -137,58 +137,169 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="descrição" class="level1">
+<h1>Descrição</h1>
+<p>Este material aborda os Modelos de Equações Estruturais (MEE) ou <em>Structural Equation Model</em> (SEM)</p>
+</section>
 <section id="introdução" class="level1">
 <h1>Introdução</h1>
-<p>Este material aborda os Modelos de Equações Estruturais (MEE) ou <em>Structural Equation Model</em> (SEM)</p>
 <section id="o-que-é-o-sem" class="level2">
 <h2 class="anchored" data-anchor-id="o-que-é-o-sem">O que é o SEM?</h2>
 <p>A Modelagem de Equações Estruturais (SEM) é uma técnica estatística multivariada extremamente poderosa usada para testar e estimar relações de causalidade entre múltiplas variáveis. Ela combina aspectos da análise fatorial (que lida com variáveis latentes, ou seja, conceitos não observáveis diretamente, como “satisfação” ou “inteligência”) e da análise de regressão múltipla (que analisa as relações de dependência entre variáveis).</p>
-<p>Um modelo SEM é geralmente representado por um diagrama que mostra as relações hipotéticas entre:</p>
+<p>Um modelo SEM é geralmente representado por um diagrama que mostra as relações hipotéticas entre: <strong>Variáveis Latentes</strong> e <strong>Variáveis Observadas</strong></p>
 <ul>
 <li><p><strong>Variáveis Latentes</strong>: Conceitos abstratos que não podem ser medidos diretamente (ex: bem-estar, inteligência, burnout).</p></li>
 <li><p><strong>Variáveis Observadas (ou Indicadores)</strong>: Dados que podem ser medidos diretamente e que servem como indicadores das variáveis latentes (ex: respostas a perguntas de um questionário).</p></li>
 </ul>
-<p>Os Modelos de Equações Estruturais (SEM) são uma <strong>estrutura de modelo linear que permite modelar equações de regressão simultâneas com variáveis latentes</strong> [3, 4]. Eles englobam uma ampla gama de modelos, como regressão linear, regressão multivariada, análise de trajetória (path analysis), análise fatorial confirmatória (CFA) e regressão estrutural, todos considerados casos especiais do SEM [3-5]. Essencialmente, o SEM pode ser visto como uma <strong>combinação de análise fatorial e regressão</strong> [1]. O SEM implica uma estrutura para as covariâncias entre as variáveis observadas [1].</p>
-<p>A utilização do SEM oferece diversas <strong>vantagens</strong> [6]:</p>
+<p>O SEM pode ser visto como uma <strong>combinação de análise fatorial e regressão</strong></p>
+<p>A análise fatorial pode ser dividida em dois tipos principais: exploratória e confirmatória.</p>
 <ul>
-<li><p><strong>Permite trabalhar simultaneamente com estimação e mensuração</strong>: O SEM consegue integrar modelos de mensuração (como variáveis latentes são medidas) e modelos estruturais (as relações causais entre elas) [6, 7].</p></li>
-<li><p><strong>Estimação de efeitos diretos e indiretos</strong>: O SEM possibilita a decomposição de efeitos estatísticos entre efeitos diretos e indiretos de variáveis explicativas sobre variáveis de resposta [6, 8, 9].</p></li>
-<li><p><strong>Robustez</strong>: É uma técnica bastante robusta devido ao relaxamento de pressupostos, especialmente quando comparado à regressão de mínimos quadrados ordinários (MQO), pois <strong>não exige a satisfação do pressuposto de independência dos erros</strong> (em modelos não-recursivos) [6, 10].</p></li>
-<li><p><strong>Facilidade interpretativa</strong>: A visualização através de <strong>diagramas de trajetória</strong> simplifica a interpretação dos modelos complexos [6, 11, 12].</p></li>
+<li><p><strong>A análise fatorial exploratória</strong>, também conhecida como AFE, como o nome sugere, é uma ferramenta exploratória para entender as traços latentes (atributos psicológicos) subjacentes de uma escala desconhecida.</p></li>
+<li><p><strong>A análise fatorial confirmatória</strong> toma emprestados muitos dos mesmos conceitos da análise fatorial exploratória, exceto que, em vez de deixar os dados nos dizerem a estrutura fatorial, nós pré-determinamos a estrutura fat orial e verificamos a estrutura latente de uma escala previamente desenvolvida.</p></li>
+</ul>
+<p><strong>A análise fatorial confirmatória - ou confirmatory factor analysis (CFA) - participa frequentemente do abordagem guarda-chuva do SEM</strong></p>
+</section>
+<section id="por-que-utilizar-o-sem" class="level2">
+<h2 class="anchored" data-anchor-id="por-que-utilizar-o-sem">Por que utilizar o SEM?</h2>
+<p><strong>Visão Holística do Modelo</strong> Use a SEM para testar um sistema completo de relações de uma só vez. Em vez de analisar cada hipótese separadamente (o que aumenta o risco de erro), a SEM avalia se o seu modelo teórico como um todo é compatível com os dados, oferecendo uma visão global e integrada do fenômeno.</p>
+<p><strong>Medição Precisa de Conceitos Abstratos</strong> A SEM é ideal para medir conceitos abstratos (variáveis latentes) como “satisfação” ou “ansiedade”. Ela faz isso usando múltiplos indicadores (perguntas de um questionário) e, crucialmente, separa a medição do conceito do seu erro de medição. Isso resulta em estimativas muito mais puras e confiáveis das relações entre as variáveis.</p>
+</section>
+<section id="quando-usar-o-sem" class="level2">
+<h2 class="anchored" data-anchor-id="quando-usar-o-sem">Quando usar o SEM?</h2>
+<p>A Modelagem de Equações Estruturais é uma ferramenta estatística confirmatória, não exploratória. Ela pode ser aplicada de três maneiras distintas:</p>
+<ul>
+<li><p>I. <em>Confirmação Direta</em>: Testar um único modelo teórico para validá-lo ou invalidá-lo.</p></li>
+<li><ol start="2" type="I">
+<li><em>Modelos Alternativos</em>: Comparar modelos concorrentes para ver qual explica melhor os dados.</li>
+</ol></li>
+<li><ol start="3" type="I">
+<li><em>Desenvolvimento do Modelo</em>: Iniciar com um modelo teórico e, caso ele não se ajuste bem, modificá-lo em busca de uma versão melhor e mais simples (parcimoniosa).</li>
+</ol></li>
 </ul>
 </section>
-<section id="contextualização-quando-usar-o-sem" class="level2">
-<h2 class="anchored" data-anchor-id="contextualização-quando-usar-o-sem">Contextualização: Quando usar o SEM?</h2>
-<p>O SEM é, fundamentalmente, uma <strong>técnica de análise estatística confirmatória</strong> [13, 14]. Isso significa que ele <strong>não se presta à exploração de dados</strong> [13, 14]. Pelo contrário, o SEM exige que o pesquisador tenha uma <strong>sólida confiança teórica no modelo inicial a ser estimado</strong> [15]. É a ferramenta ideal quando o analista já possui um conhecimento aprofundado sobre a questão que está analisando, incluindo as relações esperadas entre variáveis observadas e construtos latentes, e a forma como esses construtos são medidos [16].</p>
+<section id="vantagem-do-sem" class="level2">
+<h2 class="anchored" data-anchor-id="vantagem-do-sem">Vantagem do SEM</h2>
+<p>Os Modelos de Equações Estruturais englobam uma ampla gama de abordagens:</p>
+<ul>
+<li><strong>Regressão linear e multivariada</strong></li>
+<li><strong>Análise de trajetória (path analysis)</strong></li>
+<li><strong>Análise fatorial confirmatória (CFA)</strong></li>
+<li><strong>Regressão estrutural</strong></li>
+</ul>
+<p>Essa abordagem Guarda-chuva representa sua maior vantagem</p>
 </section>
 <section id="breve-histórico-do-sem" class="level2">
 <h2 class="anchored" data-anchor-id="breve-histórico-do-sem">Breve histórico do SEM</h2>
-<p>Os fundamentos técnicos de todos os modelos SEM são baseados na notação clássica LISREL (linear structural relations) em homenagem a <strong>Karl Joreskög</strong>, que a inventou em 1969 e 1973 [11, 17, 18]. Embora o SEM seja considerado um campo relativamente novo na estatística, com base em 1976 [11], todas as implementações modernas do SEM são derivações do LISREL, seja expandindo suas capacidades ou simplificando sua complexidade [17]. A compreensão da notação LISREL é, portanto, fundamental para entender as estruturas mais recentes do SEM [17, 19].</p>
+<p>Os fundamentos técnicos de todos os modelos SEM são baseados na notação clássica LISREL (linear structural relations) em homenagem a <strong>Karl Joreskög</strong>, que a inventou em 1969 e 1973. Embora o SEM seja considerado um campo relativamente novo na estatística, com base em 1976, todas as implementações modernas do SEM são derivações do LISREL, seja expandindo suas capacidades ou simplificando sua complexidade. A compreensão da notação LISREL é, portanto, fundamental para entender as estruturas mais recentes do SEM.</p>
 </section>
 </section>
 <section id="conceitos-e-a-caixa-de-ferramentas" class="level1">
 <h1>Conceitos e a Caixa de Ferramentas</h1>
-<p>Para trabalhar com SEM, é essencial compreender seus componentes e a terminologia específica [20].</p>
+<p>Para trabalhar com SEM, é essencial compreender seus componentes e a terminologia específica.</p>
+<section id="variável-observada-observed-variable" class="level3">
+<h3 class="anchored" data-anchor-id="variável-observada-observed-variable">Variável Observada (Observed Variable)</h3>
+<p>É uma variável que <strong>existe concretamente no seu banco de dados</strong>, ou seja, foi diretamente medida ou coletada. Também é chamada de <strong>item</strong> (quando é uma pergunta de um questionário, por exemplo) ou <strong>variável manifesta</strong>.</p>
+<blockquote class="blockquote">
+<p><em>Exemplo: A resposta a uma pergunta específica como “Qual sua nota em matemática?” ou “De 1 a 5, quão satisfeito você está?”.</em></p>
+</blockquote>
+<hr>
+</section>
+<section id="variável-latente-latent-variable" class="level3">
+<h3 class="anchored" data-anchor-id="variável-latente-latent-variable">Variável Latente (Latent Variable)</h3>
+<p>É um <strong>conceito ou construto abstrato que não pode ser medido diretamente</strong> e, portanto, não existe como uma única coluna no seu banco de dados. Ela é “construída” ou inferida a partir de um conjunto de variáveis observadas.</p>
+<blockquote class="blockquote">
+<p><em>Exemplo: “Inteligência”, “Ansiedade” ou “Satisfação no Trabalho”. Ninguém mede “inteligência” com uma única pergunta; ela é inferida a partir das respostas a vários testes.</em></p>
+</blockquote>
+<hr>
+</section>
+<section id="variável-exógena-exogenous-variable" class="level3">
+<h3 class="anchored" data-anchor-id="variável-exógena-exogenous-variable">Variável Exógena (Exogenous Variable)</h3>
+<p>É uma <strong>variável independente</strong> no modelo. Ela funciona como uma “causa” ou preditora e não é explicada por nenhuma outra variável dentro do modelo. Pode ser tanto uma variável observada (<code>x</code>) quanto uma latente.</p>
+<blockquote class="blockquote">
+<p>Pense nela como o <em>ponto de partida</em> de uma seta causal.</p>
+</blockquote>
+<hr>
+</section>
+<section id="variável-endógena-endogenous-variable" class="level3">
+<h3 class="anchored" data-anchor-id="variável-endógena-endogenous-variable">Variável Endógena (Endogenous Variable)</h3>
+<p>É uma <strong>variável dependente</strong> no modelo. Ela funciona como um “efeito” ou resultado, pois sempre há pelo menos uma seta causal apontando para ela, indicando que ela é explicada por outras variáveis no modelo. Pode ser tanto uma variável observada (<code>y</code>) quanto uma latente.</p>
+<blockquote class="blockquote">
+<p>Pense nela como o <em>destino</em> de uma seta causal.</p>
+</blockquote>
+<hr>
+</section>
+<section id="modelo-de-mensuração-measurement-model" class="level3">
+<h3 class="anchored" data-anchor-id="modelo-de-mensuração-measurement-model">Modelo de Mensuração (Measurement Model)</h3>
+<p>É a parte do modelo SEM que <strong>conecta as variáveis observadas (os itens) às suas respectivas variáveis latentes (os conceitos)</strong>. Essencialmente, ele define como os conceitos abstratos são medidos.</p>
+<blockquote class="blockquote">
+<p><em>É aqui que você especifica que as perguntas Q1, Q2 e Q3 são os indicadores do conceito “Ansiedade”.</em></p>
+</blockquote>
+<hr>
+</section>
+<section id="indicador-indicator" class="level3">
+<h3 class="anchored" data-anchor-id="indicador-indicator">Indicador (Indicator)</h3>
+<p>É simplesmente o nome que se dá a uma <strong>variável observada quando ela está sendo usada para medir uma variável latente</strong> dentro de um modelo de mensuração.</p>
+<blockquote class="blockquote">
+<p><em>Se a variável observada “nota em geometria” é usada para medir a variável latente “habilidade matemática”, então “nota em geometria” é um indicador.</em></p>
+</blockquote>
+<hr>
+</section>
+<section id="fator-factor" class="level3">
+<h3 class="anchored" data-anchor-id="fator-factor">Fator (Factor)</h3>
+<p>É outro nome para uma <strong>variável latente</strong>, especialmente no contexto do modelo de mensuração. Um fator é o conceito abstrato que é “definido” pelo seu conjunto de indicadores.</p>
+<blockquote class="blockquote">
+<p><em>“Inteligência” é o fator que é medido pelos indicadores (respostas a diferentes testes de QI).</em></p>
+</blockquote>
+<hr>
+</section>
+<section id="carga-fatorial-loading" class="level3">
+<h3 class="anchored" data-anchor-id="carga-fatorial-loading">Carga Fatorial (Loading)</h3>
+<p>É o caminho (a seta) que <strong>liga um indicador (variável observada) ao seu fator (variável latente)</strong>. O valor dessa carga representa a força da relação entre o indicador e o conceito que ele está medindo.</p>
+<blockquote class="blockquote">
+<p><em>Uma carga fatorial alta significa que aquele item é um ótimo medidor do conceito.</em></p>
+</blockquote>
+<hr>
+</section>
+<section id="modelo-estrutural-structural-model" class="level3">
+<h3 class="anchored" data-anchor-id="modelo-estrutural-structural-model">Modelo Estrutural (Structural Model)</h3>
+<p>É a parte do modelo SEM que <strong>especifica as relações de causa e efeito entre as variáveis</strong>, sejam elas latentes ou observadas. Ele representa as hipóteses principais da sua pesquisa.</p>
+<blockquote class="blockquote">
+<p><em>É aqui que você define as setas que conectam as variáveis exógenas (causas) às endógenas (efeitos), como “Ansiedade → Desempenho Acadêmico”.</em></p>
+</blockquote>
+<hr>
+</section>
+<section id="caminho-de-regressão-regression-path" class="level3">
+<h3 class="anchored" data-anchor-id="caminho-de-regressão-regression-path">Caminho de Regressão (Regression Path)</h3>
+<p>É a seta que representa uma <strong>relação de causa e efeito direta entre uma variável exógena e uma endógena</strong> dentro do modelo estrutural. Essencialmente, é a sua hipótese de regressão.</p>
+</section>
 <section id="variáveis-observadas-vs.-variáveis-latentes" class="level2">
 <h2 class="anchored" data-anchor-id="variáveis-observadas-vs.-variáveis-latentes">Variáveis Observadas vs.&nbsp;Variáveis Latentes</h2>
-<p>No SEM, distinguimos entre dois tipos principais de variáveis [21]: * <strong>Variáveis Observadas (ou Manifestas / Itens)</strong>: São variáveis que <strong>existem diretamente nos dados</strong> e podem ser medidas sem erro [21-23]. Exemplos do conjunto de dados utilizado no seminário da UCLA incluem Motivação, Harmonia, Estabilidade, Psicologia Parental Negativa, SES (Status Socioeconômico), QI Verbal, Leitura, Aritmética e Ortografia [24-26]. * <strong>Variáveis Latentes (ou Construtos / Fatores)</strong>: São variáveis <strong>construídas e que não existem diretamente nos dados</strong>; são hipóteses teóricas [21-23, 27]. Elas são mensuradas indiretamente através de suas variáveis observadas (indicadores) por meio de análise fatorial confirmatória [28]. Exemplos no contexto do seminário incluem Ajustamento, Risco e Desempenho (Achievement), cada uma medida por um conjunto de variáveis observadas [24-26].</p>
-<p>Além disso, as variáveis podem ser classificadas como: * <strong>Variável Exógena</strong>: Uma variável <strong>independente</strong> que explica uma variável endógena. Pode ser observada (representada por ‘x’) ou latente (representada por ‘<span class="math inline">\(\xi\)</span>’) [21, 22, 28]. * <strong>Variável Endógena</strong>: Uma variável <strong>dependente</strong> que é explicada por outras variáveis no modelo. Pode ser observada (representada por ‘y’) ou latente (representada por ‘<span class="math inline">\(\eta\)</span>’) [21, 22, 28]. Em modelos de análise de trajetória, uma variável endógena pode predizer outra variável endógena [29].</p>
+<p>No SEM, distinguimos entre dois tipos principais de variáveis : <strong>Variáveis Observadas</strong>: São variáveis que <strong>existem diretamente nos dados</strong> e podem ser medidas sem erro.</p>
+<p><strong>Variáveis Latentes</strong>: São variáveis <strong>construídas e que não existem diretamente nos dados</strong>; são hipóteses teóricas. Elas são mensuradas indiretamente através de suas variáveis observadas (indicadores) por meio de análise fatorial confirmatória</p>
+<p>Além disso, as variáveis podem ser classificadas como:</p>
+<p><strong>Variável Exógena</strong>: Uma variável <strong>independente</strong> que explica uma variável endógena. Pode ser observada (representada por ‘x’) ou latente (representada por ‘<span class="math inline">\(\xi\)</span>’).</p>
+<p><strong>Variável Endógena</strong>: Uma variável <strong>dependente</strong> que é explicada por outras variáveis no modelo. Pode ser observada (representada por ‘y’) ou latente (representada por ‘<span class="math inline">\(\eta\)</span>’). Em modelos de análise de trajetória, uma variável endógena pode predizer outra variável endógena.</p>
 </section>
-<section id="diagramas-de-trajetória" class="level2">
-<h2 class="anchored" data-anchor-id="diagramas-de-trajetória">Diagramas de Trajetória</h2>
-<p>Os <strong>diagramas de trajetória</strong> são representações visuais essenciais dos modelos SEM, facilitando a compreensão das relações complexas que podem ser difíceis de visualizar apenas com equações matriciais [11, 12, 30].</p>
-<p>Os símbolos utilizados nos diagramas são padronizados [11, 30]: * <strong>Círculos</strong>: Representam <strong>variáveis latentes</strong> (fatores ou construtos). * <strong>Quadrados</strong>: Representam <strong>variáveis observadas</strong> (indicadores ou itens). * <strong>Triângulos</strong>: Representam <strong>interceptos</strong> ou médias (geralmente não explicitados por padrão no <code>lavaan</code> a menos que solicitados) [11, 31]. * <strong>Setas únicas (de uma via)</strong>: Indicam <strong>caminhos de regressão</strong> ou relações causais diretas (ex: uma variável predizendo outra) [11, 30, 32]. * <strong>Setas duplas (de duas vias)</strong>: Indicam <strong>variâncias</strong> (se a seta aponta para a própria variável, formando um loop) ou <strong>covariâncias</strong> (se a seta conecta duas variáveis) [11, 30, 32].</p>
-<p><strong>Exemplo de leitura de um diagrama</strong> [11, 33]: * Uma seta de um círculo para um quadrado indica que uma variável latente (fator) prediz uma variável observada (indicador), o que é parte de um <strong>modelo de mensuração</strong>. * Uma seta dupla em um círculo ou quadrado representa a variância daquela variável (latente ou observada). * Uma seta dupla entre dois círculos ou dois quadrados indica a covariância entre essas duas variáveis.</p>
+<section id="diagramas-de-caminho-ou-diagramas-de-trajetória" class="level2">
+<h2 class="anchored" data-anchor-id="diagramas-de-caminho-ou-diagramas-de-trajetória">Diagramas de Caminho ou Diagramas de Trajetória</h2>
+<p>Os <strong>diagramas de trajetória</strong> são representações visuais essenciais dos modelos SEM, facilitando a compreensão das relações complexas que podem ser difíceis de visualizar apenas com equações matriciais.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="legenda_diagrama.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Exemplo de diagrama de trajetória</figcaption><p></p>
+</figure>
+</div>
+<p>Os símbolos utilizados nos diagramas são padronizados: <strong>Círculos</strong>: Representam <strong>variáveis latentes</strong> (fatores ou construtos). <strong>Quadrados</strong>: Representam <strong>variáveis observadas</strong> (indicadores ou itens). <strong>Triângulos</strong>: Representam <strong>interceptos</strong> ou médias (geralmente não explicitados por padrão no <code>lavaan</code> a menos que solicitados). <strong>Setas únicas (de uma via)</strong>: Indicam <strong>caminhos de regressão</strong> ou relações causais diretas (ex: uma variável predizendo outra). <strong>Setas duplas (de duas vias)</strong>: Indicam <strong>variâncias</strong> (se a seta aponta para a própria variável, formando um loop) ou <strong>covariâncias</strong> (se a seta conecta duas variáveis) .</p>
+<p><strong>Exemplo de leitura de um diagrama</strong>: Uma seta de um círculo para um quadrado indica que uma variável latente (fator) prediz uma variável observada (indicador), o que é parte de um <strong>modelo de mensuração ou medida</strong>. Uma seta dupla em um círculo ou quadrado representa a variância daquela variável (latente ou observada). Uma seta dupla entre dois círculos ou dois quadrados indica a covariância entre essas duas variáveis.</p>
 </section>
 <section id="modelo-de-mensuração-e-modelo-estrutural" class="level2">
 <h2 class="anchored" data-anchor-id="modelo-de-mensuração-e-modelo-estrutural">Modelo de Mensuração e Modelo Estrutural</h2>
-<p>O SEM é singular por abranger tanto <strong>modelos de mensuração</strong> quanto <strong>modelos estruturais</strong> [24, 34]:</p>
+<p>O SEM é singular por abranger tanto <strong>modelos de medida ou de mensuração</strong> quanto <strong>modelos estruturais</strong>:</p>
 <ul>
-<li><strong>Modelo de Mensuração</strong>: É a parte do SEM que <strong>liga variáveis observadas a variáveis latentes</strong> [7, 21, 34, 35]. Sua função é mensurar construtos latentes a partir de variáveis observadas [36]. Envolve a <strong>Análise Fatorial Confirmatória (AFC)</strong> [24, 37, 38].
+<li><strong>Modelo de Mensuração</strong>: É a parte do SEM que <strong>liga variáveis observadas a variáveis latentes</strong> [7, 21, 34, 35]. Sua função é mensurar construtos latentes a partir de variáveis observadas . Envolve a <strong>Análise Fatorial Confirmatória (AFC)</strong>.
 <ul>
-<li>Neste modelo, as variáveis observadas que medem um fator são chamadas de <strong>indicadores</strong> [21, 35].</li>
-<li>No contexto LISREL, variáveis latentes exógenas (x-side) têm setas de mensuração apontando para a esquerda, e variáveis latentes endógenas (y-side) têm setas de mensuração apontando para a direita [39, 40].</li>
-<li>Um fator (variável latente) é definido por seus indicadores [21]. A relação entre um indicador e um fator é chamada de <strong>carga fatorial (loading)</strong> [21, 35].</li>
+<li>Neste modelo, as variáveis observadas que medem um fator são chamadas de <strong>indicadores</strong>.</li>
+<li>Um fator (variável latente) é definido por seus indicadores. A relação entre um indicador e um fator é chamada de <strong>carga fatorial (loading)</strong>.</li>
 </ul></li>
 <li><strong>Modelo Estrutural</strong>: A parte do SEM que <strong>especifica as relações causais entre variáveis</strong>, sejam elas observadas ou latentes [7, 34, 35]. Pode envolver relações de variáveis exógenas para endógenas, e até mesmo de variáveis endógenas para outras variáveis endógenas [35].
 <ul>
