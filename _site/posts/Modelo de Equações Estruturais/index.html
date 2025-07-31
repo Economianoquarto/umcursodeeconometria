@@ -22,6 +22,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -60,6 +123,11 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="../../site_libs/viz-1.8.2/viz.js"></script>
+<link href="../../site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+<script src="../../site_libs/grViz-binding-1.0.11/grViz.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
@@ -196,82 +264,68 @@ ul.task-list li input[type="checkbox"] {
 <section id="conceitos-e-a-caixa-de-ferramentas" class="level1">
 <h1>Conceitos e a Caixa de Ferramentas</h1>
 <p>Para trabalhar com SEM, é essencial compreender seus componentes e a terminologia específica.</p>
-<section id="variável-observada-observed-variable" class="level3">
-<h3 class="anchored" data-anchor-id="variável-observada-observed-variable">Variável Observada (Observed Variable)</h3>
-<p>É uma variável que <strong>existe concretamente no seu banco de dados</strong>, ou seja, foi diretamente medida ou coletada. Também é chamada de <strong>item</strong> (quando é uma pergunta de um questionário, por exemplo) ou <strong>variável manifesta</strong>.</p>
-<blockquote class="blockquote">
-<p><em>Exemplo: A resposta a uma pergunta específica como “Qual sua nota em matemática?” ou “De 1 a 5, quão satisfeito você está?”.</em></p>
-</blockquote>
-<hr>
-</section>
-<section id="variável-latente-latent-variable" class="level3">
-<h3 class="anchored" data-anchor-id="variável-latente-latent-variable">Variável Latente (Latent Variable)</h3>
-<p>É um <strong>conceito ou construto abstrato que não pode ser medido diretamente</strong> e, portanto, não existe como uma única coluna no seu banco de dados. Ela é “construída” ou inferida a partir de um conjunto de variáveis observadas.</p>
-<blockquote class="blockquote">
-<p><em>Exemplo: “Inteligência”, “Ansiedade” ou “Satisfação no Trabalho”. Ninguém mede “inteligência” com uma única pergunta; ela é inferida a partir das respostas a vários testes.</em></p>
-</blockquote>
-<hr>
-</section>
-<section id="variável-exógena-exogenous-variable" class="level3">
-<h3 class="anchored" data-anchor-id="variável-exógena-exogenous-variable">Variável Exógena (Exogenous Variable)</h3>
-<p>É uma <strong>variável independente</strong> no modelo. Ela funciona como uma “causa” ou preditora e não é explicada por nenhuma outra variável dentro do modelo. Pode ser tanto uma variável observada (<code>x</code>) quanto uma latente.</p>
-<blockquote class="blockquote">
-<p>Pense nela como o <em>ponto de partida</em> de uma seta causal.</p>
-</blockquote>
-<hr>
-</section>
-<section id="variável-endógena-endogenous-variable" class="level3">
-<h3 class="anchored" data-anchor-id="variável-endógena-endogenous-variable">Variável Endógena (Endogenous Variable)</h3>
-<p>É uma <strong>variável dependente</strong> no modelo. Ela funciona como um “efeito” ou resultado, pois sempre há pelo menos uma seta causal apontando para ela, indicando que ela é explicada por outras variáveis no modelo. Pode ser tanto uma variável observada (<code>y</code>) quanto uma latente.</p>
-<blockquote class="blockquote">
-<p>Pense nela como o <em>destino</em> de uma seta causal.</p>
-</blockquote>
-<hr>
-</section>
-<section id="modelo-de-mensuração-measurement-model" class="level3">
-<h3 class="anchored" data-anchor-id="modelo-de-mensuração-measurement-model">Modelo de Mensuração (Measurement Model)</h3>
-<p>É a parte do modelo SEM que <strong>conecta as variáveis observadas (os itens) às suas respectivas variáveis latentes (os conceitos)</strong>. Essencialmente, ele define como os conceitos abstratos são medidos.</p>
-<blockquote class="blockquote">
-<p><em>É aqui que você especifica que as perguntas Q1, Q2 e Q3 são os indicadores do conceito “Ansiedade”.</em></p>
-</blockquote>
-<hr>
-</section>
-<section id="indicador-indicator" class="level3">
-<h3 class="anchored" data-anchor-id="indicador-indicator">Indicador (Indicator)</h3>
-<p>É simplesmente o nome que se dá a uma <strong>variável observada quando ela está sendo usada para medir uma variável latente</strong> dentro de um modelo de mensuração.</p>
-<blockquote class="blockquote">
-<p><em>Se a variável observada “nota em geometria” é usada para medir a variável latente “habilidade matemática”, então “nota em geometria” é um indicador.</em></p>
-</blockquote>
-<hr>
-</section>
-<section id="fator-factor" class="level3">
-<h3 class="anchored" data-anchor-id="fator-factor">Fator (Factor)</h3>
-<p>É outro nome para uma <strong>variável latente</strong>, especialmente no contexto do modelo de mensuração. Um fator é o conceito abstrato que é “definido” pelo seu conjunto de indicadores.</p>
-<blockquote class="blockquote">
-<p><em>“Inteligência” é o fator que é medido pelos indicadores (respostas a diferentes testes de QI).</em></p>
-</blockquote>
-<hr>
-</section>
-<section id="carga-fatorial-loading" class="level3">
-<h3 class="anchored" data-anchor-id="carga-fatorial-loading">Carga Fatorial (Loading)</h3>
-<p>É o caminho (a seta) que <strong>liga um indicador (variável observada) ao seu fator (variável latente)</strong>. O valor dessa carga representa a força da relação entre o indicador e o conceito que ele está medindo.</p>
-<blockquote class="blockquote">
-<p><em>Uma carga fatorial alta significa que aquele item é um ótimo medidor do conceito.</em></p>
-</blockquote>
-<hr>
-</section>
-<section id="modelo-estrutural-structural-model" class="level3">
-<h3 class="anchored" data-anchor-id="modelo-estrutural-structural-model">Modelo Estrutural (Structural Model)</h3>
-<p>É a parte do modelo SEM que <strong>especifica as relações de causa e efeito entre as variáveis</strong>, sejam elas latentes ou observadas. Ele representa as hipóteses principais da sua pesquisa.</p>
-<blockquote class="blockquote">
-<p><em>É aqui que você define as setas que conectam as variáveis exógenas (causas) às endógenas (efeitos), como “Ansiedade → Desempenho Acadêmico”.</em></p>
-</blockquote>
-<hr>
-</section>
-<section id="caminho-de-regressão-regression-path" class="level3">
-<h3 class="anchored" data-anchor-id="caminho-de-regressão-regression-path">Caminho de Regressão (Regression Path)</h3>
-<p>É a seta que representa uma <strong>relação de causa e efeito direta entre uma variável exógena e uma endógena</strong> dentro do modelo estrutural. Essencialmente, é a sua hipótese de regressão.</p>
-</section>
+<p>Este quadro apresenta os principais termos utilizados em Modelagem de Equações Estruturais (SEM) de forma concisa e visual.</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Termo</th>
+<th style="text-align: left;">Definição</th>
+<th style="text-align: left;">Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Variável Observada</strong></td>
+<td style="text-align: left;">Variável que <strong>existe no banco de dados</strong>, diretamente medida ou coletada. Também chamada de <strong>item</strong> ou <strong>variável manifesta</strong>.</td>
+<td style="text-align: left;">Resposta a “Qual sua nota em matemática?” ou “De 1 a 5, quão satisfeito você está?”.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Variável Latente</strong></td>
+<td style="text-align: left;"><strong>Conceito abstrato não medido diretamente</strong>, inferido a partir de variáveis observadas.</td>
+<td style="text-align: left;">“Inteligência”, “Ansiedade”, “Satisfação no Trabalho”.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Variável Exógena</strong></td>
+<td style="text-align: left;"><strong>Variável independente</strong> no modelo, funciona como “causa” e não é explicada por outras variáveis no modelo.</td>
+<td style="text-align: left;">Ponto de partida de uma seta causal.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Variável Endógena</strong></td>
+<td style="text-align: left;"><strong>Variável dependente</strong> no modelo, funciona como “efeito” e é explicada por outras variáveis no modelo.</td>
+<td style="text-align: left;">Destino de uma seta causal.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Modelo de Mensuração</strong></td>
+<td style="text-align: left;">Parte do SEM que <strong>conecta variáveis observadas a variáveis latentes</strong>, definindo como os conceitos abstratos são medidos.</td>
+<td style="text-align: left;">Especificar que Q1, Q2 e Q3 são indicadores de “Ansiedade”.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Indicador</strong></td>
+<td style="text-align: left;"><strong>Variável observada usada para medir uma variável latente</strong> em um modelo de mensuração.</td>
+<td style="text-align: left;">“Nota em geometria” como medida de “habilidade matemática”.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Fator</strong></td>
+<td style="text-align: left;">Outro nome para <strong>variável latente</strong>, definida por seus indicadores.</td>
+<td style="text-align: left;">“Inteligência” como fator medido por testes de QI.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Carga Fatorial</strong></td>
+<td style="text-align: left;">Caminho que <strong>liga um indicador ao seu fator</strong>, representando a força dessa relação.</td>
+<td style="text-align: left;">Uma carga fatorial alta indica que o item é um bom medidor do conceito.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Modelo Estrutural</strong></td>
+<td style="text-align: left;">Parte do SEM que <strong>especifica relações de causa e efeito entre variáveis</strong> (latentes ou observadas).</td>
+<td style="text-align: left;">Definir “Ansiedade → Desempenho Acadêmico”.</td>
+</tr>
+</tbody>
+</table>
 <section id="variáveis-observadas-vs.-variáveis-latentes" class="level2">
 <h2 class="anchored" data-anchor-id="variáveis-observadas-vs.-variáveis-latentes">Variáveis Observadas vs.&nbsp;Variáveis Latentes</h2>
 <p>No SEM, distinguimos entre dois tipos principais de variáveis : <strong>Variáveis Observadas</strong>: São variáveis que <strong>existem diretamente nos dados</strong> e podem ser medidas sem erro.</p>
@@ -296,15 +350,15 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="modelo-de-mensuração-e-modelo-estrutural">Modelo de Mensuração e Modelo Estrutural</h2>
 <p>O SEM é singular por abranger tanto <strong>modelos de medida ou de mensuração</strong> quanto <strong>modelos estruturais</strong>:</p>
 <ul>
-<li><strong>Modelo de Mensuração</strong>: É a parte do SEM que <strong>liga variáveis observadas a variáveis latentes</strong> [7, 21, 34, 35]. Sua função é mensurar construtos latentes a partir de variáveis observadas . Envolve a <strong>Análise Fatorial Confirmatória (AFC)</strong>.
+<li><strong>Modelo de Mensuração</strong>: É a parte do SEM que <strong>liga variáveis observadas a variáveis latentes</strong>. Sua função é mensurar construtos latentes a partir de variáveis observadas . Envolve a <strong>Análise Fatorial Confirmatória (AFC)</strong>.
 <ul>
 <li>Neste modelo, as variáveis observadas que medem um fator são chamadas de <strong>indicadores</strong>.</li>
 <li>Um fator (variável latente) é definido por seus indicadores. A relação entre um indicador e um fator é chamada de <strong>carga fatorial (loading)</strong>.</li>
 </ul></li>
-<li><strong>Modelo Estrutural</strong>: A parte do SEM que <strong>especifica as relações causais entre variáveis</strong>, sejam elas observadas ou latentes [7, 34, 35]. Pode envolver relações de variáveis exógenas para endógenas, e até mesmo de variáveis endógenas para outras variáveis endógenas [35].
+<li><strong>Modelo Estrutural</strong>: A parte do SEM que <strong>especifica as relações causais entre variáveis</strong>, sejam elas observadas ou latentes. Pode envolver relações de variáveis exógenas para endógenas, e até mesmo de variáveis endógenas para outras variáveis endógenas.
 <ul>
-<li>O tipo mais abrangente de modelo estrutural, a <strong>regressão estrutural</strong>, lida com as relações entre <strong>variáveis latentes</strong> [3, 24, 41, 42].</li>
-<li>As relações são definidas por coeficientes de regressão: <span class="math inline">\(\Gamma\)</span> (Gamma) para relações de variáveis exógenas para endógenas, e <span class="math inline">\(B\)</span> (Beta) para relações de variáveis endógenas para outras variáveis endógenas [19, 43, 44].</li>
+<li>O tipo mais abrangente de modelo estrutural, a <strong>regressão estrutural</strong>, lida com as relações entre <strong>variáveis latentes</strong>.</li>
+<li>As relações são definidas por coeficientes de regressão: <span class="math inline">\(\Gamma\)</span> (Gamma) para relações de variáveis exógenas para endógenas, e <span class="math inline">\(B\)</span> (Beta) para relações de variáveis endógenas para outras variáveis endógenas.</li>
 </ul></li>
 </ul>
 </section>
@@ -312,40 +366,49 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="estimação-máxima-verossimilhança-e-teste-de-modelos-goodness-of-fit">Estimação (Máxima Verossimilhança) e Teste de Modelos (Goodness-of-Fit)</h2>
 <section id="estimação" class="level3">
 <h3 class="anchored" data-anchor-id="estimação">Estimação</h3>
-<p>No SEM, os modelos são tipicamente estimados utilizando o método de <strong>Máxima Verossimilhança (ML)</strong> [10, 45]. A ML busca os parâmetros que tornam a amostra observada mais provável, ou seja, maximiza a função de verossimilhança para determinar os parâmetros que têm maior probabilidade de produzir os dados observados [46]. É importante notar que, embora os coeficientes de regressão de uma estimação por Mínimos Quadrados Ordinários (MQO) sejam equivalentes aos da Máxima Verossimilhança, as <strong>variâncias residuais podem diferir ligeiramente</strong> devido às diferentes bases de cálculo (divisão por <span class="math inline">\(N-k\)</span> para MQO e <span class="math inline">\(N\)</span> para ML) [45, 47, 48].</p>
-<p>O componente mais essencial de um modelo de equações estruturais é a <strong>matriz de covariância</strong> [26, 49]. O objetivo do SEM é <strong>reproduzir a matriz de covariância da população (</strong><span class="math inline">\(\Sigma\)</span>) usando os parâmetros que o modelo hipotetiza (<span class="math inline">\(\Sigma(\theta)\)</span>), conhecida como matriz de covariância implicada pelo modelo [50-52]. Se o modelo se ajusta perfeitamente, então <span class="math inline">\(\Sigma = \Sigma(\theta)\)</span> [50].</p>
+<p>No SEM, os modelos são tipicamente estimados utilizando o método de <strong>Máxima Verossimilhança (ML)</strong>. A ML busca os parâmetros que tornam a amostra observada mais provável, ou seja, maximiza a função de verossimilhança para determinar os parâmetros que têm maior probabilidade de produzir os dados observados. É importante notar que, embora os coeficientes de regressão de uma estimação por Mínimos Quadrados Ordinários (MQO) sejam equivalentes aos da Máxima Verossimilhança, as <strong>variâncias residuais podem diferir ligeiramente</strong> devido às diferentes bases de cálculo (divisão por <span class="math inline">\(N-k\)</span> para MQO e <span class="math inline">\(N\)</span> para ML).</p>
+<p>O componente mais essencial de um modelo de equações estruturais é a <strong>matriz de covariância</strong>. O objetivo do SEM é <strong>reproduzir a matriz de covariância da população (</strong><span class="math inline">\(\Sigma\)</span>) usando os parâmetros que o modelo hipotetiza (<span class="math inline">\(\Sigma(\theta)\)</span>), conhecida como matriz de covariância implicada pelo modelo. Se o modelo se ajusta perfeitamente, então <span class="math inline">\(\Sigma = \Sigma(\theta)\)</span>.</p>
 </section>
 <section id="identificação-do-modelo" class="level3">
 <h3 class="anchored" data-anchor-id="identificação-do-modelo">Identificação do Modelo</h3>
-<p>A identificação de um modelo SEM é crucial para garantir que os parâmetros possam ser estimados de forma única. Modelos podem ser classificados como [53-55]: * <strong>Sub-identificados</strong>: O número de valores conhecidos é menor que o número de parâmetros livres (<span class="math inline">\(df &lt; 0\)</span>). <strong>Não há solução única para a estimação</strong> [55, 56]. * <strong>Justamente Identificados (ou Saturados)</strong>: O número de valores conhecidos é igual ao número de parâmetros livres (<span class="math inline">\(df = 0\)</span>). <strong>O modelo se ajusta perfeitamente aos dados</strong> [53-55]. Modelos de regressão linear simples e múltipla são exemplos de modelos saturados [57, 58]. * <strong>Sobre-identificados</strong>: O número de valores conhecidos é maior que o número de parâmetros livres (<span class="math inline">\(df &gt; 0\)</span>). <strong>O modelo não se ajusta perfeitamente, mas permite a avaliação da qualidade do ajuste</strong> [53-55]. <strong>Modelos sobre-identificados são considerados “bons”</strong>, pois permitem avaliar o ajuste do modelo [56, 57].</p>
-<p>Para modelos de análise fatorial (medida), a identificação do fator é particularmente importante, pois variáveis latentes não são observadas diretamente. Para um modelo com três ou mais indicadores, existem duas abordagens principais para identificação [59-61]: 1. <strong>Método do Marcador (Marker Method)</strong>: Fixa a <strong>primeira carga fatorial de cada fator em 1</strong>. Este é o método padrão no <code>lavaan</code> [59, 61, 62]. 2. <strong>Método de Padronização da Variância (Variance Standardization Method)</strong>: Fixa a <strong>variância de cada fator em 1</strong>, mas estima livremente todas as cargas fatoriais [59, 61, 63]. Este método é considerado mais padronizado e útil para interpretação [59].</p>
+<p>A identificação de um modelo SEM é crucial para garantir que os parâmetros possam ser estimados de forma única. Modelos podem ser classificados como:</p>
+<ul>
+<li><p><strong>Sub-identificados</strong>: O número de valores conhecidos é menor que o número de parâmetros livres (<span class="math inline">\(df &lt; 0\)</span>). <strong>Não há solução única para a estimação</strong>.</p></li>
+<li><p><strong>Justamente Identificados (ou Saturados)</strong>: O número de valores conhecidos é igual ao número de parâmetros livres (<span class="math inline">\(df = 0\)</span>). <strong>O modelo se ajusta perfeitamente aos dados</strong>.Modelos de regressão linear simples e múltipla são exemplos de modelos saturados .</p></li>
+<li><p><strong>Sobre-identificados</strong>: O número de valores conhecidos é maior que o número de parâmetros livres (<span class="math inline">\(df &gt; 0\)</span>). <strong>O modelo não se ajusta perfeitamente, mas permite a avaliação da qualidade do ajuste</strong>. <strong>Modelos sobre-identificados são considerados “bons”</strong>, pois permitem avaliar o ajuste do modelo .</p></li>
+</ul>
+<p>Para modelos de análise fatorial (medida), a identificação do fator é particularmente importante, pois variáveis latentes não são observadas diretamente. Para um modelo com três ou mais indicadores, existem duas abordagens principais para identificação:</p>
+<ul>
+<li><ol type="1">
+<li><strong>Método do Marcador (Marker Method)</strong>: Fixa a <strong>primeira carga fatorial de cada fator em 1</strong>. Este é o método padrão no <code>lavaan</code> .</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li><strong>Método de Padronização da Variância (Variance Standardization Method)</strong>: Fixa a <strong>variância de cada fator em 1</strong>, mas estima livremente todas as cargas fatoriais . Este método é considerado mais padronizado e útil para interpretação.</li>
+</ol></li>
+</ul>
 </section>
 <section id="estatísticas-de-qualidade-do-ajuste-model-fit-statistics" class="level3">
 <h3 class="anchored" data-anchor-id="estatísticas-de-qualidade-do-ajuste-model-fit-statistics">Estatísticas de Qualidade do Ajuste (Model Fit Statistics)</h3>
-<p>As estatísticas de qualidade do ajuste avaliam o quão bem o modelo hipotetizado se ajusta aos dados observados [52, 64]. A hipótese nula no SEM é que <strong>a matriz de covariância implicada pelo modelo (</strong><span class="math inline">\(\Sigma(\theta)\)</span>) é igual à matriz de covariância da população (<span class="math inline">\(\Sigma\)</span>) (<span class="math inline">\(H_0: \Sigma(\theta)=\Sigma\)</span>) [65]. Rejeitar esta hipótese é geralmente <strong>indesejável</strong> no SEM, pois significaria que o modelo proposto não se ajusta bem aos dados [65, 66].</p>
+<p>As estatísticas de qualidade do ajuste avaliam o quão bem o modelo populacional se ajusta aos dados observados. A hipótese nula no SEM é que <strong>a matriz de covariância implicada pelo modelo (</strong><span class="math inline">\(\Sigma(\theta)\)</span>) é igual à matriz de covariância da população (<span class="math inline">\(\Sigma\)</span>) (<span class="math inline">\(H_0: \Sigma(\theta)=\Sigma\)</span>). Rejeitar esta hipótese é geralmente <strong>indesejável</strong> no SEM, pois significaria que o modelo proposto não se ajusta bem aos dados.</p>
 <ul>
-<li><p><strong>Covariância Residual</strong>: A diferença entre a matriz de covariância amostral (<span class="math inline">\(S\)</span>) e a matriz de covariância implicada pelo modelo (<span class="math inline">\(\Sigma(\hat{\theta})\)</span>), ou seja, <span class="math inline">\(S - \Sigma(\hat{\theta})\)</span> [67]. Valores próximos de zero indicam um bom ajuste [67].</p></li>
+<li><p><strong>Covariância Residual</strong>: A diferença entre a matriz de covariância amostral (<span class="math inline">\(S\)</span>) e a matriz de covariância implicada pelo modelo (<span class="math inline">\(\Sigma(\hat{\theta})\)</span>), ou seja, <span class="math inline">\(S - \Sigma(\hat{\theta})\)</span>. Valores próximos de zero indicam um bom ajuste.</p></li>
 <li><p><strong>Teste Chi-quadrado do Modelo (</strong><span class="math inline">\(\chi^2\)</span>): É a estatística de teste principal que mede a discrepância entre a matriz de covariância observada e a matriz de covariância implicada pelo modelo [28, 66, 68, 69].</p>
 <ul>
 <li>Um <strong>valor de chi-quadrado maior indica uma maior diferença</strong> (pior ajuste) entre as matrizes e, consequentemente, uma maior probabilidade de rejeitar a hipótese nula [68, 70].</li>
-<li><strong>Sensibilidade ao tamanho da amostra</strong>: O teste chi-quadrado é <strong>altamente sensível a amostras grandes</strong> [68, 70-72]. Em amostras grandes (e.g., mais de 400 casos), é comum que o teste seja estatisticamente significativo mesmo para modelos com bom ajuste prático [70, 71]. Por isso, o chi-quadrado sozinho não deve ser o único critério de avaliação de ajuste [70].</li>
+<li><strong>Sensibilidade ao tamanho da amostra</strong>: O teste chi-quadrado é <strong>altamente sensível a amostras grandes</strong>. Em amostras grandes, é comum que o teste seja estatisticamente significativo mesmo para modelos com bom ajuste prático . Por isso, o chi-quadrado sozinho não deve ser o único critério de avaliação de ajuste.</li>
 </ul></li>
-<li><p><strong>Modelo de Linha de Base (Baseline Model)</strong>: Considerado o <strong>modelo de “pior ajuste”</strong> [73-75]. Ele assume que não há covariância entre quaisquer variáveis, estimando apenas as variâncias de cada uma [73, 74]. Serve como ponto de comparação para os índices de ajuste incrementais [73, 75].</p></li>
-<li><p><strong>Índices de Ajuste Aproximados</strong>: Desenvolvidos para complementar o teste chi-quadrado, atenuando sua sensibilidade ao tamanho da amostra [73, 75].</p>
+<li><p><strong>Modelo de Linha de Base (Baseline Model)</strong>: Considerado o <strong>modelo de “pior ajuste”</strong>. Ele assume que não há covariância entre quaisquer variáveis, estimando apenas as variâncias de cada uma. Serve como ponto de comparação para os índices de ajuste incrementais.</p></li>
+<li><p><strong>Índices de Ajuste Aproximados</strong>: Desenvolvidos para complementar o teste chi-quadrado, atenuando sua sensibilidade ao tamanho da amostra.</p>
 <ul>
-<li><strong>Índices de Ajuste Incrementais (ou Relativos)</strong>: Avaliam a melhoria do ajuste do modelo do usuário em relação ao modelo de linha de base.
-<ul>
-<li><strong>CFI (Comparative Fit Index)</strong>: Varia de 0 a 1. Valores <strong>maiores que 0.90 (conservadoramente 0.95) indicam bom ajuste</strong> [69, 76, 77]. Quanto mais próximo de 1, melhor o ajuste [77, 78].</li>
-<li><strong>TLI (Tucker-Lewis Index)</strong>: Também varia de 0 a 1 (valores maiores que 1 são arredondados para 1). Valores <strong>maiores que 0.90 indicam bom ajuste</strong> [69, 76, 79]. O TLI utiliza a “chi-quadrado relativa” (<span class="math inline">\(\chi^2/df\)</span>), onde <span class="math inline">\(\chi^2/df = 1\)</span> indica ajuste perfeito, e valores acima de 2 ou 5 podem indicar ajuste inadequado [77].</li>
+<li><strong>Índices de Ajuste Incrementais (ou Relativos)</strong>: Avaliam a melhoria do ajuste do modelo do usuário em relação ao modelo de linha de base.</li>
+<li><strong>CFI (Comparative Fit Index)</strong>: Varia de 0 a 1. Valores <strong>maiores que 0.90 (conservadoramente 0.95) indicam bom ajuste</strong>. Quanto mais próximo de 1, melhor o ajuste.</li>
+<li><strong>TLI (Tucker-Lewis Index)</strong>: Também varia de 0 a 1 (valores maiores que 1 são arredondados para 1). Valores <strong>maiores que 0.90 indicam bom ajuste</strong>. O TLI utiliza a “chi-quadrado relativa” (<span class="math inline">\(\chi^2/df\)</span>), onde <span class="math inline">\(\chi^2/df = 1\)</span> indica ajuste perfeito, e valores acima de 2 ou 5 podem indicar ajuste inadequado.</li>
+<li><strong>Índices de Ajuste Absolutos</strong>: Avaliam o ajuste do modelo diretamente em relação aos dados observados, sem comparação com um modelo de linha de base.</li>
+<li><strong>RMSEA (Root Mean Square Error of Approximation)</strong>: Mede o erro de aproximação. Valores <span class="math inline">\(\le 0.05\)</span> indicam um ajuste próximo, entre <span class="math inline">\(0.05\)</span> e <span class="math inline">\(0.08\)</span> indicam um ajuste razoável, e <span class="math inline">\(\ge 0.10\)</span> indicam um ajuste ruim.</li>
 </ul></li>
-<li><strong>Índices de Ajuste Absolutos</strong>: Avaliam o ajuste do modelo diretamente em relação aos dados observados, sem comparação com um modelo de linha de base.
+<li><p><strong>Índice de Modificação (MI)</strong>: É um teste de qui-quadrado de 1 grau de liberdade que avalia o quanto o chi-quadrado do modelo mudaria se um parâmetro específico fosse incluído. MIs elevados sugerem um grande impacto na melhoria do ajuste.</p>
 <ul>
-<li><strong>RMSEA (Root Mean Square Error of Approximation)</strong>: Mede o erro de aproximação. Valores <span class="math inline">\(\le 0.05\)</span> indicam um ajuste próximo, entre <span class="math inline">\(0.05\)</span> e <span class="math inline">\(0.08\)</span> indicam um ajuste razoável, e <span class="math inline">\(\ge 0.10\)</span> indicam um ajuste ruim [69, 76, 80].</li>
-</ul></li>
-</ul></li>
-<li><p><strong>Índice de Modificação (MI)</strong>: É um teste de qui-quadrado de 1 grau de liberdade que avalia o quanto o chi-quadrado do modelo mudaria se um parâmetro específico fosse incluído [81-83]. MIs elevados sugerem um grande impacto na melhoria do ajuste.</p>
-<ul>
-<li><strong>Cuidado</strong>: A modificação do modelo com base exclusivamente no MI <strong>deve ser feita com justificativa teórica</strong>, para evitar a superestimação do ajuste e o aumento do Erro Tipo I (falsos positivos) [84-87].</li>
+<li><strong>Cuidado</strong>: A modificação do modelo com base exclusivamente no MI <strong>deve ser feita com justificativa teórica</strong>, para evitar a superestimação do ajuste e o aumento do Erro Tipo I (falsos positivos).</li>
 </ul></li>
 </ul>
 </section>
@@ -353,15 +416,82 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="aplicações-do-sem-na-economia" class="level1">
 <h1>Aplicações do SEM na Economia</h1>
-<p>O SEM, com sua capacidade de modelar relações complexas e variáveis latentes, tem diversas aplicações [88].</p>
+<p>O SEM, com sua capacidade de modelar relações complexas e variáveis latentes, tem diversas aplicações.</p>
 <section id="exemplos-de-aplicações" class="level2">
 <h2 class="anchored" data-anchor-id="exemplos-de-aplicações">Exemplos de Aplicações</h2>
-<p>Dois exemplos clássicos de aplicação são [89-91]: * <strong>Modelo de Realização de Status Socioeconômico</strong>: Um modelo da teoria da estratificação social que investiga como a origem socioeconômica (variáveis como escolaridade dos pais e status socioeconômico da ocupação do pai) influencia o destino socioeconômico (medido por variáveis como escolaridade do próprio indivíduo, status socioeconômico da ocupação e rendimento do trabalho) [92-96]. Este modelo é relevante para entender a <strong>transmissão intergeracional da desigualdade</strong>, muitas vezes revelando que os efeitos indiretos são mais proeminentes que os diretos [93, 94, 96]. * <strong>Modelo de Determinação do Índice de Gestão Descentralizada Municipal (IGD-M)</strong>: Aplicado na área de políticas sociais, este modelo busca explicar os fatores que determinam a qualidade da gestão de programas sociais em nível municipal. Pode incluir variáveis como renda per capita, PIB per capita e a proporção de beneficiários de programas sociais, revelando a dependência municipal de recursos externos e a complexa relação entre desenvolvimento econômico e qualidade da gestão social [97-101].</p>
+<p>Dois exemplos clássicos de aplicação são:</p>
+<ol type="1">
+<li><strong>Modelo de Realização de Status Socioeconômico</strong>: Um modelo da teoria da estratificação social que investiga como a origem socioeconômica (variáveis como escolaridade dos pais e status socioeconômico da ocupação do pai) influencia o destino socioeconômico (medido por variáveis como escolaridade do próprio indivíduo, status socioeconômico da ocupação e rendimento do trabalho). Este modelo é relevante para entender a <strong>transmissão intergeracional da desigualdade</strong>, muitas vezes revelando que os efeitos indiretos são mais proeminentes que os diretos .</li>
+</ol>
+<p><strong>Modelo de Determinação do Índice de Gestão Descentralizada Municipal (IGD-M)</strong>: Aplicado na área de políticas sociais, este modelo busca explicar os fatores que determinam a qualidade da gestão de programas sociais em nível municipal. Pode incluir variáveis como renda per capita, PIB per capita e a proporção de beneficiários de programas sociais, revelando a dependência municipal de recursos externos e a complexa relação entre desenvolvimento econômico e qualidade da gestão social.</p>
 </section>
 <section id="hands-on-aplicação-do-sem-em-software-estatístico" class="level2">
 <h2 class="anchored" data-anchor-id="hands-on-aplicação-do-sem-em-software-estatístico">Hands-on: Aplicação do SEM em Software Estatístico</h2>
-<p>A aplicação prática do SEM é comumente realizada em softwares estatísticos. O pacote <strong><code>lavaan</code> no R</strong> é amplamente utilizado por ser <strong>gratuito, de código aberto e relativamente fácil de usar</strong> [34, 102]. Outros softwares incluem Mplus, EQS, SAS PROC CALIS e o próprio <code>sem</code> do Stata [34, 103].</p>
-<p>A sintaxe no <code>lavaan</code> é intuitiva [32]: * <code>~</code>: Usado para <strong>previsão</strong> (regressão), onde o resultado observado é previsto por preditores observados (e.g., <code>y ~ x</code>) [32]. * <code>=~</code>: Usado para <strong>indicadores</strong> em modelos de mensuração, ligando uma variável latente aos seus indicadores observados (e.g., <code>f =~ q + r + s</code>) [32, 104]. * <code>~~</code>: Usado para <strong>covariância</strong> (e.g., <code>x ~~ x</code> para variância, <code>x ~~ y</code> para covariância) [32]. * <code>~1</code>: Usado para estimar o <strong>intercepto</strong> ou média de uma variável (e.g., <code>x ~ 1</code>) [31, 32].</p>
+<p>A aplicação prática do SEM é comumente realizada em softwares estatísticos. O pacote <strong><code>lavaan</code> no R</strong> é amplamente utilizado por ser <strong>gratuito, de código aberto e relativamente fácil de usar</strong>. O <strong>STATA</strong> também emprega a aboradagem por meio do comando <code>SEM</code>.</p>
+<p>A sintaxe no <code>lavaan</code> é intuitiva:</p>
+<p><code>~</code>: Usado para <strong>previsão</strong> (regressão), onde o resultado observado é previsto por preditores observados (e.g., <code>y ~ x</code>).</p>
+<p><code>=~</code>: Usado para <strong>indicadores</strong> em modelos de mensuração, ligando uma variável latente aos seus indicadores observados (e.g., <code>f =~ q + r + s</code>).</p>
+<p><code>~~</code>: Usado para <strong>covariância</strong> (e.g., <code>x ~~ x</code> para variância, <code>x ~~ y</code> para covariância).</p>
+<p><code>~1</code>: Usado para estimar o <strong>intercepto</strong> ou média de uma variável (e.g., <code>x ~ 1</code>).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"lavaan"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"lavaanPlot"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"PoliticalDemocracy"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="st">'y1 ~ 1 + x1 + x2 + x3'</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>fit1 <span class="ot">&lt;-</span> <span class="fu">sem</span>(m1, <span class="at">data=</span>PoliticalDemocracy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Os resultados obtidos são:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>lavaan 0.6-19 ended normally after 1 iteration
+
+  Estimator                                         ML
+  Optimization method                           NLMINB
+  Number of model parameters                         5
+
+  Number of observations                            75
+
+Model Test User Model:
+                                                      
+  Test statistic                                 0.000
+  Degrees of freedom                                 0
+
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Regressions:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+  y1 ~                                                
+    x1                1.807    0.861    2.098    0.036
+    x2                0.017    0.477    0.036    0.971
+    x3               -0.307    0.382   -0.805    0.421
+
+Intercepts:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+   .y1               -2.655    2.739   -0.970    0.332
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+   .y1                5.733    0.936    6.124    0.000</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lavaanPlot</span>(<span class="at">model =</span> fit1, </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">node_options =</span> <span class="fu">list</span>(<span class="at">shape =</span> <span class="st">"box"</span>, <span class="at">fontname =</span> <span class="st">"Helvetica"</span>), </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>), </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="grViz html-widget html-fill-item" id="htmlwidget-fa83c40e38fc01e62a35" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-fa83c40e38fc01e62a35">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.81\"] x2->y1 [label = \"0.02\"] x3->y1 [label = \"-0.31\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 </section>
 <section id="análise-e-interpretação-dos-parâmetros-estimados" class="level2">
 <h2 class="anchored" data-anchor-id="análise-e-interpretação-dos-parâmetros-estimados">Análise e Interpretação dos Parâmetros Estimados</h2>

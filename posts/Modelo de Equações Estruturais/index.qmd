@@ -30,7 +30,7 @@ A análise fatorial pode ser dividida em dois tipos principais: exploratória e 
 
 - **A análise fatorial confirmatória** toma emprestados muitos dos mesmos conceitos da análise fatorial exploratória, exceto que, em vez de deixar os dados nos dizerem a estrutura fatorial, nós pré-determinamos a estrutura fat orial e verificamos a estrutura latente de uma escala previamente desenvolvida.
 
-**A análise fatorial confirmatória - ou confirmatory factor analysis  (CFA) - participa frequentemente do abordagem guarda-chuva do SEM**
+**A análise fatorial confirmatória - ou confirmatory factor analysis  (CFA) - participa frequentemente da abordagem guarda-chuva do SEM**
 
 ## Por que utilizar o SEM?
 
@@ -69,81 +69,19 @@ Os fundamentos técnicos de todos os modelos SEM são baseados na notação clá
 
 Para trabalhar com SEM, é essencial compreender seus componentes e a terminologia específica.
 
-### Variável Observada (Observed Variable)
+Este quadro apresenta os principais termos utilizados em Modelagem de Equações Estruturais (SEM) de forma concisa e visual.
 
-É uma variável que **existe concretamente no seu banco de dados**, ou seja, foi diretamente medida ou coletada. Também é chamada de **item** (quando é uma pergunta de um questionário, por exemplo) ou **variável manifesta**.
-
-> *Exemplo: A resposta a uma pergunta específica como "Qual sua nota em matemática?" ou "De 1 a 5, quão satisfeito você está?".*
-
----
-
-### Variável Latente (Latent Variable)
-
-É um **conceito ou construto abstrato que não pode ser medido diretamente** e, portanto, não existe como uma única coluna no seu banco de dados. Ela é "construída" ou inferida a partir de um conjunto de variáveis observadas.
-
-> *Exemplo: "Inteligência", "Ansiedade" ou "Satisfação no Trabalho". Ninguém mede "inteligência" com uma única pergunta; ela é inferida a partir das respostas a vários testes.*
-
----
-
-### Variável Exógena (Exogenous Variable)
-
-É uma **variável independente** no modelo. Ela funciona como uma "causa" ou preditora e não é explicada por nenhuma outra variável dentro do modelo. Pode ser tanto uma variável observada (`x`) quanto uma latente.
-
-> Pense nela como o *ponto de partida* de uma seta causal.
-
----
-
-### Variável Endógena (Endogenous Variable)
-
-É uma **variável dependente** no modelo. Ela funciona como um "efeito" ou resultado, pois sempre há pelo menos uma seta causal apontando para ela, indicando que ela é explicada por outras variáveis no modelo. Pode ser tanto uma variável observada (`y`) quanto uma latente.
-
-> Pense nela como o *destino* de uma seta causal.
-
----
-
-### Modelo de Mensuração (Measurement Model)
-
-É a parte do modelo SEM que **conecta as variáveis observadas (os itens) às suas respectivas variáveis latentes (os conceitos)**. Essencialmente, ele define como os conceitos abstratos são medidos.
-
-> *É aqui que você especifica que as perguntas Q1, Q2 e Q3 são os indicadores do conceito "Ansiedade".*
-
----
-
-### Indicador (Indicator)
-
-É simplesmente o nome que se dá a uma **variável observada quando ela está sendo usada para medir uma variável latente** dentro de um modelo de mensuração.
-
-> *Se a variável observada "nota em geometria" é usada para medir a variável latente "habilidade matemática", então "nota em geometria" é um indicador.*
-
----
-
-### Fator (Factor)
-
-É outro nome para uma **variável latente**, especialmente no contexto do modelo de mensuração. Um fator é o conceito abstrato que é "definido" pelo seu conjunto de indicadores.
-
-> *"Inteligência" é o fator que é medido pelos indicadores (respostas a diferentes testes de QI).*
-
----
-
-### Carga Fatorial (Loading)
-
-É o caminho (a seta) que **liga um indicador (variável observada) ao seu fator (variável latente)**. O valor dessa carga representa a força da relação entre o indicador e o conceito que ele está medindo.
-
-> *Uma carga fatorial alta significa que aquele item é um ótimo medidor do conceito.*
-
----
-
-### Modelo Estrutural (Structural Model)
-
-É a parte do modelo SEM que **especifica as relações de causa e efeito entre as variáveis**, sejam elas latentes ou observadas. Ele representa as hipóteses principais da sua pesquisa.
-
-> *É aqui que você define as setas que conectam as variáveis exógenas (causas) às endógenas (efeitos), como "Ansiedade → Desempenho Acadêmico".*
-
----
-
-### Caminho de Regressão (Regression Path)
-
-É a seta que representa uma **relação de causa e efeito direta entre uma variável exógena e uma endógena** dentro do modelo estrutural. Essencialmente, é a sua hipótese de regressão.
+| Termo | Definição | Exemplo |
+|:---|:---|:---|
+| **Variável Observada** | Variável que **existe no banco de dados**, diretamente medida ou coletada. Também chamada de **item** ou **variável manifesta**. | Resposta a "Qual sua nota em matemática?" ou "De 1 a 5, quão satisfeito você está?". |
+| **Variável Latente** | **Conceito abstrato não medido diretamente**, inferido a partir de variáveis observadas. | "Inteligência", "Ansiedade", "Satisfação no Trabalho". |
+| **Variável Exógena** | **Variável independente** no modelo, funciona como "causa" e não é explicada por outras variáveis no modelo. | Ponto de partida de uma seta causal. |
+| **Variável Endógena** | **Variável dependente** no modelo, funciona como "efeito" e é explicada por outras variáveis no modelo. | Destino de uma seta causal. |
+| **Modelo de Mensuração** | Parte do SEM que **conecta variáveis observadas a variáveis latentes**, definindo como os conceitos abstratos são medidos. | Especificar que Q1, Q2 e Q3 são indicadores de "Ansiedade". |
+| **Indicador** | **Variável observada usada para medir uma variável latente** em um modelo de mensuração. | "Nota em geometria" como medida de "habilidade matemática". |
+| **Fator** | Outro nome para **variável latente**, definida por seus indicadores. | "Inteligência" como fator medido por testes de QI. |
+| **Carga Fatorial** | Caminho que **liga um indicador ao seu fator**, representando a força dessa relação. | Uma carga fatorial alta indica que o item é um bom medidor do conceito. |
+| **Modelo Estrutural** | Parte do SEM que **especifica relações de causa e efeito entre variáveis** (latentes ou observadas). | Definir "Ansiedade → Desempenho Acadêmico". |
 
 ## Variáveis Observadas vs. Variáveis Latentes
 
@@ -167,71 +105,120 @@ Os símbolos utilizados nos diagramas são padronizados:  **Círculos**: Represe
 
 **Exemplo de leitura de um diagrama**:  Uma seta de um círculo para um quadrado indica que uma variável latente (fator) prediz uma variável observada (indicador), o que é parte de um **modelo de mensuração ou medida**. Uma seta dupla em um círculo ou quadrado representa a variância daquela variável (latente ou observada).  Uma seta dupla entre dois círculos ou dois quadrados indica a covariância entre essas duas variáveis.
 
-
-
 ## Modelo de Mensuração e Modelo Estrutural
 
 O SEM é singular por abranger tanto **modelos de medida ou  de mensuração** quanto **modelos estruturais**:
 
--   **Modelo de Mensuração**: É a parte do SEM que **liga variáveis observadas a variáveis latentes** \[7, 21, 34, 35\]. Sua função é mensurar construtos latentes a partir de variáveis observadas . Envolve a **Análise Fatorial Confirmatória (AFC)**.
+-   **Modelo de Mensuração**: É a parte do SEM que **liga variáveis observadas a variáveis latentes**. Sua função é mensurar construtos latentes a partir de variáveis observadas . Envolve a **Análise Fatorial Confirmatória (AFC)**.
     -   Neste modelo, as variáveis observadas que medem um fator são chamadas de **indicadores**.
     -   Um fator (variável latente) é definido por seus indicadores. A relação entre um indicador e um fator é chamada de **carga fatorial (loading)**.
--   **Modelo Estrutural**: A parte do SEM que **especifica as relações causais entre variáveis**, sejam elas observadas ou latentes \[7, 34, 35\]. Pode envolver relações de variáveis exógenas para endógenas, e até mesmo de variáveis endógenas para outras variáveis endógenas \[35\].
-    -   O tipo mais abrangente de modelo estrutural, a **regressão estrutural**, lida com as relações entre **variáveis latentes** \[3, 24, 41, 42\].
-    -   As relações são definidas por coeficientes de regressão: $\Gamma$ (Gamma) para relações de variáveis exógenas para endógenas, e $B$ (Beta) para relações de variáveis endógenas para outras variáveis endógenas \[19, 43, 44\].
+-   **Modelo Estrutural**: A parte do SEM que **especifica as relações causais entre variáveis**, sejam elas observadas ou latentes. Pode envolver relações de variáveis exógenas para endógenas, e até mesmo de variáveis endógenas para outras variáveis endógenas.
+    -   O tipo mais abrangente de modelo estrutural, a **regressão estrutural**, lida com as relações entre **variáveis latentes**.
+    -   As relações são definidas por coeficientes de regressão: $\Gamma$ (Gamma) para relações de variáveis exógenas para endógenas, e $B$ (Beta) para relações de variáveis endógenas para outras variáveis endógenas.
 
 ## Estimação (Máxima Verossimilhança) e Teste de Modelos (Goodness-of-Fit)
 
 ### Estimação
 
-No SEM, os modelos são tipicamente estimados utilizando o método de **Máxima Verossimilhança (ML)** \[10, 45\]. A ML busca os parâmetros que tornam a amostra observada mais provável, ou seja, maximiza a função de verossimilhança para determinar os parâmetros que têm maior probabilidade de produzir os dados observados \[46\]. É importante notar que, embora os coeficientes de regressão de uma estimação por Mínimos Quadrados Ordinários (MQO) sejam equivalentes aos da Máxima Verossimilhança, as **variâncias residuais podem diferir ligeiramente** devido às diferentes bases de cálculo (divisão por $N-k$ para MQO e $N$ para ML) \[45, 47, 48\].
+No SEM, os modelos são tipicamente estimados utilizando o método de **Máxima Verossimilhança (ML)**. A ML busca os parâmetros que tornam a amostra observada mais provável, ou seja, maximiza a função de verossimilhança para determinar os parâmetros que têm maior probabilidade de produzir os dados observados. É importante notar que, embora os coeficientes de regressão de uma estimação por Mínimos Quadrados Ordinários (MQO) sejam equivalentes aos da Máxima Verossimilhança, as **variâncias residuais podem diferir ligeiramente** devido às diferentes bases de cálculo (divisão por $N-k$ para MQO e $N$ para ML).
 
-O componente mais essencial de um modelo de equações estruturais é a **matriz de covariância** \[26, 49\]. O objetivo do SEM é **reproduzir a matriz de covariância da população (**$\Sigma$) usando os parâmetros que o modelo hipotetiza ($\Sigma(\theta)$), conhecida como matriz de covariância implicada pelo modelo \[50-52\]. Se o modelo se ajusta perfeitamente, então $\Sigma = \Sigma(\theta)$ \[50\].
+O componente mais essencial de um modelo de equações estruturais é a **matriz de covariância**. O objetivo do SEM é **reproduzir a matriz de covariância da população (**$\Sigma$) usando os parâmetros que o modelo hipotetiza ($\Sigma(\theta)$), conhecida como matriz de covariância implicada pelo modelo. Se o modelo se ajusta perfeitamente, então $\Sigma = \Sigma(\theta)$.
 
 ### Identificação do Modelo
 
-A identificação de um modelo SEM é crucial para garantir que os parâmetros possam ser estimados de forma única. Modelos podem ser classificados como \[53-55\]: \* **Sub-identificados**: O número de valores conhecidos é menor que o número de parâmetros livres ($df < 0$). **Não há solução única para a estimação** \[55, 56\]. \* **Justamente Identificados (ou Saturados)**: O número de valores conhecidos é igual ao número de parâmetros livres ($df = 0$). **O modelo se ajusta perfeitamente aos dados** \[53-55\]. Modelos de regressão linear simples e múltipla são exemplos de modelos saturados \[57, 58\]. \* **Sobre-identificados**: O número de valores conhecidos é maior que o número de parâmetros livres ($df > 0$). **O modelo não se ajusta perfeitamente, mas permite a avaliação da qualidade do ajuste** \[53-55\]. **Modelos sobre-identificados são considerados "bons"**, pois permitem avaliar o ajuste do modelo \[56, 57\].
+A identificação de um modelo SEM é crucial para garantir que os parâmetros possam ser estimados de forma única. Modelos podem ser classificados como: 
 
-Para modelos de análise fatorial (medida), a identificação do fator é particularmente importante, pois variáveis latentes não são observadas diretamente. Para um modelo com três ou mais indicadores, existem duas abordagens principais para identificação \[59-61\]: 1. **Método do Marcador (Marker Method)**: Fixa a **primeira carga fatorial de cada fator em 1**. Este é o método padrão no `lavaan` \[59, 61, 62\]. 2. **Método de Padronização da Variância (Variance Standardization Method)**: Fixa a **variância de cada fator em 1**, mas estima livremente todas as cargas fatoriais \[59, 61, 63\]. Este método é considerado mais padronizado e útil para interpretação \[59\].
+- **Sub-identificados**: O número de valores conhecidos é menor que o número de parâmetros livres ($df < 0$). **Não há solução única para a estimação**.  
+
+- **Justamente Identificados (ou Saturados)**: O número de valores conhecidos é igual ao número de parâmetros livres ($df = 0$). **O modelo se ajusta perfeitamente aos dados**.Modelos de regressão linear simples e múltipla são exemplos de modelos saturados .
+
+- **Sobre-identificados**: O número de valores conhecidos é maior que o número de parâmetros livres ($df > 0$). **O modelo não se ajusta perfeitamente, mas permite a avaliação da qualidade do ajuste**. **Modelos sobre-identificados são considerados "bons"**, pois permitem avaliar o ajuste do modelo .
+
+Para modelos de análise fatorial (medida), a identificação do fator é particularmente importante, pois variáveis latentes não são observadas diretamente. Para um modelo com três ou mais indicadores, existem duas abordagens principais para identificação: 
+
+- 1. **Método do Marcador (Marker Method)**: Fixa a **primeira carga fatorial de cada fator em 1**. Este é o método padrão no `lavaan` .
+
+- 2. **Método de Padronização da Variância (Variance Standardization Method)**: Fixa a **variância de cada fator em 1**, mas estima livremente todas as cargas fatoriais . Este método é considerado mais padronizado e útil para interpretação.
 
 ### Estatísticas de Qualidade do Ajuste (Model Fit Statistics)
 
-As estatísticas de qualidade do ajuste avaliam o quão bem o modelo hipotetizado se ajusta aos dados observados \[52, 64\]. A hipótese nula no SEM é que **a matriz de covariância implicada pelo modelo (**$\Sigma(\theta)$) é igual à matriz de covariância da população ($\Sigma$) ($H_0: \Sigma(\theta)=\Sigma$) \[65\]. Rejeitar esta hipótese é geralmente **indesejável** no SEM, pois significaria que o modelo proposto não se ajusta bem aos dados \[65, 66\].
+As estatísticas de qualidade do ajuste avaliam o quão bem o modelo populacional se ajusta aos dados observados. A hipótese nula no SEM é que **a matriz de covariância implicada pelo modelo (**$\Sigma(\theta)$) é igual à matriz de covariância da população ($\Sigma$) ($H_0: \Sigma(\theta)=\Sigma$). Rejeitar esta hipótese é geralmente **indesejável** no SEM, pois significaria que o modelo proposto não se ajusta bem aos dados.
 
--   **Covariância Residual**: A diferença entre a matriz de covariância amostral ($S$) e a matriz de covariância implicada pelo modelo ($\Sigma(\hat{\theta})$), ou seja, $S - \Sigma(\hat{\theta})$ \[67\]. Valores próximos de zero indicam um bom ajuste \[67\].
+-   **Covariância Residual**: A diferença entre a matriz de covariância amostral ($S$) e a matriz de covariância implicada pelo modelo ($\Sigma(\hat{\theta})$), ou seja, $S - \Sigma(\hat{\theta})$. Valores próximos de zero indicam um bom ajuste.
 
 -   **Teste Chi-quadrado do Modelo (**$\chi^2$): É a estatística de teste principal que mede a discrepância entre a matriz de covariância observada e a matriz de covariância implicada pelo modelo \[28, 66, 68, 69\].
 
     -   Um **valor de chi-quadrado maior indica uma maior diferença** (pior ajuste) entre as matrizes e, consequentemente, uma maior probabilidade de rejeitar a hipótese nula \[68, 70\].
-    -   **Sensibilidade ao tamanho da amostra**: O teste chi-quadrado é **altamente sensível a amostras grandes** \[68, 70-72\]. Em amostras grandes (e.g., mais de 400 casos), é comum que o teste seja estatisticamente significativo mesmo para modelos com bom ajuste prático \[70, 71\]. Por isso, o chi-quadrado sozinho não deve ser o único critério de avaliação de ajuste \[70\].
+    -   **Sensibilidade ao tamanho da amostra**: O teste chi-quadrado é **altamente sensível a amostras grandes**. Em amostras grandes, é comum que o teste seja estatisticamente significativo mesmo para modelos com bom ajuste prático . Por isso, o chi-quadrado sozinho não deve ser o único critério de avaliação de ajuste.
 
--   **Modelo de Linha de Base (Baseline Model)**: Considerado o **modelo de "pior ajuste"** \[73-75\]. Ele assume que não há covariância entre quaisquer variáveis, estimando apenas as variâncias de cada uma \[73, 74\]. Serve como ponto de comparação para os índices de ajuste incrementais \[73, 75\].
+-   **Modelo de Linha de Base (Baseline Model)**: Considerado o **modelo de "pior ajuste"**. Ele assume que não há covariância entre quaisquer variáveis, estimando apenas as variâncias de cada uma. Serve como ponto de comparação para os índices de ajuste incrementais.
 
--   **Índices de Ajuste Aproximados**: Desenvolvidos para complementar o teste chi-quadrado, atenuando sua sensibilidade ao tamanho da amostra \[73, 75\].
+-   **Índices de Ajuste Aproximados**: Desenvolvidos para complementar o teste chi-quadrado, atenuando sua sensibilidade ao tamanho da amostra.
 
     -   **Índices de Ajuste Incrementais (ou Relativos)**: Avaliam a melhoria do ajuste do modelo do usuário em relação ao modelo de linha de base.
-        -   **CFI (Comparative Fit Index)**: Varia de 0 a 1. Valores **maiores que 0.90 (conservadoramente 0.95) indicam bom ajuste** \[69, 76, 77\]. Quanto mais próximo de 1, melhor o ajuste \[77, 78\].
-        -   **TLI (Tucker-Lewis Index)**: Também varia de 0 a 1 (valores maiores que 1 são arredondados para 1). Valores **maiores que 0.90 indicam bom ajuste** \[69, 76, 79\]. O TLI utiliza a "chi-quadrado relativa" ($\chi^2/df$), onde $\chi^2/df = 1$ indica ajuste perfeito, e valores acima de 2 ou 5 podem indicar ajuste inadequado \[77\].
+    -   **CFI (Comparative Fit Index)**: Varia de 0 a 1. Valores **maiores que 0.90 (conservadoramente 0.95) indicam bom ajuste**. Quanto mais próximo de 1, melhor o ajuste.
+    -   **TLI (Tucker-Lewis Index)**: Também varia de 0 a 1 (valores maiores que 1 são arredondados para 1). Valores **maiores que 0.90 indicam bom ajuste**. O TLI utiliza a "chi-quadrado relativa" ($\chi^2/df$), onde $\chi^2/df = 1$ indica ajuste perfeito, e valores acima de 2 ou 5 podem indicar ajuste inadequado.
     -   **Índices de Ajuste Absolutos**: Avaliam o ajuste do modelo diretamente em relação aos dados observados, sem comparação com um modelo de linha de base.
-        -   **RMSEA (Root Mean Square Error of Approximation)**: Mede o erro de aproximação. Valores $\le 0.05$ indicam um ajuste próximo, entre $0.05$ e $0.08$ indicam um ajuste razoável, e $\ge 0.10$ indicam um ajuste ruim \[69, 76, 80\].
+    -   **RMSEA (Root Mean Square Error of Approximation)**: Mede o erro de aproximação. Valores $\le 0.05$ indicam um ajuste próximo, entre $0.05$ e $0.08$ indicam um ajuste razoável, e $\ge 0.10$ indicam um ajuste ruim.
 
--   **Índice de Modificação (MI)**: É um teste de qui-quadrado de 1 grau de liberdade que avalia o quanto o chi-quadrado do modelo mudaria se um parâmetro específico fosse incluído \[81-83\]. MIs elevados sugerem um grande impacto na melhoria do ajuste.
+-   **Índice de Modificação (MI)**: É um teste de qui-quadrado de 1 grau de liberdade que avalia o quanto o chi-quadrado do modelo mudaria se um parâmetro específico fosse incluído. MIs elevados sugerem um grande impacto na melhoria do ajuste.
 
-    -   **Cuidado**: A modificação do modelo com base exclusivamente no MI **deve ser feita com justificativa teórica**, para evitar a superestimação do ajuste e o aumento do Erro Tipo I (falsos positivos) \[84-87\].
+    -   **Cuidado**: A modificação do modelo com base exclusivamente no MI **deve ser feita com justificativa teórica**, para evitar a superestimação do ajuste e o aumento do Erro Tipo I (falsos positivos).
 
 # Aplicações do SEM na Economia
 
-O SEM, com sua capacidade de modelar relações complexas e variáveis latentes, tem diversas aplicações \[88\].
+O SEM, com sua capacidade de modelar relações complexas e variáveis latentes, tem diversas aplicações.
 
 ## Exemplos de Aplicações
 
-Dois exemplos clássicos de aplicação são \[89-91\]: \* **Modelo de Realização de Status Socioeconômico**: Um modelo da teoria da estratificação social que investiga como a origem socioeconômica (variáveis como escolaridade dos pais e status socioeconômico da ocupação do pai) influencia o destino socioeconômico (medido por variáveis como escolaridade do próprio indivíduo, status socioeconômico da ocupação e rendimento do trabalho) \[92-96\]. Este modelo é relevante para entender a **transmissão intergeracional da desigualdade**, muitas vezes revelando que os efeitos indiretos são mais proeminentes que os diretos \[93, 94, 96\]. \* **Modelo de Determinação do Índice de Gestão Descentralizada Municipal (IGD-M)**: Aplicado na área de políticas sociais, este modelo busca explicar os fatores que determinam a qualidade da gestão de programas sociais em nível municipal. Pode incluir variáveis como renda per capita, PIB per capita e a proporção de beneficiários de programas sociais, revelando a dependência municipal de recursos externos e a complexa relação entre desenvolvimento econômico e qualidade da gestão social \[97-101\].
+Dois exemplos clássicos de aplicação são:  
+
+1) **Modelo de Realização de Status Socioeconômico**: Um modelo da teoria da estratificação social que investiga como a origem socioeconômica (variáveis como escolaridade dos pais e status socioeconômico da ocupação do pai) influencia o destino socioeconômico (medido por variáveis como escolaridade do próprio indivíduo, status socioeconômico da ocupação e rendimento do trabalho). Este modelo é relevante para entender a **transmissão intergeracional da desigualdade**, muitas vezes revelando que os efeitos indiretos são mais proeminentes que os diretos . 
+
+**Modelo de Determinação do Índice de Gestão Descentralizada Municipal (IGD-M)**: Aplicado na área de políticas sociais, este modelo busca explicar os fatores que determinam a qualidade da gestão de programas sociais em nível municipal. Pode incluir variáveis como renda per capita, PIB per capita e a proporção de beneficiários de programas sociais, revelando a dependência municipal de recursos externos e a complexa relação entre desenvolvimento econômico e qualidade da gestão social.
 
 ## Hands-on: Aplicação do SEM em Software Estatístico
 
-A aplicação prática do SEM é comumente realizada em softwares estatísticos. O pacote **`lavaan` no R** é amplamente utilizado por ser **gratuito, de código aberto e relativamente fácil de usar** \[34, 102\]. Outros softwares incluem Mplus, EQS, SAS PROC CALIS e o próprio `sem` do Stata \[34, 103\].
+A aplicação prática do SEM é comumente realizada em softwares estatísticos. O pacote **`lavaan` no R** é amplamente utilizado por ser **gratuito, de código aberto e relativamente fácil de usar**. O **STATA** também emprega a aboradagem por meio do comando `SEM`.
 
-A sintaxe no `lavaan` é intuitiva \[32\]: \* `~`: Usado para **previsão** (regressão), onde o resultado observado é previsto por preditores observados (e.g., `y ~ x`) \[32\]. \* `=~`: Usado para **indicadores** em modelos de mensuração, ligando uma variável latente aos seus indicadores observados (e.g., `f =~ q + r + s`) \[32, 104\]. \* `~~`: Usado para **covariância** (e.g., `x ~~ x` para variância, `x ~~ y` para covariância) \[32\]. \* `~1`: Usado para estimar o **intercepto** ou média de uma variável (e.g., `x ~ 1`) \[31, 32\].
+A sintaxe no `lavaan` é intuitiva: 
+
+`~`: Usado para **previsão** (regressão), onde o resultado observado é previsto por preditores observados (e.g., `y ~ x`). 
+
+`=~`: Usado para **indicadores** em modelos de mensuração, ligando uma variável latente aos seus indicadores observados (e.g., `f =~ q + r + s`). 
+
+`~~`: Usado para **covariância** (e.g., `x ~~ x` para variância, `x ~~ y` para covariância). 
+
+`~1`: Usado para estimar o **intercepto** ou média de uma variável (e.g., `x ~ 1`).
+
+
+```{r}
+#| message: false
+#| warning: false
+
+library("lavaan")
+library("lavaanPlot")
+
+data("PoliticalDemocracy")
+
+m1 <- 'y1 ~ 1 + x1 + x2 + x3'
+
+fit1 <- sem(m1, data=PoliticalDemocracy)
+```
+Os resultados obtidos são: 
+```{r}
+#| echo: true
+summary(fit1)
+```
+
+
+```{r}
+#| echo: true
+lavaanPlot(model = fit1, 
+           node_options = list(shape = "box", fontname = "Helvetica"), 
+           edge_options = list(color = "grey"), 
+           coefs = TRUE)
+```
 
 ## Análise e Interpretação dos Parâmetros Estimados
 
