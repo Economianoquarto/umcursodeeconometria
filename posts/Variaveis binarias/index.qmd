@@ -5,9 +5,10 @@ date: "2025-07-22"
 categories: [Aulas]
 image: "thumbnail.jpg"
 ---
+# Descrição
+Este material aborda o uso de variáveis binárias como regressores
 
 # Introdução
-
 
 Variáveis Binárias
 

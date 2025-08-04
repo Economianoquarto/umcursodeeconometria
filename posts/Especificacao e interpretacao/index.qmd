@@ -6,6 +6,10 @@ categories: [Aulas]
 image: "thumbnail.jpg"
 ---
 
+# Descrição
+
+Este material trata de especificação e interpretação dos modelos de regressão linear
+
 # Introdução
 
 Especificação e Interpretação

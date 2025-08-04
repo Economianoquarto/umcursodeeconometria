@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">Sobre este Blog</a>
+    <a class="nav-link" href="../../about.html">Plano de Curso</a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
@@ -209,23 +209,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Descrição</h1>
 <p>Este material aborda os Modelos de Equações Estruturais (MEE) ou <em>Structural Equation Model</em> (SEM)</p>
 </section>
+<section id="plano-de-aula" class="level1">
+<h1>Plano de aula</h1>
+<p><a href="Plano_de_Aula_tema_8.pdf" target="_blank">Visualizar Plano de Aula Completo</a></p>
+</section>
 <section id="introdução" class="level1">
 <h1>Introdução</h1>
 <section id="o-que-é-o-sem" class="level2">
 <h2 class="anchored" data-anchor-id="o-que-é-o-sem">O que é o SEM?</h2>
-<p>A Modelagem de Equações Estruturais (SEM) é uma técnica estatística multivariada extremamente poderosa usada para testar e estimar relações de causalidade entre múltiplas variáveis. Ela combina aspectos da análise fatorial (que lida com variáveis latentes, ou seja, conceitos não observáveis diretamente, como “satisfação” ou “inteligência”) e da análise de regressão múltipla (que analisa as relações de dependência entre variáveis).</p>
+<p>A Modelagem de Equações Estruturais (SEM) é uma metodologia para testar e estimar relações de causalidade entre múltiplas variáveis.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Observação Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>O SEM pode ser entendido como uma combinação de 2 técnicas e trabalha essencialmente com 2 tipos de variáveis</strong></p>
+</div>
+</div>
+<ul>
+<li><strong>Das técnicas</strong>: O SEM pode ser visto como uma combinação da:</li>
+</ul>
+<ol type="1">
+<li><p><strong>Análise fatorial</strong>, que busca mesurar <strong>variáveis latentes</strong> por meio de variáveis observadas;</p></li>
+<li><p><strong>Análise de regressão</strong>, que analisa as inter-relações das variáveis.</p></li>
+</ol>
+<section id="sobre-a-análise-fatorial" class="level3">
+<h3 class="anchored" data-anchor-id="sobre-a-análise-fatorial">Sobre a Análise Fatorial</h3>
+<p>A análise fatorial pode ser dividida em dois tipos principais: exploratória e confirmatória.</p>
+<ul>
+<li><p>A <strong>Análise Fatorial Exploratória</strong> é utilizada quando o pesquisador não possui uma teoria pré-existente forte ou uma hipótese clara sobre a estrutura subjacente de um conjunto de variáveis. O objetivo da AFE é identificar e entender os traços latentes (também chamados de fatores ou construtos) que podem explicar as correlações observadas entre um grande número de variáveis manifestas (itens de um questionário, por exemplo)</p></li>
+<li><p><strong>A análise fatorial confirmatória</strong> toma emprestados muitos dos mesmos conceitos da análise fatorial exploratória, exceto que, em vez de deixar os dados nos dizerem a estrutura fatorial, nós pré-determinamos a estrutura fatorial. É geralmente baseada em pesquisas anteriores, teorias estabelecidas ou no próprio resultado de uma AFE prévia..</p></li>
+</ul>
+<p><strong>A análise fatorial confirmatória - ou confirmatory factor analysis (CFA) - participa frequentemente da abordagem guarda-chuva do SEM</strong></p>
 <p>Um modelo SEM é geralmente representado por um diagrama que mostra as relações hipotéticas entre: <strong>Variáveis Latentes</strong> e <strong>Variáveis Observadas</strong></p>
 <ul>
 <li><p><strong>Variáveis Latentes</strong>: Conceitos abstratos que não podem ser medidos diretamente (ex: bem-estar, inteligência, burnout).</p></li>
 <li><p><strong>Variáveis Observadas (ou Indicadores)</strong>: Dados que podem ser medidos diretamente e que servem como indicadores das variáveis latentes (ex: respostas a perguntas de um questionário).</p></li>
 </ul>
-<p>O SEM pode ser visto como uma <strong>combinação de análise fatorial e regressão</strong></p>
-<p>A análise fatorial pode ser dividida em dois tipos principais: exploratória e confirmatória.</p>
-<ul>
-<li><p><strong>A análise fatorial exploratória</strong>, também conhecida como AFE, como o nome sugere, é uma ferramenta exploratória para entender as traços latentes (atributos psicológicos) subjacentes de uma escala desconhecida.</p></li>
-<li><p><strong>A análise fatorial confirmatória</strong> toma emprestados muitos dos mesmos conceitos da análise fatorial exploratória, exceto que, em vez de deixar os dados nos dizerem a estrutura fatorial, nós pré-determinamos a estrutura fat orial e verificamos a estrutura latente de uma escala previamente desenvolvida.</p></li>
-</ul>
-<p><strong>A análise fatorial confirmatória - ou confirmatory factor analysis (CFA) - participa frequentemente do abordagem guarda-chuva do SEM</strong></p>
+</section>
 </section>
 <section id="por-que-utilizar-o-sem" class="level2">
 <h2 class="anchored" data-anchor-id="por-que-utilizar-o-sem">Por que utilizar o SEM?</h2>
@@ -362,53 +388,106 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 </section>
-<section id="estimação-máxima-verossimilhança-e-teste-de-modelos-goodness-of-fit" class="level2">
-<h2 class="anchored" data-anchor-id="estimação-máxima-verossimilhança-e-teste-de-modelos-goodness-of-fit">Estimação (Máxima Verossimilhança) e Teste de Modelos (Goodness-of-Fit)</h2>
-<section id="estimação" class="level3">
-<h3 class="anchored" data-anchor-id="estimação">Estimação</h3>
-<p>No SEM, os modelos são tipicamente estimados utilizando o método de <strong>Máxima Verossimilhança (ML)</strong>. A ML busca os parâmetros que tornam a amostra observada mais provável, ou seja, maximiza a função de verossimilhança para determinar os parâmetros que têm maior probabilidade de produzir os dados observados. É importante notar que, embora os coeficientes de regressão de uma estimação por Mínimos Quadrados Ordinários (MQO) sejam equivalentes aos da Máxima Verossimilhança, as <strong>variâncias residuais podem diferir ligeiramente</strong> devido às diferentes bases de cálculo (divisão por <span class="math inline">\(N-k\)</span> para MQO e <span class="math inline">\(N\)</span> para ML).</p>
-<p>O componente mais essencial de um modelo de equações estruturais é a <strong>matriz de covariância</strong>. O objetivo do SEM é <strong>reproduzir a matriz de covariância da população (</strong><span class="math inline">\(\Sigma\)</span>) usando os parâmetros que o modelo hipotetiza (<span class="math inline">\(\Sigma(\theta)\)</span>), conhecida como matriz de covariância implicada pelo modelo. Se o modelo se ajusta perfeitamente, então <span class="math inline">\(\Sigma = \Sigma(\theta)\)</span>.</p>
-</section>
-<section id="identificação-do-modelo" class="level3">
-<h3 class="anchored" data-anchor-id="identificação-do-modelo">Identificação do Modelo</h3>
-<p>A identificação de um modelo SEM é crucial para garantir que os parâmetros possam ser estimados de forma única. Modelos podem ser classificados como:</p>
-<ul>
-<li><p><strong>Sub-identificados</strong>: O número de valores conhecidos é menor que o número de parâmetros livres (<span class="math inline">\(df &lt; 0\)</span>). <strong>Não há solução única para a estimação</strong>.</p></li>
-<li><p><strong>Justamente Identificados (ou Saturados)</strong>: O número de valores conhecidos é igual ao número de parâmetros livres (<span class="math inline">\(df = 0\)</span>). <strong>O modelo se ajusta perfeitamente aos dados</strong>.Modelos de regressão linear simples e múltipla são exemplos de modelos saturados .</p></li>
-<li><p><strong>Sobre-identificados</strong>: O número de valores conhecidos é maior que o número de parâmetros livres (<span class="math inline">\(df &gt; 0\)</span>). <strong>O modelo não se ajusta perfeitamente, mas permite a avaliação da qualidade do ajuste</strong>. <strong>Modelos sobre-identificados são considerados “bons”</strong>, pois permitem avaliar o ajuste do modelo .</p></li>
-</ul>
-<p>Para modelos de análise fatorial (medida), a identificação do fator é particularmente importante, pois variáveis latentes não são observadas diretamente. Para um modelo com três ou mais indicadores, existem duas abordagens principais para identificação:</p>
+<section id="estimação-identificação-e-teste-de-modelos-goodness-of-fit" class="level2">
+<h2 class="anchored" data-anchor-id="estimação-identificação-e-teste-de-modelos-goodness-of-fit">Estimação, Identificação e Teste de Modelos (Goodness-of-Fit)</h2>
+<p>Para entender os conceitos de estimação, identificação e teste de ajuste de modelos tomaremos como exemplo um modelo de mensuração.</p>
+<section id="o-modelo-de-mensuração" class="level3">
+<h3 class="anchored" data-anchor-id="o-modelo-de-mensuração">O modelo de mensuração</h3>
+<p>O <strong>modelo de mensuração</strong> ou modelo de análise fatorial é essencialmente um modelo de regressão linear onde o preditor principal, o fator, é latente ou não observado. Para um único <em>item</em>, o modelo de análise fatorial é:</p>
+<p><span class="math display">\[y_1 = \tau_1 + \lambda_1\eta + \epsilon_1\]</span></p>
+<p>onde <span class="math inline">\(\tau_1\)</span> é o intercepto do primeiro item e <span class="math inline">\(\lambda_1\)</span> é a carga ou peso de regressão do primeiro fator no primeiro item, e <span class="math inline">\(\epsilon_1\)</span> é o resíduo para o primeiro item. Existem duas diferenças principais entre o modelo de análise fatorial e a regressão linear:</p>
 <ul>
 <li><ol type="1">
-<li><strong>Método do Marcador (Marker Method)</strong>: Fixa a <strong>primeira carga fatorial de cada fator em 1</strong>. Este é o método padrão no <code>lavaan</code> .</li>
+<li>A primeira e mais importante é que o preditor ou fator, <span class="math inline">\(\eta\)</span> (“eta”), não é observado, enquanto em uma regressão linear os preditores são observados.</li>
 </ol></li>
 <li><ol start="2" type="1">
-<li><strong>Método de Padronização da Variância (Variance Standardization Method)</strong>: Fixa a <strong>variância de cada fator em 1</strong>, mas estima livremente todas as cargas fatoriais . Este método é considerado mais padronizado e útil para interpretação.</li>
+<li>A análise fatorial tende a ser um modelo multivariado: vários itens (resultados) por indivíduos)</li>
 </ol></li>
 </ul>
+<p>Podemos representar um modelo mensuração (com 3 itens) como uma equação matricial:</p>
+<p><span class="math display">\[\begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = \begin{pmatrix} \tau_1 \\ \tau_2 \\ \tau_3 \end{pmatrix} + \begin{pmatrix} \lambda_1 \\ \lambda_2 \\ \lambda_3 \end{pmatrix} (\eta_1) + \begin{pmatrix} \epsilon_1 \\ \epsilon_2 \\ \epsilon_3 \end{pmatrix}\]</span></p>
+<p>Vamos definir cada um dos termos no modelo:</p>
+<ul>
+<li><span class="math inline">\(\tau\)</span> (“tau”) os <strong>interceptos</strong> ou médias dos itens</li>
+<li><span class="math inline">\(\lambda\)</span> (“lambda”) as <strong>cargas</strong>, que podem ser interpretadas como a correlação do item com o fator</li>
+<li><span class="math inline">\(\eta\)</span> (“eta”), o preditor latente dos itens, ou seja, o <strong>fator</strong></li>
+<li><span class="math inline">\(\epsilon\)</span> (“epsilon”) os <strong>resíduos</strong> do modelo fatorial, o que sobra depois de considerar o fator ou o que explica o item além do fator</li>
+</ul>
+<p>O índice refere-se ao número do item. Assim, por exemplo, <span class="math inline">\(\tau_1\)</span> significa o intercepto do primeiro item, <span class="math inline">\(\lambda_2\)</span> é a carga do segundo item com o fator e <span class="math inline">\(\epsilon_3\)</span> é o resíduo do terceiro item, após considerar o fator.</p>
+</section>
+</section>
+<section id="a-matriz-de-covariância-implícita-no-modelo" class="level2">
+<h2 class="anchored" data-anchor-id="a-matriz-de-covariância-implícita-no-modelo">A Matriz de Covariância Implícita no Modelo</h2>
+<p>Historicamente, a análise fatorial é usada para responder à pergunta: quanta <strong>variância</strong> comum é compartilhada entre os itens? Esta matriz de variância-covariância pode ser descrita usando a <strong>matriz de covariância implícita no modelo</strong> <span class="math inline">\(\Sigma(\theta_{y})\)</span>. Note que isso contrasta com a <strong>matriz de covariância populacional observada</strong> <span class="math inline">\(\Sigma\)</span>, que vem apenas dos dados. A fórmula para a matriz de covariância implícita no modelo é:</p>
+<p><span class="math display">\[\Sigma(\theta_{y}) = \Lambda\Psi\Lambda' + \Theta_\epsilon\]</span></p>
+<p>A seguir, a descrição de cada <strong>parâmetro</strong>, definido como um termo no modelo a ser estimado:</p>
+<ul>
+<li><span class="math inline">\(\Lambda\)</span> (“lambda”) matriz de <strong>cargas fatoriais</strong> (consistindo dos mesmos <span class="math inline">\(\lambda\)</span>’s do modelo de mensuração)</li>
+<li><span class="math inline">\(\Psi\)</span> (“psi”) matriz de <strong>variância-covariância dos fatores latentes</strong> (ou seja, variância de <span class="math inline">\(\eta\)</span>; para um fator, é um escalar)</li>
+<li><span class="math inline">\(\Theta_\epsilon\)</span> (“theta-epsilon”) matriz de <strong>variância-covariância dos resíduos</strong></li>
+</ul>
+<p>As dimensões desta matriz correspondem às mesmas da matriz de covariância observada <span class="math inline">\(\Sigma\)</span>; para três itens, é 3x3. Lembre-se que a matriz de covariância do modelo pode ser definida pelo seguinte:</p>
+<p>No caso de três itens e um fator:</p>
+<p><span class="math display">\[\Sigma(\theta_y) = \begin{pmatrix} \lambda_1 \\ \lambda_2 \\ \lambda_3 \end{pmatrix} (\psi_{11}) \begin{pmatrix} \lambda_1 &amp; \lambda_2 &amp; \lambda_3 \end{pmatrix} + \begin{pmatrix} \theta_{11} &amp; \theta_{12} &amp; \theta_{13} \\ \theta_{21} &amp; \theta_{22} &amp; \theta_{23} \\ \theta_{31} &amp; \theta_{32} &amp; \theta_{33} \end{pmatrix}\]</span></p>
+<p>Note que as cargas <span class="math inline">\(\lambda\)</span> são os mesmos parâmetros compartilhados entre o modelo de mensuração e o a matriz de covariância implícita. Isso significa que os únicos novos parâmetros envolvem <span class="math inline">\(\Psi\)</span> e <span class="math inline">\(\Theta_\epsilon\)</span>, que são as matrizes de covariância dos fatores latentes e dos erros residuais, respectivamente.</p>
+<p>Usualmente negligenciamos os interceptos (<span class="math inline">\(\tau\)</span>'s) do modelo estrutural (raramente possui um interpretação útil). Para isso, o pesquisador padroniza os itens (tira a média e divide pelo desvio-padrão).</p>
+</section>
+<section id="valores-conhecidos-parâmetros-graus-de-liberdade-e-identificação" class="level2">
+<h2 class="anchored" data-anchor-id="valores-conhecidos-parâmetros-graus-de-liberdade-e-identificação">Valores Conhecidos, Parâmetros, Graus de Liberdade e Identificação</h2>
+<p>O conceito de parâmetro fixo ou livre é essencial na CFA (Análise Fatorial Confirmatória). O número total de parâmetros em um modelo CFA é determinado pelo número de <strong>valores conhecidos</strong> em sua matriz de variância-covariância populacional <span class="math inline">\(\Sigma\)</span>, dada pela fórmula <span class="math inline">\(p(p+1)/2\)</span>, onde <span class="math inline">\(p\)</span> é o número de itens em sua pesquisa. Para obter a matriz de covariância amostral <span class="math inline">\(S = \hat{\Sigma}\)</span>, que é uma estimativa da matriz de covariância populacional <span class="math inline">\(\Sigma\)</span>, use o comando <code>cov</code> no <code>R</code>.</p>
+<p>As células fora da diagonal em <span class="math inline">\(S\)</span> correspondem às <strong>covariâncias amostrais</strong> entre dois pares de itens; e as células diagonais em <span class="math inline">\(S\)</span> correspondem à <strong>variância amostral</strong> de cada item.</p>
+<p>Como as covariâncias são duplicadas, o número de parâmetros livres na CFA é determinado pelo número de variâncias e covariâncias <strong>únicas</strong>. Com três itens, o número de valores conhecidos é <span class="math inline">\(3(4)/2 = 6\)</span>.</p>
+<p>Os valores conhecidos servem como a restrição principal em termos de quantos parâmetros <strong>totais</strong> podemos estimar. Para simplificar, vamos assumir que o número total de parâmetros vem <strong>apenas</strong> da matriz de covariância implícita no modelo. Dado que temos 6 valores conhecidos, quantos parâmetros totais (únicos) temos da matriz de covariância implícita no modelo (com 3 itens e 1 fator latente)?</p>
+<p><span class="math display">\[\Sigma(\theta) = \begin{pmatrix} \lambda_1 \\ \lambda_2 \\ \lambda_3 \end{pmatrix} (\psi_{11}) \begin{pmatrix} \lambda_1 &amp; \lambda_2 &amp; \lambda_3 \end{pmatrix} + \begin{pmatrix} \theta_{11} &amp; \theta_{12} &amp; \theta_{13} \\ \theta_{21} &amp; \theta_{22} &amp; \theta_{23} \\ \theta_{31} &amp; \theta_{32} &amp; \theta_{33} \end{pmatrix}\]</span></p>
+<p>Se fôssemos estimar cada parâmetro na matriz de covariância implícita no modelo, haveria 3 <span class="math inline">\(\lambda\)</span>'s, 1 <span class="math inline">\(\psi\)</span>, e 6 <span class="math inline">\(\theta\)</span>'s, o que nos dá um total de 10 parâmetros, mas temos apenas 6 valores conhecidos! A solução é permitir <strong>parâmetros fixos</strong>, que são parâmetros pré-determinados.</p>
+<p>N<span class="math inline">\(^{o}\)</span> <strong>de parâmetros livres</strong> = N<span class="math inline">\(^{o}\)</span> <strong>de parâmetros de interesse</strong> - N<span class="math inline">\(^{o}\)</span> <strong>de parâmetros fixos</strong>.</p>
+<p><strong>df</strong> = N<span class="math inline">\(^{o}\)</span> <strong>de valores conhecidos</strong> - N<span class="math inline">\(^{o}\)</span><strong>de parâmetros livres</strong></p>
+<ul>
+<li><p>Os modelos são <strong>justamente identificados</strong> ou <strong>saturados</strong> com zero graus de liberdade. Isso significa que o número de parâmetros livres ocupa todos os valores conhecidos em <span class="math inline">\(\Sigma\)</span>. Isso é comumente visto em modelos de regressão linear, e a principal desvantagem é que não podemos avaliar o ajuste do modelo porque ele supostamente é o melhor que podemos fazer.</p></li>
+<li><p>Um <strong>modelo subidentificado</strong> significa que o número de valores conhecidos é menor que o número de parâmetros livres, o que é indesejável.</p></li>
+<li><p>Em <strong>modelos superidentificados</strong>, o número de valores conhecidos é maior que o número de parâmetros livres. Modelos superidentificados nos permitem avaliar o ajuste do modelo (a ser discutido posteriormente). Para resumir:</p></li>
+<li><p>df negativo, valores conhecidos &lt; parametros livres</p></li>
+<li><p>df = 0, valores conhecidos = parametros livres</p></li>
+<li><p>df positivo, valores conhecidos &gt; parametros livres</p></li>
+</ul>
+<p>Usualmente existem 2 formas de garantir a identificação do modelo:</p>
+<ul>
+<li><ol type="1">
+<li><strong>Método do Marcador</strong>: Fixa a <strong>primeira carga fatorial de cada fator em 1</strong>. Este é o método padrão no <code>lavaan</code> .</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li><strong>Método de Padronização da Variância </strong>: Fixa a <strong>variância de cada fator em 1</strong>, mas estima livremente todas as cargas fatoriais.</li>
+</ol></li>
+</ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Observação Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Se for do interesse do pesquisador encontrar os valores dos interceptos ele terá problema de identificação?</strong></p>
+<p><strong>Resposta</strong>: Não. Apesar dos parâmetros de interesse aumentarem, o número de valores conhecidos também ira aumentar, pois a matriz de variância-covariância amostral devará incorporar os vetores de 1's dos interceptos</p>
+</div>
+</div>
+<section id="estimação" class="level3">
+<h3 class="anchored" data-anchor-id="estimação">Estimação</h3>
+<p>No SEM, os modelos são tipicamente estimados utilizando o método de <strong>Máxima Verossimilhança (ML)</strong>. A ML busca os parâmetros que tornam a amostra observada mais provável, ou seja, maximiza a função de verossimilhança para determinar os parâmetros que têm maior probabilidade de produzir os dados observados.</p>
+<p>É importante notar que, embora os coeficientes de regressão de uma estimação por Mínimos Quadrados Ordinários (MQO) sejam equivalentes aos da Máxima Verossimilhança, as estimativas das variâncias do modelo diferem entre os 2 estimadores.</p>
+<p>O componente mais essencial de um modelo de equações estruturais é a <strong>matriz de covariância</strong>. O objetivo do SEM é <strong>reproduzir a matriz de covariância da população</strong> (<span class="math inline">\(\Sigma\)</span>), usando os parâmetros que o modelo hipotetiza (<span class="math inline">\(\Sigma(\theta)\)</span>), pela matriz de covariância implicita do modelo. Se o modelo se ajusta perfeitamente, então <span class="math inline">\(\Sigma = \Sigma(\theta)\)</span>.</p>
+<p>Na prática a função máxima verossilhança busca os valores dos parâmetros de interesse que maximizam a probabilidade de que a matriz de covariância amostral (<span class="math inline">\(\Sigma\)</span>) coincida com a matriz de covariância implicita do modelo (<span class="math inline">\(\Sigma(\theta)\)</span>).</p>
 </section>
 <section id="estatísticas-de-qualidade-do-ajuste-model-fit-statistics" class="level3">
 <h3 class="anchored" data-anchor-id="estatísticas-de-qualidade-do-ajuste-model-fit-statistics">Estatísticas de Qualidade do Ajuste (Model Fit Statistics)</h3>
 <p>As estatísticas de qualidade do ajuste avaliam o quão bem o modelo populacional se ajusta aos dados observados. A hipótese nula no SEM é que <strong>a matriz de covariância implicada pelo modelo (</strong><span class="math inline">\(\Sigma(\theta)\)</span>) é igual à matriz de covariância da população (<span class="math inline">\(\Sigma\)</span>) (<span class="math inline">\(H_0: \Sigma(\theta)=\Sigma\)</span>). Rejeitar esta hipótese é geralmente <strong>indesejável</strong> no SEM, pois significaria que o modelo proposto não se ajusta bem aos dados.</p>
 <ul>
 <li><p><strong>Covariância Residual</strong>: A diferença entre a matriz de covariância amostral (<span class="math inline">\(S\)</span>) e a matriz de covariância implicada pelo modelo (<span class="math inline">\(\Sigma(\hat{\theta})\)</span>), ou seja, <span class="math inline">\(S - \Sigma(\hat{\theta})\)</span>. Valores próximos de zero indicam um bom ajuste.</p></li>
-<li><p><strong>Teste Chi-quadrado do Modelo (</strong><span class="math inline">\(\chi^2\)</span>): É a estatística de teste principal que mede a discrepância entre a matriz de covariância observada e a matriz de covariância implicada pelo modelo [28, 66, 68, 69].</p>
+<li><p><strong>Teste Qui-quadrado do Modelo (</strong><span class="math inline">\(\chi^2\)</span>): É a estatística de teste principal que mede a discrepância entre a matriz de covariância observada e a matriz de covariância implicada pelo modelo.</p>
 <ul>
-<li>Um <strong>valor de chi-quadrado maior indica uma maior diferença</strong> (pior ajuste) entre as matrizes e, consequentemente, uma maior probabilidade de rejeitar a hipótese nula [68, 70].</li>
-<li><strong>Sensibilidade ao tamanho da amostra</strong>: O teste chi-quadrado é <strong>altamente sensível a amostras grandes</strong>. Em amostras grandes, é comum que o teste seja estatisticamente significativo mesmo para modelos com bom ajuste prático . Por isso, o chi-quadrado sozinho não deve ser o único critério de avaliação de ajuste.</li>
-</ul></li>
-<li><p><strong>Modelo de Linha de Base (Baseline Model)</strong>: Considerado o <strong>modelo de “pior ajuste”</strong>. Ele assume que não há covariância entre quaisquer variáveis, estimando apenas as variâncias de cada uma. Serve como ponto de comparação para os índices de ajuste incrementais.</p></li>
-<li><p><strong>Índices de Ajuste Aproximados</strong>: Desenvolvidos para complementar o teste chi-quadrado, atenuando sua sensibilidade ao tamanho da amostra.</p>
-<ul>
-<li><strong>Índices de Ajuste Incrementais (ou Relativos)</strong>: Avaliam a melhoria do ajuste do modelo do usuário em relação ao modelo de linha de base.</li>
-<li><strong>CFI (Comparative Fit Index)</strong>: Varia de 0 a 1. Valores <strong>maiores que 0.90 (conservadoramente 0.95) indicam bom ajuste</strong>. Quanto mais próximo de 1, melhor o ajuste.</li>
-<li><strong>TLI (Tucker-Lewis Index)</strong>: Também varia de 0 a 1 (valores maiores que 1 são arredondados para 1). Valores <strong>maiores que 0.90 indicam bom ajuste</strong>. O TLI utiliza a “chi-quadrado relativa” (<span class="math inline">\(\chi^2/df\)</span>), onde <span class="math inline">\(\chi^2/df = 1\)</span> indica ajuste perfeito, e valores acima de 2 ou 5 podem indicar ajuste inadequado.</li>
-<li><strong>Índices de Ajuste Absolutos</strong>: Avaliam o ajuste do modelo diretamente em relação aos dados observados, sem comparação com um modelo de linha de base.</li>
-<li><strong>RMSEA (Root Mean Square Error of Approximation)</strong>: Mede o erro de aproximação. Valores <span class="math inline">\(\le 0.05\)</span> indicam um ajuste próximo, entre <span class="math inline">\(0.05\)</span> e <span class="math inline">\(0.08\)</span> indicam um ajuste razoável, e <span class="math inline">\(\ge 0.10\)</span> indicam um ajuste ruim.</li>
-</ul></li>
-<li><p><strong>Índice de Modificação (MI)</strong>: É um teste de qui-quadrado de 1 grau de liberdade que avalia o quanto o chi-quadrado do modelo mudaria se um parâmetro específico fosse incluído. MIs elevados sugerem um grande impacto na melhoria do ajuste.</p>
-<ul>
-<li><strong>Cuidado</strong>: A modificação do modelo com base exclusivamente no MI <strong>deve ser feita com justificativa teórica</strong>, para evitar a superestimação do ajuste e o aumento do Erro Tipo I (falsos positivos).</li>
+<li>Um <strong>valor de qui-quadrado maior indica uma maior diferença</strong> (pior ajuste) entre as matrizes e, consequentemente, uma maior probabilidade de rejeitar a hipótese nula .</li>
 </ul></li>
 </ul>
 </section>
@@ -427,31 +506,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="hands-on-aplicação-do-sem-em-software-estatístico" class="level2">
 <h2 class="anchored" data-anchor-id="hands-on-aplicação-do-sem-em-software-estatístico">Hands-on: Aplicação do SEM em Software Estatístico</h2>
-<p>A aplicação prática do SEM é comumente realizada em softwares estatísticos. O pacote <strong><code>lavaan</code> no R</strong> é amplamente utilizado por ser <strong>gratuito, de código aberto e relativamente fácil de usar</strong>. O <strong>STATA</strong> também emprega a aboradagem por meio do comando <code>SEM</code>.</p>
+<p>A aplicação prática do SEM é comumente realizada em softwares estatísticos. O pacote <strong><code>lavaan</code> no R</strong> é amplamente utilizado por ser <strong>gratuito, de código aberto e relativamente fácil de usar</strong>. O <strong>STATA</strong> também emprega a aboradagem por meio do comando <code>sem</code>.</p>
 <p>A sintaxe no <code>lavaan</code> é intuitiva:</p>
 <p><code>~</code>: Usado para <strong>previsão</strong> (regressão), onde o resultado observado é previsto por preditores observados (e.g., <code>y ~ x</code>).</p>
 <p><code>=~</code>: Usado para <strong>indicadores</strong> em modelos de mensuração, ligando uma variável latente aos seus indicadores observados (e.g., <code>f =~ q + r + s</code>).</p>
 <p><code>~~</code>: Usado para <strong>covariância</strong> (e.g., <code>x ~~ x</code> para variância, <code>x ~~ y</code> para covariância).</p>
 <p><code>~1</code>: Usado para estimar o <strong>intercepto</strong> ou média de uma variável (e.g., <code>x ~ 1</code>).</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"lavaan"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"lavaanPlot"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"PoliticalDemocracy"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="st">'y1 ~ 1 + x1 + x2 + x3'</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>fit1 <span class="ot">&lt;-</span> <span class="fu">sem</span>(m1, <span class="at">data=</span>PoliticalDemocracy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>Os resultados obtidos são:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>lavaan 0.6-19 ended normally after 1 iteration
 
   Estimator                                         ML
   Optimization method                           NLMINB
-  Number of model parameters                         5
+  Number of model parameters                         4
 
   Number of observations                            75
 
@@ -469,53 +538,364 @@ Parameter Estimates:
 Regressions:
                    Estimate  Std.Err  z-value  P(&gt;|z|)
   y1 ~                                                
-    x1                1.807    0.861    2.098    0.036
-    x2                0.017    0.477    0.036    0.971
-    x3               -0.307    0.382   -0.805    0.421
+    x1                1.693    0.853    1.985    0.047
+    x2               -0.177    0.414   -0.427    0.669
 
 Intercepts:
                    Estimate  Std.Err  z-value  P(&gt;|z|)
-   .y1               -2.655    2.739   -0.970    0.332
+   .y1               -2.246    2.702   -0.831    0.406
 
 Variances:
                    Estimate  Std.Err  z-value  P(&gt;|z|)
-   .y1                5.733    0.936    6.124    0.000</code></pre>
+   .y1                5.782    0.944    6.124    0.000</code></pre>
+</div>
+</div>
+<p>Se quisermos visualizar o diagrama de caminho podemos usar o comando <code>lavaanPlot</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lavaanPlot</span>(<span class="at">model =</span> fit1, </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">node_options =</span> <span class="fu">list</span>(<span class="at">shape =</span> <span class="st">"box"</span>, <span class="at">fontname =</span> <span class="st">"Helvetica"</span>), </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>), </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="grViz html-widget html-fill-item" id="htmlwidget-2d2630800e616aa2bb7e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-2d2630800e616aa2bb7e">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; y1 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.69\"] x2->y1 [label = \"-0.18\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>Perceba que os valores do coeficientes estimados serão os mesmo que quando usamos o <code>lm</code>. Os estimativas dos erros-padrão dos coesficientes são diferentes, pois o comando <code>sem</code> utiliza outro estimador da variância do erro do modelo. <em>Lembre-se que o estimador da variância dos parâmetros é um função do estimador da variância do modelo</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fit1lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(y1 <span class="sc">~</span> x1 <span class="sc">+</span> x2, <span class="at">data=</span>PoliticalDemocracy)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit1lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = y1 ~ x1 + x2, data = PoliticalDemocracy)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-5.4361 -1.6303  0.3055  1.7073  4.6509 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept)  -2.2459     2.7582  -0.814   0.4182  
+x1            1.6931     0.8707   1.945   0.0557 .
+x2           -0.1768     0.4224  -0.418   0.6768  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2.454 on 72 degrees of freedom
+Multiple R-squared:  0.148, Adjusted R-squared:  0.1244 
+F-statistic: 6.256 on 2 and 72 DF,  p-value: 0.003126</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lavaanPlot</span>(<span class="at">model =</span> fit1, </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">node_options =</span> <span class="fu">list</span>(<span class="at">shape =</span> <span class="st">"box"</span>, <span class="at">fontname =</span> <span class="st">"Helvetica"</span>), </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>), </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="st">'</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="st">      y1 ~ 1 + x1 + x2</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="st">      y2 ~ 1 + x2 + x3</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="st">      x1~~x3</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="st">      '</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>fit2 <span class="ot">&lt;-</span> <span class="fu">sem</span>(m2, <span class="at">data=</span>PoliticalDemocracy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Os resultados obtidos são:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>lavaan 0.6-19 ended normally after 56 iterations
+
+  Estimator                                         ML
+  Optimization method                           NLMINB
+  Number of model parameters                        14
+
+  Number of observations                            75
+
+Model Test User Model:
+                                                      
+  Test statistic                               143.509
+  Degrees of freedom                                 4
+  P-value (Chi-square)                           0.000
+
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Regressions:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+  y1 ~                                                
+    x1                1.828    0.348    5.245    0.000
+    x2               -0.235    0.185   -1.271    0.204
+  y2 ~                                                
+    x2                0.439    0.293    1.499    0.134
+    x3                0.271    0.287    0.945    0.345
+
+Covariances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+  x1 ~~                                               
+    x3                0.812    0.150    5.407    0.000
+ .y1 ~~                                               
+   .y2                5.442    1.229    4.429    0.000
+
+Intercepts:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+   .y1               -2.647    1.992   -1.329    0.184
+   .y2                1.189    1.790    0.664    0.507
+    x1                5.054    0.084   60.127    0.000
+    x3                3.558    0.161   22.066    0.000
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+   .y1                5.784    0.945    6.124    0.000
+   .y2               14.456    2.361    6.124    0.000
+    x1                0.530    0.087    6.124    0.000
+    x3                1.950    0.318    6.124    0.000</code></pre>
+</div>
+</div>
+<p>O diagrama de trajetória nesse caso fica:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lavaanPlot</span>(<span class="at">model =</span> fit2, </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">node_options =</span> <span class="fu">list</span>(<span class="at">shape =</span> <span class="st">"box"</span>, <span class="at">fontname =</span> <span class="st">"Helvetica"</span>), </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>), </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-fa83c40e38fc01e62a35" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-fa83c40e38fc01e62a35">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.81\"] x2->y1 [label = \"0.02\"] x3->y1 [label = \"-0.31\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-5351b20b62881153aeaf" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-5351b20b62881153aeaf">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1; y2 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.83\"] x2->y1 [label = \"-0.24\"] x2->y2 [label = \"0.44\"] x3->y2 [label = \"0.27\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
-</section>
-<section id="análise-e-interpretação-dos-parâmetros-estimados" class="level2">
-<h2 class="anchored" data-anchor-id="análise-e-interpretação-dos-parâmetros-estimados">Análise e Interpretação dos Parâmetros Estimados</h2>
-<p>A interpretação dos resultados de um modelo SEM envolve a análise de diferentes tipos de coeficientes e estatísticas:</p>
+<p>Para rodar um modelo de mensuração (exclusivamente):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="st">'</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="st">      ind60 =~ x1 + x2 + x3</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">      '</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>fit3 <span class="ot">&lt;-</span> <span class="fu">sem</span>(m3, <span class="at">data=</span>PoliticalDemocracy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>lavaan 0.6-19 ended normally after 22 iterations
+
+  Estimator                                         ML
+  Optimization method                           NLMINB
+  Number of model parameters                         6
+
+  Number of observations                            75
+
+Model Test User Model:
+                                                      
+  Test statistic                                 0.000
+  Degrees of freedom                                 0
+
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Latent Variables:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+  ind60 =~                                            
+    x1                1.000                           
+    x2                2.193    0.142   15.403    0.000
+    x3                1.824    0.153   11.883    0.000
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+   .x1                0.084    0.020    4.140    0.000
+   .x2                0.108    0.074    1.455    0.146
+   .x3                0.468    0.091    5.124    0.000
+    ind60             0.446    0.087    5.135    0.000</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lavaanPlot</span>(<span class="at">model =</span> fit3, </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">node_options =</span> <span class="fu">list</span>(<span class="at">shape =</span> <span class="st">"box"</span>, <span class="at">fontname =</span> <span class="st">"Helvetica"</span>), </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>), </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="grViz html-widget html-fill-item" id="htmlwidget-f611fdb5175ea4ea3c10" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-f611fdb5175ea4ea3c10">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3 \n node [shape = oval] \n ind60 \n \n edge [ color = grey ] \n  ind60->x1 [label = \"1\"] ind60->x2 [label = \"2.19\"] ind60->x3 [label = \"1.82\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="st">'</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="st">  # measurement model</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="st">    ind60 =~ x1 + x2 + x3</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="st">    dem60 =~ y1 + y2 + y3</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="st">    dem65 =~ y5 + y6 + y7</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="st">  # regressions</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="st">    dem60 ~ ind60</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="st">    dem65 ~ ind60 + dem60</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="st">  # residual correlations</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="st">    y5 ~~ y6</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="st">    y6 ~~ y7</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="st">    x1 ~~ x2</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="st">    x3 ~~ x2</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="st">'</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">sem</span>(model, <span class="at">data=</span>PoliticalDemocracy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: lavaan-&gt;lav_object_post_check():  
+   some estimated lv variances are negative</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit, <span class="at">standardized=</span><span class="cn">TRUE</span>, <span class="at">fit.measures=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>lavaan 0.6-19 ended normally after 54 iterations
+
+  Estimator                                         ML
+  Optimization method                           NLMINB
+  Number of model parameters                        25
+
+  Number of observations                            75
+
+Model Test User Model:
+                                                      
+  Test statistic                                36.487
+  Degrees of freedom                                20
+  P-value (Chi-square)                           0.013
+
+Model Test Baseline Model:
+
+  Test statistic                               541.665
+  Degrees of freedom                                36
+  P-value                                        0.000
+
+User Model versus Baseline Model:
+
+  Comparative Fit Index (CFI)                    0.967
+  Tucker-Lewis Index (TLI)                       0.941
+
+Loglikelihood and Information Criteria:
+
+  Loglikelihood user model (H0)              -1250.675
+  Loglikelihood unrestricted model (H1)      -1232.431
+                                                      
+  Akaike (AIC)                                2551.350
+  Bayesian (BIC)                              2609.287
+  Sample-size adjusted Bayesian (SABIC)       2530.493
+
+Root Mean Square Error of Approximation:
+
+  RMSEA                                          0.105
+  90 Percent confidence interval - lower         0.047
+  90 Percent confidence interval - upper         0.158
+  P-value H_0: RMSEA &lt;= 0.050                    0.057
+  P-value H_0: RMSEA &gt;= 0.080                    0.794
+
+Standardized Root Mean Square Residual:
+
+  SRMR                                           0.048
+
+Parameter Estimates:
+
+  Standard errors                             Standard
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Latent Variables:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+  ind60 =~                                                              
+    x1                1.000                               0.693    0.952
+    x2                2.042    0.200   10.185    0.000    1.415    0.943
+    x3                1.691    0.247    6.832    0.000    1.172    0.839
+  dem60 =~                                                              
+    y1                1.000                               2.287    0.878
+    y2                1.239    0.168    7.388    0.000    2.835    0.723
+    y3                1.009    0.141    7.158    0.000    2.307    0.708
+  dem65 =~                                                              
+    y5                1.000                               2.217    0.854
+    y6                1.127    0.163    6.917    0.000    2.498    0.746
+    y7                1.169    0.140    8.349    0.000    2.591    0.794
+
+Regressions:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+  dem60 ~                                                               
+    ind60             1.366    0.425    3.216    0.001    0.414    0.414
+  dem65 ~                                                               
+    ind60             0.696    0.253    2.749    0.006    0.218    0.218
+    dem60             0.870    0.106    8.229    0.000    0.898    0.898
+
+Covariances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+ .y5 ~~                                                                 
+   .y6               -0.628    0.523   -1.200    0.230   -0.628   -0.208
+ .y6 ~~                                                                 
+   .y7                0.184    0.745    0.247    0.805    0.184    0.042
+ .x1 ~~                                                                 
+   .x2               -0.004    0.105   -0.039    0.969   -0.004   -0.037
+ .x2 ~~                                                                 
+   .x3                0.123    0.147    0.835    0.404    0.123    0.325
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+   .x1                0.049    0.059    0.832    0.406    0.049    0.093
+   .x2                0.248    0.293    0.846    0.398    0.248    0.110
+   .x3                0.576    0.193    2.986    0.003    0.576    0.295
+   .y1                1.555    0.405    3.845    0.000    1.555    0.229
+   .y2                7.337    1.334    5.498    0.000    7.337    0.477
+   .y3                5.299    0.954    5.553    0.000    5.299    0.499
+   .y5                1.821    0.443    4.108    0.000    1.821    0.270
+   .y6                4.981    1.034    4.817    0.000    4.981    0.444
+   .y7                3.941    0.785    5.021    0.000    3.941    0.370
+    ind60             0.481    0.104    4.603    0.000    1.000    1.000
+   .dem60             4.334    0.972    4.459    0.000    0.829    0.829
+   .dem65            -0.073    0.371   -0.198    0.843   -0.015   -0.015</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lavaanPlot</span>(<span class="at">model =</span> fit, </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">node_options =</span> <span class="fu">list</span>(<span class="at">shape =</span> <span class="st">"box"</span>, <span class="at">fontname =</span> <span class="st">"Helvetica"</span>),</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">graph_options =</span> <span class="fu">list</span>(<span class="at">rankdir =</span> <span class="st">"LR"</span>),</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>),</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">stars =</span>  <span class="st">"regress"</span>,</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">covs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="grViz html-widget html-fill-item" id="htmlwidget-ebe3500fd5106125d875" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-ebe3500fd5106125d875">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1; y2; y3; y5; y6; y7 \n node [shape = oval] \n ind60; dem60; dem65 \n \n edge [ color = grey ] \n ind60->dem60 [label = \"1.37**\"] ind60->dem65 [label = \"0.7**\"] dem60->dem65 [label = \"0.87***\"] ind60->x1 [label = \"1\"] ind60->x2 [label = \"2.04\"] ind60->x3 [label = \"1.69\"] dem60->y1 [label = \"1\"] dem60->y2 [label = \"1.24\"] dem60->y3 [label = \"1.01\"] dem65->y5 [label = \"1\"] dem65->y6 [label = \"1.13\"] dem65->y7 [label = \"1.17\"] y6 -> y5 [label = \"-0.63\", dir = \"both\"] y7 -> y6 [label = \"0.18\", dir = \"both\"] x2 -> x1 [label = \"0\", dir = \"both\"] x3 -> x2 [label = \"0.12\", dir = \"both\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>Uma forma de analisar o ajuste do modelo é pelo qui-quadrado. A estatística desse teste é calculada a partir do <em>score</em> da função de máxima verossimilhança</p>
+<p>Quanto maior o valor do qui-quadrado, maior a diferença entre a matriz de covariância implícita da amostra <span class="math inline">\(\Sigma(\theta)\)</span> e a matriz de covariância observada da amostra <span class="math inline">\(S\)</span>, e maior a probabilidade de você rejeitar seu modelo. A hipótese nula é: <span class="math display">\[
+H_0: \Sigma(\theta) = \Sigma
+\]</span> <span class="math display">\[
+H_1: \Sigma(\theta) \ne \Sigma
+\]</span></p>
+<p>No nosso exemplo acima rejeita-se a hipótese nula a 5% (p-valor de 0,023 e estatística do teste de 37,157)</p>
+<p>Como no teste qui-quadrado, a estatística é computada pelo produto do número de observações e do <em>score</em> da função de máxima verossimilhança, dizemos que é um teste sensivel ao tamanho da amostra (amostra muito tendem a gerar estatísticas do teste maiores e p-valores menores).</p>
+<p>Por esse motivo é comum a utilização do medidas de ajuste do modelo comparativas. O <code>lavaan</code> reporta 2:</p>
+<ol type="1">
+<li>Comparative Fit Index (CFI)</li>
+</ol>
 <ul>
-<li><strong>Coeficientes de Regressão (Caminhos Estruturais)</strong>:
-<ul>
-<li><strong>Caminhos</strong> <span class="math inline">\(\Gamma\)</span> (Gamma): Representam a relação entre <strong>variáveis exógenas e variáveis endógenas</strong> (observadas ou latentes) [44, 105-107].</li>
-<li><strong>Caminhos</strong> <span class="math inline">\(B\)</span> (Beta): Representam a relação entre <strong>variáveis endógenas e outras variáveis endógenas</strong> (observadas ou latentes) [43, 44, 108, 109].</li>
-</ul></li>
-<li><strong>Cargas Fatoriais (Loadings,</strong> <span class="math inline">\(\Lambda\)</span>):
-<ul>
-<li>Indicam a <strong>associação específica entre os fatores (variáveis latentes) e suas variáveis observadas (indicadores)</strong> [33, 35, 37, 110].</li>
-<li>Em termos padronizados (similar a correlações), cargas fatoriais <strong>próximas de 0.8 são consideradas boas</strong>, enquanto valores próximos de 0.4 podem ser questionáveis [62]. Cargas elevadas (e.g., &gt; 0.70 ou 0.80) são geralmente desejáveis e indicam que as variáveis observadas convergem satisfatoriamente para formar o construto [111-113].</li>
-</ul></li>
-<li><strong>Variâncias e Covariâncias</strong>:
-<ul>
-<li><strong>Variância de variáveis exógenas (</strong><span class="math inline">\(\Phi\)</span>): A variância de uma variável exógena (observada ou latente) [105, 106].</li>
-<li><strong>Variância Residual de variáveis endógenas (</strong><span class="math inline">\(\Psi\)</span>): A variância não explicada da variável endógena após considerar a influência de seus preditores [105, 106, 114]. É o que “sobra” da previsão [115, 116].</li>
-<li><strong>Variância Residual de Indicadores (</strong><span class="math inline">\(\Theta\)</span>): No modelo de mensuração, é a variância não explicada dos indicadores após a influência do fator latente [39, 110].</li>
-<li>A presença de um “.” (ponto) antes do nome da variável na saída do <code>lavaan</code> geralmente indica uma variável endógena ou uma variância residual [114, 117].</li>
-</ul></li>
-<li><strong>Coeficientes Padronizados</strong>: Facilitam a interpretação e a comparação da magnitude dos efeitos entre diferentes variáveis, pois transformam as variáveis para uma mesma escala (desvios padrão) [9, 71].</li>
+<li>O teste compara a estatística do teste qui-quadrado entre 2 modelo: o modelo utilizado e o modelo <em>baseline</em>, isto é, aquele que não admite relação/covariância entre as variáveis (apenas variância). Seja <span class="math inline">\(\delta\)</span> = <span class="math inline">\(\chi^2 - df\)</span> a diferença entre a estatística qui-quadrado e graus de liberdade, o CFI é calculado por:</li>
 </ul>
+<p><span class="math display">\[
+CFI = \frac{\delta_{baseline}-\delta_{usado}}{\delta_{baseline}}
+\]</span> Quanto mais próximo o valor do CFI de 1 melhor o ajuste do modelo: no limite queremos minimizar a distância entre a diferença entre a matriz de covariância implícita da amostra <span class="math inline">\(\Sigma(\theta)\)</span> e a matriz de covariância observada da amostra <span class="math inline">\(S\)</span>, ou seja, <span class="math inline">\(\chi^2 \rightarrow 0\)</span> modelando todas as relações entre as variáveis, <span class="math inline">\(df \rightarrow 0\)</span></p>
+<ol start="2" type="1">
+<li>Tucker Lewis Index (TLI)</li>
+</ol>
+<ul>
+<li>O teste tem a mesma ideia do CFI, mas a ponderação pelos graus de liberdade é diferente. Seja <span class="math inline">\(\Delta\)</span> = <span class="math inline">\(\frac{\chi^2}{df}\)</span> a diferença entre a estatística qui-quadrado e graus de liberdade, o TLI é calculado por:</li>
+</ul>
+<p><span class="math display">\[
+TLI = \frac{\Delta_{baseline}-\Delta_{usado}}{\Delta_{baseline}-1}
+\]</span> Quanto mais próximo o valor do TLI de 1 melhor o ajuste do modelo</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Atividade
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Compute o TLI e o CFI na mão. Compara com os resultados obtidos no ‘lavann’</strong></p>
+</div>
+</div>
 </section>
 <section id="discussão-limitações-e-desafios-do-sem" class="level2">
 <h2 class="anchored" data-anchor-id="discussão-limitações-e-desafios-do-sem">Discussão: Limitações e Desafios do SEM</h2>
@@ -523,7 +903,7 @@ Variances:
 <ul>
 <li><strong>Requisito de Teoria Forte</strong>: O SEM é uma abordagem confirmatória, o que significa que ele exige uma <strong>sólida base teórica</strong> para a especificação do modelo inicial [13, 15]. O sucesso de uma análise SEM depende da adequação da teoria subjacente; <strong>erros teóricos ou conceituais não podem ser corrigidos apenas por análises estatísticas</strong> [119].</li>
 <li><strong>Desafio da Causalidade</strong>: Embora o SEM seja amplamente utilizado para análises causais [120, 121], estabelecer a causalidade definitiva requer a satisfação de três condições principais: associação estatística, precedência temporal e eliminação de causas concorrentes [122]. A última, em particular, é difícil de ser plenamente garantida com dados observacionais [123].</li>
-<li><strong>Sensibilidade ao Tamanho da Amostra</strong>: O teste chi-quadrado do modelo, um dos principais indicadores de ajuste, é <strong>muito sensível a amostras grandes</strong>, o que pode levar à sua rejeição mesmo para modelos bem ajustados na prática [68, 70-72]. Recomenda-se uma proporção de 20 observações para cada parâmetro estimado no modelo (<span class="math inline">\(N:q\)</span> rule) [124].</li>
+<li><strong>Sensibilidade ao Tamanho da Amostra</strong>: O teste qui-quadrado do modelo, um dos principais indicadores de ajuste, é <strong>muito sensível a amostras grandes</strong>, o que pode levar à sua rejeição mesmo para modelos bem ajustados na prática [68, 70-72]. Recomenda-se uma proporção de 20 observações para cada parâmetro estimado no modelo (<span class="math inline">\(N:q\)</span> rule) [124].</li>
 <li><strong>Uso Criterioso dos Índices de Modificação</strong>: Embora os índices de modificação possam sugerir melhorias no modelo, seu <strong>uso excessivo ou sem justificativa teórica pode levar a modelos espúrios</strong> e aumentar o Erro Tipo I (falsos positivos), comprometendo a replicabilidade dos resultados [84-87].</li>
 <li><strong>Complexidade de Interpretação (LISREL)</strong>: A notação LISREL original pode ser complexa [12, 17]. No entanto, softwares modernos como <code>lavaan</code> simplificaram essa complexidade, tornando o SEM mais acessível [17, 103].</li>
 </ul>

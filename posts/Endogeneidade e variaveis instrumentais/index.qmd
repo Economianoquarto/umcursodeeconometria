@@ -5,6 +5,10 @@ date: "2025-07-22"
 categories: [Aulas]
 image: "thumbnail.jpg"
 ---
+# Descrição
+
+Este material aborda sobre as causas da endogeneidade e as formas de corrigi-la
+
 
 # Introdução
 

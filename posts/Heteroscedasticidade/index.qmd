@@ -6,6 +6,10 @@ categories: [Aulas]
 image: "thumbnail.jpg"
 ---
 
+# Descrição
+
+Este material trata de heteroscedasticidade e as forma de lidar com ela
+
 # Introdução
 
 Heteroscedasticidade

@@ -1,10 +1,14 @@
 ---
-title: "Inferência e teste de Hipótese"
+title: "Inferência e Teste de Hipótese"
 author: "Caio Lopes"
 date: "2025-07-22"
 categories: [Aulas]
 image: "thumbnail.jpg"
 ---
+
+# Descrição
+
+Este material discorre sobre testes de hipótese e inferência estatística
 
 # Introdução
 

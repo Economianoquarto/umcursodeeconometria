@@ -6,6 +6,9 @@ categories: [Aulas]
 image: "thumbnail.jpg"
 ---
 
+# Descrição
+Este material trata das propriedade dos estimadores
+
 # Introdução
 
 Propriedades dos Estimadores: pequenas e grandes amostras

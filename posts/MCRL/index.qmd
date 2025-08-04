@@ -5,6 +5,10 @@ date: "2025-07-23"
 categories: [Aulas]
 image: "thumbnail.jpg"
 ---
+# Descrição
+
+Este material apresente as hipóteses e derivações do modelo clássico de regressão linear 
+
 
 # Introdução
 

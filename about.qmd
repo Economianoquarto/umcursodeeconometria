@@ -2,14 +2,89 @@
 title: ""
 image: profile.jpg
 about: 
-  template: trestles
+  template: solana
   links:
     - icon: github
       text: Github
       href: https://github.com/Economianoquarto/umcursodeeconometria
 ---
 
-# Sobre este Blog
+# Plano de Curso
+
+# Econometria 1
+
+**Créditos:** 4
+
+**Semestre Ideal:** 4º
+
+**Requisitos:** Estatística Econômica 2
+
+## Objetivos
+
+Os estudantes deverão compreender os métodos econométricos de regressão linear simples, regressão múltipla e com variáveis qualitativas. Assim, o estudante deverá desenvolver a capacidade de aplicar esses métodos no estudo das relações entre as variáveis econômicas e em trabalhos empíricos de economia.
+
+## Ementa
+Modelos econômicos e econométricos. Modelo de regressão simples. Regressão múltipla: estimação e Inferência; Erros gerais de especificação e multicolinearidade; heterocedasticidade; autocorrelação. Regressão múltipla com informação qualitativa: variáveis binárias.
+
+## Conteúdo por Aula
+
+### Módulo 1: Introdução à Econometria e Regressão Simples
+
+*  Modelos Econômicos vs. Modelos Econométricos. Natureza da Econometria.
+*  Revisão de Probabilidade e Estatística para Econometria.
+*  O Modelo de Regressão Linear Simples: Suposições Clássicas.
+*  Estimação por Mínimos Quadrados Ordinários (MQO) no MRLS.
+*  Propriedades dos Estimadores de MQO. Testes de Hipóteses e Intervalos de Confiança.
+
+### Módulo 2: Regressão Múltipla
+
+*  O Modelo de Regressão Linear Múltipla (MRLM): Introdução e Suposições.
+*  Estimação e Interpretação dos Coeficientes no MRLM.
+*  Inferência no MRLM: Testes F e t.
+*  Erros de Especificação: Variáveis Omitidas e Irrelevantes.
+*  Multicolinearidade: Detecção e Consequências.
+
+### Módulo 3: Problemas Comuns e Variáveis Qualitativas
+
+*  Heterocedasticidade: Detecção e Correção.
+*  Autocorrelação: Detecção e Correção.
+*  Regressão com Variáveis Dummy: Modelos de Intercepto e Inclinação.
+*  Aplicações de Variáveis Dummy em Economia.
+
+### Módulo 4: Tópicos Especiais
+
+*  Abordagem de Resultados Potencias.
+*  Variáveis Dependentes Limitadas.
+*  Modelo de Equações Equações Estrurais
+
+## Metodologia
+
+O curso será desenvolvido através de aulas expositivas, discussões de casos práticos e resolução de exercícios. Será incentivada a participação ativa dos alunos na análise de dados econômicos reais utilizando softwares econométricos. A avaliação incluirá provas teóricas, listas de exercícios e um projeto empírico final.
+
+## Recursos Didáticos
+ Pincel, quadro, notebook, projetor e laboratório de informática
+
+## Bibliografia Básica
+
+*   GUJARATI, D. Econometria Básica. Rio de Janeiro: Campus-Elsevier, 2006.
+
+*   HILL, R. C.; GRIFFITHS, W.E.; JUDGE, G.G. Econometria. Alfredo Alves de Faria (Trad.). 2 ed. São Paulo: Saraiva, 2003.
+
+*   WOOLDRIDGE, J.M. Introdução à Econometria: uma abordagem moderna. São Paulo: Thomson Pioneira, 2005.
+
+## Bibliografia Complementar
+
+ANGRIST, J. D.; PISCHKE, J. S. Mostly harmless econometrics: An empiricist's companion. Princeton university press, 2009.
+
+NEVES, J. A. B. Modelo de equações estruturais: uma introdução aplicada. Brasília: Enap, 2018.
+
+RAYKOV, T; MARCOULIDES, G. A. A first course in structural equation modeling. 2nd ed. New Jersey: Lawrence Erlbaum Associates, 2006. 238p.
+
+VERBEEK, M. A guide to modern econometrics. 2nd. ed. London: John Wiley e Sons, 2004.
+
+
+
+# Sobre o professor
 
 Caio Lopes é professor da Universidade Federal do Piauí desde 2018
 
