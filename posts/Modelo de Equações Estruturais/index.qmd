@@ -289,7 +289,8 @@ Dois exemplos clássicos de aplicação são:
 
 2) **Modelo de Determinação do Índice de Gestão Descentralizada Municipal (IGD-M)**: Aplicado na área de políticas sociais, este modelo busca explicar os fatores que determinam a qualidade da gestão de programas sociais em nível municipal. Pode incluir variáveis como renda per capita, PIB per capita e a proporção de beneficiários de programas sociais, revelando a dependência municipal de recursos externos e a complexa relação entre desenvolvimento econômico e qualidade da gestão social.
 
-## Hands-on: Aplicação do SEM em Software Estatístico
+
+## Hands-on: Aplicação do SEM em Software Estatístico e Interpretação
 
 A aplicação prática do SEM é comumente realizada em softwares estatísticos. O pacote **`lavaan` no R** é amplamente utilizado por ser **gratuito, de código aberto e relativamente fácil de usar**. O **STATA** também emprega a aboradagem por meio do comando `sem`.
 
@@ -402,7 +403,34 @@ summary(fit1lm)
 
 ### Regressão Multivariada
 
-Nessa seção vamos mostrar como 
+Nessa seção vamos mostrar como rodar um modelo multivariado (2 variáveis endógenas). Por exemplo:
+
+$$
+\begin{pmatrix}
+y_1 \\
+y_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+\alpha_1 \\
+\alpha_2
+\end{pmatrix}
++
+\begin{pmatrix}
+\beta_{11} & \beta_{12} & \beta_{13} \\
+\beta_{21} & \beta_{22} & 0
+\end{pmatrix}
+\begin{pmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{pmatrix}
++
+\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix}
+$$
 
 ```{r}
 m2 <- '
@@ -449,9 +477,9 @@ summary(fit2_1)
 ## Atividade
 1. **Compare os modelos fit2 com o fit2_1. Explique o que aconteceu com os graus de liberdade?**
 
-2. **Proponha uma especificação no `lavaan` que torne a regressão multivariada saturada. Apresente os códigos na pasta compartilhada com o professor do `posit cloud`.**
+2. **Proponha uma especificação no `lavaan` que torne a regressão multivariada saturada.**
 
-3. **Proponha uma especificação no `lavaan`que gera as mesmas estimativas que 2 regressões independentes por `lm`. Apresente os códigos na pasta compartilhada com o professor do `posit cloud`.**  
+3. **Proponha uma especificação no `lavaan`que gere as mesmas estimativas que 2 regressões independentes por `lm`.**  
 :::
 
 ### Modelo de Mensuração
@@ -468,32 +496,48 @@ fit3 <- sem(m3, data=PoliticalDemocracy)
 
 ```{r}
 #| echo: true
-summary(fit3, standardized=TRUE)
+summary(fit3)
 ```
  
+Perceba que a interpretação das cargas fatoriais é pouco informativa: **a unidade de medida de $x_2 e x_3 não é a mesma$** 
+Por isso é comum a padronização das variáveis para tornar a unidade de medida erros-padrão: 
 
+```{r}
+#| echo: true
+summary(fit3, standardized=TRUE)
+```
 
+`Std.lv` padroniza apenas o fator latente, deixando as variáveis observadas em suas escalas originais, permitindo interpretar o impacto de 1 desvio padrão no construto sobre os indicadores. Já `Std.all` padroniza tanto o fator quanto os indicadores, tornando as cargas fatoriais coeficientes de correlação entre -1 e +1, ideal para comparar a força relativa dos indicadores e avaliar sua validade.
+
+:::{.callout-note}
+## Atividade
+1. **Ao invés de utilizar o método do marcador replique o modelo `m3` utilizando o método de padronização da variância.**  
+:::
 
 ### Modelo de Regressão Estrutural
+
+Vamos agora rodar um modelo de regrassão estrutural. Imagine que a teoria nos diga que a industrialização em 1960 seja um preditor do ambiente democrático em 1960 e em 1965. Imagine, também, que o ambiente democrático em 1960 explique o ambiente democrático em 1965.    
+
 ```{r}
 model <- '
-  # modelo de medida
+  # measurement model
     ind60 =~ x1 + x2 + x3
-    dem60 =~ y1 + y2 + y3
-    dem65 =~ y5 + y6 + y7
-  # regressão 
+    dem60 =~ y1 + y2 + y3 + y4
+    dem65 =~ y5 + y6 + y7 + y8
+  # regressions
     dem60 ~ ind60
     dem65 ~ ind60 + dem60
-  # covariâncias 
-    y5 ~~ y6
-    y6 ~~ y7
-    x1 ~~ x2
-    x3 ~~ x2
-'
+  # residual correlations
+    y1 ~~ y5
+    y2 ~~ y4 + y6
+    y3 ~~ y7
+    y4 ~~ y8
+    y6 ~~ y8'
 fit <- sem(model, data=PoliticalDemocracy)
 summary(fit, standardized=TRUE, fit.measures=TRUE)
 ```
 
+A opção `fit.measures=TRUE` faz com que o comando reporte estatísticas de testes que analisam o ajuste do modelo.
 
 ```{r}
 #| echo: true
@@ -547,18 +591,31 @@ Quanto mais próximo o valor do TLI de 1 melhor o ajuste do modelo
 
 ## Discussão: Limitações e Desafios do SEM
 
-Apesar de suas muitas vantagens, a aplicação do SEM também apresenta desafios e limitações \[88, 118\]:
+A grande limitação do SEM nas Ciências Econômicas diz respeita a sua capacidade como instrumento para inferência causal
 
--   **Requisito de Teoria Forte**: O SEM é uma abordagem confirmatória, o que significa que ele exige uma **sólida base teórica** para a especificação do modelo inicial \[13, 15\]. O sucesso de uma análise SEM depende da adequação da teoria subjacente; **erros teóricos ou conceituais não podem ser corrigidos apenas por análises estatísticas** \[119\].
--   **Desafio da Causalidade**: Embora o SEM seja amplamente utilizado para análises causais \[120, 121\], estabelecer a causalidade definitiva requer a satisfação de três condições principais: associação estatística, precedência temporal e eliminação de causas concorrentes \[122\]. A última, em particular, é difícil de ser plenamente garantida com dados observacionais \[123\].
--   **Sensibilidade ao Tamanho da Amostra**: O teste qui-quadrado do modelo, um dos principais indicadores de ajuste, é **muito sensível a amostras grandes**, o que pode levar à sua rejeição mesmo para modelos bem ajustados na prática \[68, 70-72\]. Recomenda-se uma proporção de 20 observações para cada parâmetro estimado no modelo ($N:q$ rule) \[124\].
--   **Uso Criterioso dos Índices de Modificação**: Embora os índices de modificação possam sugerir melhorias no modelo, seu **uso excessivo ou sem justificativa teórica pode levar a modelos espúrios** e aumentar o Erro Tipo I (falsos positivos), comprometendo a replicabilidade dos resultados \[84-87\].
--   **Complexidade de Interpretação (LISREL)**: A notação LISREL original pode ser complexa \[12, 17\]. No entanto, softwares modernos como `lavaan` simplificaram essa complexidade, tornando o SEM mais acessível \[17, 103\].
+Na discussão **Resultados Potenciais vs SEM**, encabeçada por Judea Pearl, O SEM sai em desvantagem, pois Economia ainda é uma ciência preocupada em provar causação (devido aos seus paradigmas de pensamento). O SEM não é adequado para provar causação, mas pode interpretar parametros como efeitos causais.
 
-------------------------------------------------------------------------
+Nesse sentido, o SEM seria mais adequado como uma abordagem complementar a um experimento realizado anteriormente
+
+# Avaliação 
+:::{.callout-note}
+
+Como parte da nota da disciplina responda as seguinte questões:
+
+1. Qual a principal diferença entre uma variável observada e uma variável latente em um Modelo de Equações Estruturais (SEM)? Forneça um exemplo em um contexto econômico.
+
+2. Explique a distinção entre o modelo de mensuração e o modelo estrutural em um SEM.
+
+3. Quais são as vantagens de se utilizar um SEM em comparação com uma análise de regressão múltipla tradicional para analisar relações complexas na economia?  
+
+4. Utilize o pacote lavaan para exemplificar o modelo de equações estruturais (os dados não precisam ser reais). Compartilhe o projeto com o professor via posit cloud.
+:::
+
 
 # Referências
 
 - NEVES, J. A. B. **Modelo de equações estruturais: uma introdução aplicada**. Brasília: Enap, 2018.
+
+- RAYKOV, T.; MARCOULIDES, G. A. A first course in structural equation modeling. routledge, 2012.
+
 - UNIVERSITY OF CALIFORNIA, LOS ANGELES. Statistical Consulting Group. **Introduction to Structural Equation Modeling (SEM) in R with lavaan**. Disponível em: https://stats.oarc.ucla.edu/r/seminars/rsem/introduction-to-sem-in-r-with-lavaan/. Acesso em: 9 jul. 2025.
-- UCLA Office of Advanced Research Computing (OARC). **Introduction to Structural Equation Modeling**. \[Vídeo no YouTube\]
