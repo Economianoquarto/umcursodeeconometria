@@ -630,8 +630,8 @@ Variances:
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>), </span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-a9b5f924d77f7a8385b2" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-a9b5f924d77f7a8385b2">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.81\"] x2->y1 [label = \"0.02\"] x3->y1 [label = \"-0.31\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-3317142918df83cf5ca1" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-3317142918df83cf5ca1">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.81\"] x2->y1 [label = \"0.02\"] x3->y1 [label = \"-0.31\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Perceba que os valores do coeficientes estimados serão os mesmo que quando usamos o <code>lm</code>. Os estimativas dos erros-padrão dos coesficientes são diferentes, pois o comando <code>sem</code> utiliza outro estimador da variância do erro do modelo. <em>Lembre-se que o estimador da variância dos parâmetros é um função do estimador da variância do modelo</em></p>
@@ -1107,6 +1107,7 @@ Variances:
    .dem65             0.172    0.215    0.803    0.422    0.039    0.039</code></pre>
 </div>
 </div>
+<p>A opção <code>fit.measures=TRUE</code> faz com que o comando reporte estatísticas de testes que analisam o ajuste do modelo.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lavaanPlot</span>(<span class="at">model =</span> fit, </span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">node_options =</span> <span class="fu">list</span>(<span class="at">shape =</span> <span class="st">"box"</span>, <span class="at">fontname =</span> <span class="st">"Helvetica"</span>),</span>
@@ -1116,8 +1117,8 @@ Variances:
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">covs =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-daec71193fbbffd9e2ed" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-daec71193fbbffd9e2ed">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1; y2; y3; y4; y5; y6; y7; y8 \n node [shape = oval] \n ind60; dem60; dem65 \n \n edge [ color = grey ] \n ind60->dem60 [label = \"1.48***\"] ind60->dem65 [label = \"0.57**\"] dem60->dem65 [label = \"0.84***\"] ind60->x1 [label = \"1\"] ind60->x2 [label = \"2.18\"] ind60->x3 [label = \"1.82\"] dem60->y1 [label = \"1\"] dem60->y2 [label = \"1.26\"] dem60->y3 [label = \"1.06\"] dem60->y4 [label = \"1.26\"] dem65->y5 [label = \"1\"] dem65->y6 [label = \"1.19\"] dem65->y7 [label = \"1.28\"] dem65->y8 [label = \"1.27\"] y5 -> y1 [label = \"0.62\", dir = \"both\"] y4 -> y2 [label = \"1.31\", dir = \"both\"] y6 -> y2 [label = \"2.15\", dir = \"both\"] y7 -> y3 [label = \"0.79\", dir = \"both\"] y8 -> y4 [label = \"0.35\", dir = \"both\"] y8 -> y6 [label = \"1.36\", dir = \"both\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-8c14dea1af2096fdd177" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-8c14dea1af2096fdd177">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1; y2; y3; y4; y5; y6; y7; y8 \n node [shape = oval] \n ind60; dem60; dem65 \n \n edge [ color = grey ] \n ind60->dem60 [label = \"1.48***\"] ind60->dem65 [label = \"0.57**\"] dem60->dem65 [label = \"0.84***\"] ind60->x1 [label = \"1\"] ind60->x2 [label = \"2.18\"] ind60->x3 [label = \"1.82\"] dem60->y1 [label = \"1\"] dem60->y2 [label = \"1.26\"] dem60->y3 [label = \"1.06\"] dem60->y4 [label = \"1.26\"] dem65->y5 [label = \"1\"] dem65->y6 [label = \"1.19\"] dem65->y7 [label = \"1.28\"] dem65->y8 [label = \"1.27\"] y5 -> y1 [label = \"0.62\", dir = \"both\"] y4 -> y2 [label = \"1.31\", dir = \"both\"] y6 -> y2 [label = \"2.15\", dir = \"both\"] y7 -> y3 [label = \"0.79\", dir = \"both\"] y8 -> y4 [label = \"0.35\", dir = \"both\"] y8 -> y6 [label = \"1.36\", dir = \"both\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Uma forma de analisar o ajuste do modelo é pelo qui-quadrado. A estatística desse teste é calculada a partir do <em>score</em> da função de máxima verossimilhança</p>
@@ -1164,15 +1165,9 @@ Atividade
 </section>
 <section id="discussão-limitações-e-desafios-do-sem" class="level2">
 <h2 class="anchored" data-anchor-id="discussão-limitações-e-desafios-do-sem">Discussão: Limitações e Desafios do SEM</h2>
-<p>Apesar de suas muitas vantagens, a aplicação do SEM também apresenta desafios e limitações [88, 118]:</p>
-<ul>
-<li><strong>Requisito de Teoria Forte</strong>: O SEM é uma abordagem confirmatória, o que significa que ele exige uma <strong>sólida base teórica</strong> para a especificação do modelo inicial [13, 15]. O sucesso de uma análise SEM depende da adequação da teoria subjacente; <strong>erros teóricos ou conceituais não podem ser corrigidos apenas por análises estatísticas</strong> [119].</li>
-<li><strong>Desafio da Causalidade</strong>: Embora o SEM seja amplamente utilizado para análises causais [120, 121], estabelecer a causalidade definitiva requer a satisfação de três condições principais: associação estatística, precedência temporal e eliminação de causas concorrentes [122]. A última, em particular, é difícil de ser plenamente garantida com dados observacionais [123].</li>
-<li><strong>Sensibilidade ao Tamanho da Amostra</strong>: O teste qui-quadrado do modelo, um dos principais indicadores de ajuste, é <strong>muito sensível a amostras grandes</strong>, o que pode levar à sua rejeição mesmo para modelos bem ajustados na prática [68, 70-72]. Recomenda-se uma proporção de 20 observações para cada parâmetro estimado no modelo (<span class="math inline">\(N:q\)</span> rule) [124].</li>
-<li><strong>Uso Criterioso dos Índices de Modificação</strong>: Embora os índices de modificação possam sugerir melhorias no modelo, seu <strong>uso excessivo ou sem justificativa teórica pode levar a modelos espúrios</strong> e aumentar o Erro Tipo I (falsos positivos), comprometendo a replicabilidade dos resultados [84-87].</li>
-<li><strong>Complexidade de Interpretação (LISREL)</strong>: A notação LISREL original pode ser complexa [12, 17]. No entanto, softwares modernos como <code>lavaan</code> simplificaram essa complexidade, tornando o SEM mais acessível [17, 103].</li>
-</ul>
-<hr>
+<p>A grande limitação do SEM nas Ciências Econômicas diz respeito a sua capacidade como instrumento para inferência causal</p>
+<p>Na discussão <strong>Resultados Potenciais vs SEM</strong>, encabeçada por Judea Pearl, O SEM sai em desvantagem, pois Economia ainda é uma ciência preocupada em provar causação (devido aos seus paradigmas de pensamento). O SEM não é adequado para provar causação, mas pode interpretar parametros como efeitos causais.</p>
+<p>Nesse sentido, o SEM seria mais adequado como uma abordagem complementar a um experimento realizado anteriormente para garantir a causação.</p>
 </section>
 </section>
 <section id="avaliação" class="level1">

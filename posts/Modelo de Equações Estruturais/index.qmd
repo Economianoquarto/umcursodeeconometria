@@ -591,11 +591,13 @@ Quanto mais próximo o valor do TLI de 1 melhor o ajuste do modelo
 
 ## Discussão: Limitações e Desafios do SEM
 
-A grande limitação do SEM nas Ciências Econômicas diz respeita a sua capacidade como instrumento para inferência causal
+A grande limitação do SEM nas Ciências Econômicas diz respeito a sua capacidade como instrumento para inferência causal
 
 Na discussão **Resultados Potenciais vs SEM**, encabeçada por Judea Pearl, O SEM sai em desvantagem, pois Economia ainda é uma ciência preocupada em provar causação (devido aos seus paradigmas de pensamento). O SEM não é adequado para provar causação, mas pode interpretar parametros como efeitos causais.
 
-Nesse sentido, o SEM seria mais adequado como uma abordagem complementar a um experimento realizado anteriormente
+Nesse sentido, o SEM seria mais adequado como uma abordagem complementar a um experimento realizado anteriormente para garantir a causação.
+
+
 
 # Avaliação 
 :::{.callout-note}
