@@ -455,7 +455,7 @@ summary(fit2_1)
 :::
 
 ### Modelo de Mensuração
-Imagine que a intenção seja, a partir, das variáveis $x1$, $x2$ e $x3$, mensurar um fator latente da insdustrialização em 1960.  
+Imagine que a intenção seja, a partir, das variáveis $x_1$, $x_2$ e $x_3$, mensurar um fator latente da industrialização em 1960.  
 
 
 ```{r}
@@ -468,16 +468,10 @@ fit3 <- sem(m3, data=PoliticalDemocracy)
 
 ```{r}
 #| echo: true
-summary(fit3)
+summary(fit3, standardized=TRUE)
 ```
+ 
 
-```{r}
-#| echo: true
-lavaanPlot(model = fit3, 
-           node_options = list(shape = "box", fontname = "Helvetica"), 
-           edge_options = list(color = "grey"), 
-           coefs = TRUE)
-```
 
 
 ### Modelo de Regressão Estrutural

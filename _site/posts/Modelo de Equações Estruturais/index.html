@@ -630,8 +630,8 @@ Variances:
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>), </span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-38607b8e3c7ba0567107" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-38607b8e3c7ba0567107">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.81\"] x2->y1 [label = \"0.02\"] x3->y1 [label = \"-0.31\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-38c633e01b85ebaf2baa" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-38c633e01b85ebaf2baa">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.81\"] x2->y1 [label = \"0.02\"] x3->y1 [label = \"-0.31\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Perceba que os valores do coeficientes estimados serão os mesmo que quando usamos o <code>lm</code>. Os estimativas dos erros-padrão dos coesficientes são diferentes, pois o comando <code>sem</code> utiliza outro estimador da variância do erro do modelo. <em>Lembre-se que o estimador da variância dos parâmetros é um função do estimador da variância do modelo</em></p>
@@ -850,7 +850,7 @@ Atividade
 </section>
 <section id="modelo-de-mensuração" class="level3">
 <h3 class="anchored" data-anchor-id="modelo-de-mensuração">Modelo de Mensuração</h3>
-<p>Imagine que a intenção seja, a partir, das variáveis <span class="math inline">\(x1\)</span>, <span class="math inline">\(x2\)</span> e <span class="math inline">\(x3\)</span>, mensurar um fator latente da insdustrialização em 1960.</p>
+<p>Imagine que a intenção seja, a partir, das variáveis <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span> e <span class="math inline">\(x_3\)</span>, mensurar um fator latente da industrialização em 1960.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="st">'</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="st">      ind60 =~ x1 + x2 + x3</span></span>
@@ -859,7 +859,7 @@ Atividade
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>fit3 <span class="ot">&lt;-</span> <span class="fu">sem</span>(m3, <span class="at">data=</span>PoliticalDemocracy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit3, <span class="at">standardized=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>lavaan 0.6-19 ended normally after 22 iterations
 
@@ -881,54 +881,44 @@ Parameter Estimates:
   Information saturated (h1) model          Structured
 
 Latent Variables:
-                   Estimate  Std.Err  z-value  P(&gt;|z|)
-  ind60 =~                                            
-    x1                1.000                           
-    x2                2.193    0.142   15.403    0.000
-    x3                1.824    0.153   11.883    0.000
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+  ind60 =~                                                              
+    x1                1.000                               0.667    0.917
+    x2                2.193    0.142   15.403    0.000    1.464    0.976
+    x3                1.824    0.153   11.883    0.000    1.217    0.872
 
 Variances:
-                   Estimate  Std.Err  z-value  P(&gt;|z|)
-   .x1                0.084    0.020    4.140    0.000
-   .x2                0.108    0.074    1.455    0.146
-   .x3                0.468    0.091    5.124    0.000
-    ind60             0.446    0.087    5.135    0.000</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lavaanPlot</span>(<span class="at">model =</span> fit3, </span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">node_options =</span> <span class="fu">list</span>(<span class="at">shape =</span> <span class="st">"box"</span>, <span class="at">fontname =</span> <span class="st">"Helvetica"</span>), </span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>), </span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-4ed05e35967a429c5739" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-4ed05e35967a429c5739">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3 \n node [shape = oval] \n ind60 \n \n edge [ color = grey ] \n  ind60->x1 [label = \"1\"] ind60->x2 [label = \"2.19\"] ind60->x3 [label = \"1.82\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+   .x1                0.084    0.020    4.140    0.000    0.084    0.159
+   .x2                0.108    0.074    1.455    0.146    0.108    0.048
+   .x3                0.468    0.091    5.124    0.000    0.468    0.240
+    ind60             0.446    0.087    5.135    0.000    1.000    1.000</code></pre>
 </div>
 </div>
 </section>
 <section id="modelo-de-regressão-estrutural" class="level3">
 <h3 class="anchored" data-anchor-id="modelo-de-regressão-estrutural">Modelo de Regressão Estrutural</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="st">'</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="st">  # modelo de medida</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="st">    ind60 =~ x1 + x2 + x3</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="st">    dem60 =~ y1 + y2 + y3</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="st">    dem65 =~ y5 + y6 + y7</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="st">  # regressão </span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="st">    dem60 ~ ind60</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="st">    dem65 ~ ind60 + dem60</span></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="st">  # covariâncias </span></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="st">    y5 ~~ y6</span></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="st">    y6 ~~ y7</span></span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="st">    x1 ~~ x2</span></span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="st">    x3 ~~ x2</span></span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="st">'</span></span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">sem</span>(model, <span class="at">data=</span>PoliticalDemocracy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="st">'</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="st">  # modelo de medida</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="st">    ind60 =~ x1 + x2 + x3</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="st">    dem60 =~ y1 + y2 + y3</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="st">    dem65 =~ y5 + y6 + y7</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="st">  # regressão </span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="st">    dem60 ~ ind60</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="st">    dem65 ~ ind60 + dem60</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="st">  # covariâncias </span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="st">    y5 ~~ y6</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="st">    y6 ~~ y7</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="st">    x1 ~~ x2</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="st">    x3 ~~ x2</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="st">'</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">sem</span>(model, <span class="at">data=</span>PoliticalDemocracy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: lavaan-&gt;lav_object_post_check():  
    some estimated lv variances are negative</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit, <span class="at">standardized=</span><span class="cn">TRUE</span>, <span class="at">fit.measures=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit, <span class="at">standardized=</span><span class="cn">TRUE</span>, <span class="at">fit.measures=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>lavaan 0.6-19 ended normally after 54 iterations
 
@@ -1033,16 +1023,16 @@ Variances:
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lavaanPlot</span>(<span class="at">model =</span> fit, </span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">node_options =</span> <span class="fu">list</span>(<span class="at">shape =</span> <span class="st">"box"</span>, <span class="at">fontname =</span> <span class="st">"Helvetica"</span>),</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">graph_options =</span> <span class="fu">list</span>(<span class="at">rankdir =</span> <span class="st">"LR"</span>),</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>),</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">stars =</span>  <span class="st">"regress"</span>,</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">covs =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lavaanPlot</span>(<span class="at">model =</span> fit, </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">node_options =</span> <span class="fu">list</span>(<span class="at">shape =</span> <span class="st">"box"</span>, <span class="at">fontname =</span> <span class="st">"Helvetica"</span>),</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">graph_options =</span> <span class="fu">list</span>(<span class="at">rankdir =</span> <span class="st">"LR"</span>),</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>),</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">stars =</span>  <span class="st">"regress"</span>,</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">covs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-9bad46d51868cf371a4d" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-9bad46d51868cf371a4d">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1; y2; y3; y5; y6; y7 \n node [shape = oval] \n ind60; dem60; dem65 \n \n edge [ color = grey ] \n ind60->dem60 [label = \"1.37**\"] ind60->dem65 [label = \"0.7**\"] dem60->dem65 [label = \"0.87***\"] ind60->x1 [label = \"1\"] ind60->x2 [label = \"2.04\"] ind60->x3 [label = \"1.69\"] dem60->y1 [label = \"1\"] dem60->y2 [label = \"1.24\"] dem60->y3 [label = \"1.01\"] dem65->y5 [label = \"1\"] dem65->y6 [label = \"1.13\"] dem65->y7 [label = \"1.17\"] y6 -> y5 [label = \"-0.63\", dir = \"both\"] y7 -> y6 [label = \"0.18\", dir = \"both\"] x2 -> x1 [label = \"0\", dir = \"both\"] x3 -> x2 [label = \"0.12\", dir = \"both\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-98bff27422c043bb975f" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-98bff27422c043bb975f">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1; y2; y3; y5; y6; y7 \n node [shape = oval] \n ind60; dem60; dem65 \n \n edge [ color = grey ] \n ind60->dem60 [label = \"1.37**\"] ind60->dem65 [label = \"0.7**\"] dem60->dem65 [label = \"0.87***\"] ind60->x1 [label = \"1\"] ind60->x2 [label = \"2.04\"] ind60->x3 [label = \"1.69\"] dem60->y1 [label = \"1\"] dem60->y2 [label = \"1.24\"] dem60->y3 [label = \"1.01\"] dem65->y5 [label = \"1\"] dem65->y6 [label = \"1.13\"] dem65->y7 [label = \"1.17\"] y6 -> y5 [label = \"-0.63\", dir = \"both\"] y7 -> y6 [label = \"0.18\", dir = \"both\"] x2 -> x1 [label = \"0\", dir = \"both\"] x3 -> x2 [label = \"0.12\", dir = \"both\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Uma forma de analisar o ajuste do modelo é pelo qui-quadrado. A estatística desse teste é calculada a partir do <em>score</em> da função de máxima verossimilhança</p>
