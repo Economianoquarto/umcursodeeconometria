@@ -36,7 +36,7 @@ A análise fatorial pode ser dividida em dois tipos principais: exploratória e 
 
 - A **Análise Fatorial Exploratória** é utilizada quando o pesquisador não possui uma teoria pré-existente forte ou uma hipótese clara sobre a estrutura subjacente de um conjunto de variáveis. O objetivo da AFE é identificar e entender os traços latentes (também chamados de fatores ou construtos) que podem explicar as correlações observadas entre um grande número de variáveis manifestas (itens de um questionário, por exemplo)
 
-- **A análise fatorial confirmatória** toma emprestados muitos dos mesmos conceitos da análise fatorial exploratória, exceto que, em vez de deixar os dados nos dizerem a estrutura fatorial, nós pré-determinamos a estrutura fatorial. É geralmente baseada em pesquisas anteriores, teorias estabelecidas ou no próprio resultado de uma AFE prévia..
+- **A análise fatorial confirmatória** toma emprestados muitos dos mesmos conceitos da análise fatorial exploratória, exceto que, em vez de deixar os dados nos dizerem a estrutura fatorial, nós pré-determinamos a estrutura fatorial. É geralmente baseada em pesquisas anteriores, teorias estabelecidas ou no próprio resultado de uma AFE prévia.
 
 **A análise fatorial confirmatória - ou confirmatory factor analysis  (CFA) - participa frequentemente da abordagem guarda-chuva do SEM**
 
@@ -54,7 +54,7 @@ Um modelo SEM é geralmente representado por um diagrama que mostra as relaçõe
 Use a SEM para testar um sistema completo de relações de uma só vez. Em vez de analisar cada hipótese separadamente (o que aumenta o risco de erro), a SEM avalia se o seu modelo teórico como um todo é compatível com os dados, oferecendo uma visão global e integrada do fenômeno.
 
 **Medição Precisa de Conceitos Abstratos**
-A SEM é ideal para medir conceitos abstratos (variáveis latentes) como "satisfação" ou "ansiedade". Ela faz isso usando múltiplos indicadores (perguntas de um questionário) e, crucialmente, separa a medição do conceito do seu erro de medição. Isso resulta em estimativas muito mais puras e confiáveis das relações entre as variáveis.
+A SEM é ideal para medir conceitos abstratos (variáveis latentes) como "satisfação" ou "ansiedade". Ela faz isso usando múltiplos indicadores (perguntas de um questionário) e, crucialmente, separa a medição do conceito do seu erro de medição. Isso resulta em estimativas muito mais confiáveis das relações entre as variáveis.
 
 ## Quando usar o SEM?
 
@@ -73,19 +73,41 @@ Os Modelos de Equações Estruturais englobam uma ampla gama de abordagens:
 -  **Regressão linear e multivariada**
 -  **Análise de trajetória (path analysis)**
 -  **Análise fatorial confirmatória (CFA)**
--  **Regressão estrutural** 
+-  **Regressão estrutural** (relacionar variáveis latentes)
 
-Essa abordagem Guarda-chuva representa sua maior vantagem
+Essa capacidade de integração é o que torna a SEM tão poderosa, permitindo:: 
+
+- **Medir e quantificar relações entre conceitos abstratos e dados concretos**
+
+- **Transformar relações complexas em diagramas visuais compreensíveis**
+
+- **Computar efeitos diretos e indiretos de uma variável sobre a outra**
 
 ## Breve histórico do SEM
 
-Os fundamentos técnicos de todos os modelos SEM são baseados na notação clássica LISREL (linear structural relations) em homenagem a **Karl Joreskög**, que a inventou em 1969 e 1973. Embora o SEM seja considerado um campo relativamente novo na estatística, com base em 1976, todas as implementações modernas do SEM são derivações do LISREL, seja expandindo suas capacidades ou simplificando sua complexidade. A compreensão da notação LISREL é, portanto, fundamental para entender as estruturas mais recentes do SEM.
+* O um dos principais autores (talvez o principal) do SEM foi **Karl Joreskög** (Seus artigos seminais datam da década de 1970)
+
+  + Propôs a metodologia CFA via máxima verossimilhança e análise da matriz de variância-covariancia
+
+  + Colaborou para o desenvolvimento do diagrama de caminho
+
+  + Ele foi um dos responsáveis pelo desenvolvimento do software LISREL para modelagem de equações estruturais no início da década de 1970
+
+**Charles Spearman** e **Sewall Wright** são creditados com os primeiros modelos  (análise fatorial e análise de caminho) que influenciaram diretamente o desenvolvimento do SEM
+
+Yves Rosseel desenvolveu o pacote lavaan de código aberto para R
+
+Atualmente, **Judea Pearl** é um grande defensor da interpretação causal dos parametros estimados via SEM
+
+  - A abordagem de resultados potenciais é amplamente reconhecida como a principal abordagem para inferência causal nas Ciências Econômicas.
+
+![](pearl_imbens.png)
 
 # Conceitos e a Caixa de Ferramentas
 
 Para trabalhar com SEM, é essencial compreender seus componentes e a terminologia específica.
 
-Este quadro apresenta os principais termos utilizados em Modelagem de Equações Estruturais (SEM) de forma concisa e visual.
+Este quadro-resumo apresenta os principais termos utilizados em Modelagem de Equações Estruturais (SEM) de forma concisa e visual.
 
 | Termo | Definição | Exemplo |
 |:---|:---|:---|
@@ -117,20 +139,24 @@ Os **diagramas de trajetória** são representações visuais essenciais dos mod
 
 ![Exemplo de diagrama de trajetória](legenda_diagrama.png)
 
-Os símbolos utilizados nos diagramas são padronizados:  **Círculos**: Representam **variáveis latentes** (fatores ou construtos). **Quadrados**: Representam **variáveis observadas** (indicadores ou itens). **Triângulos**: Representam **interceptos** ou médias (geralmente não explicitados por padrão no `lavaan` a menos que solicitados).  **Setas únicas (de uma via)**: Indicam **caminhos de regressão** ou relações causais diretas (ex: uma variável predizendo outra). **Setas duplas (de duas vias)**: Indicam **variâncias** (se a seta aponta para a própria variável, formando um loop) ou **covariâncias** (se a seta conecta duas variáveis) .
+Os símbolos utilizados nos diagramas são padronizados: 
 
-**Exemplo de leitura de um diagrama**:  Uma seta de um círculo para um quadrado indica que uma variável latente (fator) prediz uma variável observada (indicador), o que é parte de um **modelo de mensuração ou medida**. Uma seta dupla em um círculo ou quadrado representa a variância daquela variável (latente ou observada).  Uma seta dupla entre dois círculos ou dois quadrados indica a covariância entre essas duas variáveis.
+- **Círculos**: Representam **variáveis latentes** (fatores ou construtos). 
+- **Quadrados**: Representam **variáveis observadas** (indicadores ou itens).
+- **Triângulos**: Representam **interceptos** ou médias (geralmente não explicitados por padrão no `lavaan` a menos que solicitados). 
+- **Setas únicas (de uma via)**: Indicam **caminhos de regressão** ou relações causais diretas (ex: uma variável predizendo outra). 
+- **Setas duplas (de duas vias)**: Indicam **variâncias** (se a seta aponta para a própria variável, formando um loop) ou **covariâncias** (se a seta conecta duas variáveis) .
 
 ## Modelo de Mensuração e Modelo Estrutural
 
-O SEM é singular por abranger tanto **modelos de medida ou  de mensuração** quanto **modelos estruturais**:
+O SEM é singular por abranger tanto **modelos de medida ou de mensuração** quanto **modelos estruturais**:
 
 -   **Modelo de Mensuração**: É a parte do SEM que **liga variáveis observadas a variáveis latentes**. Sua função é mensurar construtos latentes a partir de variáveis observadas . Envolve a **Análise Fatorial Confirmatória (AFC)**.
     -   Neste modelo, as variáveis observadas que medem um fator são chamadas de **indicadores**.
     -   Um fator (variável latente) é definido por seus indicadores. A relação entre um indicador e um fator é chamada de **carga fatorial (loading)**.
 -   **Modelo Estrutural**: A parte do SEM que **especifica as relações causais entre variáveis**, sejam elas observadas ou latentes. Pode envolver relações de variáveis exógenas para endógenas, e até mesmo de variáveis endógenas para outras variáveis endógenas.
     -   O tipo mais abrangente de modelo estrutural, a **regressão estrutural**, lida com as relações entre **variáveis latentes**.
-    -   As relações são definidas por coeficientes de regressão: $\Gamma$ (Gamma) para relações de variáveis exógenas para endógenas, e $B$ (Beta) para relações de variáveis endógenas para outras variáveis endógenas.
+
 
 ## Estimação, Identificação e Teste de Modelos (Goodness-of-Fit)
 
@@ -244,6 +270,12 @@ As estatísticas de qualidade do ajuste avaliam o quão bem o modelo populaciona
 -   **Teste Qui-quadrado do Modelo (**$\chi^2$): É a estatística de teste principal que mede a discrepância entre a matriz de covariância observada e a matriz de covariância implicada pelo modelo.
 
     -   Um **valor de qui-quadrado maior indica uma maior diferença** (pior ajuste) entre as matrizes e, consequentemente, uma maior probabilidade de rejeitar a hipótese nula .
+
+- Por ser um teste sensível ao tamanho da amostra é comum a utilização de outros testes incrementais (comparativos): 
+
+    - CFI (Comparative Fit Index)
+    - TLI (Tucker Lewis Index)
+    
     
 # Aplicações do SEM na Economia
 
@@ -255,7 +287,7 @@ Dois exemplos clássicos de aplicação são:
 
 1) **Modelo de Realização de Status Socioeconômico**: Um modelo da teoria da estratificação social que investiga como a origem socioeconômica (variáveis como escolaridade dos pais e status socioeconômico da ocupação do pai) influencia o destino socioeconômico (medido por variáveis como escolaridade do próprio indivíduo, status socioeconômico da ocupação e rendimento do trabalho). Este modelo é relevante para entender a **transmissão intergeracional da desigualdade**, muitas vezes revelando que os efeitos indiretos são mais proeminentes que os diretos . 
 
-**Modelo de Determinação do Índice de Gestão Descentralizada Municipal (IGD-M)**: Aplicado na área de políticas sociais, este modelo busca explicar os fatores que determinam a qualidade da gestão de programas sociais em nível municipal. Pode incluir variáveis como renda per capita, PIB per capita e a proporção de beneficiários de programas sociais, revelando a dependência municipal de recursos externos e a complexa relação entre desenvolvimento econômico e qualidade da gestão social.
+2) **Modelo de Determinação do Índice de Gestão Descentralizada Municipal (IGD-M)**: Aplicado na área de políticas sociais, este modelo busca explicar os fatores que determinam a qualidade da gestão de programas sociais em nível municipal. Pode incluir variáveis como renda per capita, PIB per capita e a proporção de beneficiários de programas sociais, revelando a dependência municipal de recursos externos e a complexa relação entre desenvolvimento econômico e qualidade da gestão social.
 
 ## Hands-on: Aplicação do SEM em Software Estatístico
 
@@ -271,14 +303,66 @@ A sintaxe no `lavaan` é intuitiva:
 
 `~1`: Usado para estimar o **intercepto** ou média de uma variável (e.g., `x ~ 1`).
 
+`1*`: fixa o parâmetro ou carga fatorial em 1 (e.g., `f =~ 1*q`)
+
+`NA*`: deixa o parâmetro ou carga fatoria livre (subscreve o método padrão *marker method*, (e.g., f =~ NA*q)
+
+`a*`: fixa um valor `a` para o parâmetro (e.g., f =~ a*q)
+
+### A Base de dados: Industriaçização e Economia Política
+
+Esta base de dados, **que está contida no pacote `lavaan`** é utilizada ao longo do livro de Bollen de 1989 (*Structural equations with latent variables*). A base de dados contém várias medidas de democracia política e industrialização em países em desenvolvimento. As variáveis podem ser descritas por:
+
+ - y1: Avaliações de especialistas sobre a liberdade de imprensa em 1960 *(em escala:0 a 10)*
+
+ - y2: A liberdade de oposição política em 1960 *(em escala:0 a 10)*
+
+ - y3: A imparcialidade das eleições em 1960 *(em escala:0 a 10)*
+
+ - y4: A eficácia da legislatura eleita em 1960 *(em escala:0 a 10)*
+
+Variáveis de Democracia Política (1965)
+
+ - y5: Avaliações de especialistas sobre a liberdade de imprensa em 1965 *(em escala:0 a 10)*
+
+ - y6: A liberdade de oposição política em 1965 *(em escala:0 a 10)*
+
+ - y7: A imparcialidade das eleições em 1965 *(em escala:0 a 10)*
+
+ - y8: A eficácia da legislatura eleita em 1965 *(em escala:0 a 10)*
+
+Variáveis de Industrialização (1960)
+
+ - x1: O produto nacional bruto (PNB) per capita em 1960
+
+ - x2: O consumo de energia per capita em 1960
+
+ - x3: A porcentagem da força de trabalho na indústria em 1960
+
+
+
+### Regressão linear:
+
+Imagine que queremos estimar a relação entre: liberdade de imprensa e industrialização. A seguinte regressão foi proposta:
+
+$$
+y_1 = \alpha_1 + \gamma_1 x_1 + \gamma_2 x_2 + \gamma_3 x_3 + \zeta_1 
+$$
+
+
 ```{r}
-#| include: false
+#| echo: true
+#| results: hide
+#| message: false
+#| warning: false
 library("lavaan")
 library("lavaanPlot")
+```
 
+```{r}
 data("PoliticalDemocracy")
 
-m1 <- 'y1 ~ 1 + x1 + x2'
+m1 <- 'y1 ~ 1 + x1 + x2 + x3'
 
 fit1 <- sem(m1, data=PoliticalDemocracy)
 ```
@@ -304,15 +388,29 @@ Perceba que os valores do coeficientes estimados serão os mesmo que quando usam
 
 ```{r}
 #| echo: true
-fit1lm <- lm(y1 ~ x1 + x2, data=PoliticalDemocracy)
+fit1lm <- lm(y1 ~ x1 + x2 + x3, data=PoliticalDemocracy)
 summary(fit1lm)
 ```
 
+:::{.callout-note}
+## Atividade
+1. **Como você interpretaria as estimativas dos parâmetros obtidos via comando `sem` do `lavaan`: de maneira diferente ou idêntica a um MQO?**
+
+2. **No caso da estimação via `sem` de uma única equação de regressão linear como está, existe a possibilidade do modelo não ser saturado ?**
+:::
+
+
+### Regressão Multivariada
+
+Nessa seção vamos mostrar como 
+
 ```{r}
 m2 <- '
-      y1 ~ 1 + x1 + x2
-      y2 ~ 1 + x2 + x3
+      y1 ~ 1 + x1 + x2 + x3
+      y2 ~ 1 + x1 + x2
       x1~~x3
+      x1~~x2
+      x2~~x3
       '
 
 
@@ -324,23 +422,46 @@ Os resultados obtidos são:
 #| echo: true
 summary(fit2)
 ```
-O diagrama de trajetória nesse caso fica:
+
+Por padrão (default) o comando `sem` admite covariação entre  as variáveis endógenas, mas podemos forçar uma covariância nula:
 
 ```{r}
-#| echo: true
-lavaanPlot(model = fit2, 
-           node_options = list(shape = "box", fontname = "Helvetica"), 
-           edge_options = list(color = "grey"), 
-           coefs = TRUE)
+m2_1 <- '
+      y1 ~ 1 + x1 + x2 + x3
+      y2 ~ 1 + x1 + x2
+      x1~~x3
+      x1~~x2
+      x2~~x3
+      y1 ~~ 0*y2
+      '
+
+
+fit2_1 <- sem(m2_1, data=PoliticalDemocracy)
 ```
 
+Os resultados obtidos são: 
+```{r}
+#| echo: true
+summary(fit2_1)
+```
 
-Para rodar um modelo de mensuração (exclusivamente): 
+:::{.callout-note}
+## Atividade
+1. **Compare os modelos fit2 com o fit2_1. Explique o que aconteceu com os graus de liberdade?**
+
+2. **Proponha uma especificação no `lavaan` que torne a regressão multivariada saturada. Apresente os códigos na pasta compartilhada com o professor do `posit cloud`.**
+
+3. **Proponha uma especificação no `lavaan`que gera as mesmas estimativas que 2 regressões independentes por `lm`. Apresente os códigos na pasta compartilhada com o professor do `posit cloud`.**  
+:::
+
+### Modelo de Mensuração
+Imagine que a intenção seja, a partir, das variáveis $x1$, $x2$ e $x3$, mensurar um fator latente da insdustrialização em 1960.  
+
+
 ```{r}
 m3 <- '
       ind60 =~ x1 + x2 + x3
       '
-
 
 fit3 <- sem(m3, data=PoliticalDemocracy)
 ```
@@ -359,17 +480,17 @@ lavaanPlot(model = fit3,
 ```
 
 
-
+### Modelo de Regressão Estrutural
 ```{r}
 model <- '
-  # measurement model
+  # modelo de medida
     ind60 =~ x1 + x2 + x3
     dem60 =~ y1 + y2 + y3
     dem65 =~ y5 + y6 + y7
-  # regressions
+  # regressão 
     dem60 ~ ind60
     dem65 ~ ind60 + dem60
-  # residual correlations
+  # covariâncias 
     y5 ~~ y6
     y6 ~~ y7
     x1 ~~ x2
@@ -427,7 +548,7 @@ Quanto mais próximo o valor do TLI de 1 melhor o ajuste do modelo
 
 :::{.callout-note}
 ## Atividade
-**Compute o TLI e o CFI na mão. Compara com os resultados obtidos no 'lavann'** 
+**Compute o TLI e o CFI na mão. Compare com os resultados obtidos no 'lavann'** 
 :::
 
 ## Discussão: Limitações e Desafios do SEM
@@ -444,6 +565,6 @@ Apesar de suas muitas vantagens, a aplicação do SEM também apresenta desafios
 
 # Referências
 
--   \[125\] NEVES, J. A. B. **Modelo de equações estruturais: uma introdução aplicada**. Brasília: Enap, 2018.
--   \[5\] UNIVERSITY OF CALIFORNIA, LOS ANGELES. Statistical Consulting Group. **Introduction to Structural Equation Modeling (SEM) in R with lavaan**. Disponível em: https://stats.oarc.ucla.edu/r/seminars/rsem/introduction-to-sem-in-r-with-lavaan/. Acesso em: 9 jul. 2025.
--   \[126\] UCLA Office of Advanced Research Computing (OARC). **Introduction to Structural Equation Modeling**. \[Vídeo no YouTube\]
+- NEVES, J. A. B. **Modelo de equações estruturais: uma introdução aplicada**. Brasília: Enap, 2018.
+- UNIVERSITY OF CALIFORNIA, LOS ANGELES. Statistical Consulting Group. **Introduction to Structural Equation Modeling (SEM) in R with lavaan**. Disponível em: https://stats.oarc.ucla.edu/r/seminars/rsem/introduction-to-sem-in-r-with-lavaan/. Acesso em: 9 jul. 2025.
+- UCLA Office of Advanced Research Computing (OARC). **Introduction to Structural Equation Modeling**. \[Vídeo no YouTube\]
