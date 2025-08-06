@@ -564,7 +564,6 @@ $$
 H_1: \Sigma(\theta) \ne \Sigma
 $$
 
-No nosso exemplo acima rejeita-se a hipótese nula a 5\% (p-valor de 0,023 e estatística do teste de 37,157)
 
 Como no teste qui-quadrado, a estatística é computada pelo produto do número de observações e do *score* da função de máxima verossimilhança, dizemos que é um teste sensível ao tamanho da amostra (amostras muito grandes tendem a gerar estatísticas do teste maiores e p-valores menores). 
 

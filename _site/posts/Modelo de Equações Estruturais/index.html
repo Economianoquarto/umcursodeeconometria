@@ -639,8 +639,8 @@ Variances:
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>), </span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-951ec3a05dd3bcac6207" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-951ec3a05dd3bcac6207">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.81\"] x2->y1 [label = \"0.02\"] x3->y1 [label = \"-0.31\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-30b09782ae22a0e453f8" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-30b09782ae22a0e453f8">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.81\"] x2->y1 [label = \"0.02\"] x3->y1 [label = \"-0.31\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Perceba que os valores do coeficientes estimados serão os mesmo que quando usamos o <code>lm</code>. As estimativas dos erros-padrão dos coeficientes são diferentes, pois o comando <code>sem</code> utiliza outro estimador da variância do erro do modelo. <em>Lembre-se que o estimador da variância dos parâmetros é uma função do estimador da variância do modelo</em></p>
@@ -1126,8 +1126,8 @@ Variances:
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">covs =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-098f30f31f5e26464948" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-098f30f31f5e26464948">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1; y2; y3; y4; y5; y6; y7; y8 \n node [shape = oval] \n ind60; dem60; dem65 \n \n edge [ color = grey ] \n ind60->dem60 [label = \"1.48***\"] ind60->dem65 [label = \"0.57**\"] dem60->dem65 [label = \"0.84***\"] ind60->x1 [label = \"1\"] ind60->x2 [label = \"2.18\"] ind60->x3 [label = \"1.82\"] dem60->y1 [label = \"1\"] dem60->y2 [label = \"1.26\"] dem60->y3 [label = \"1.06\"] dem60->y4 [label = \"1.26\"] dem65->y5 [label = \"1\"] dem65->y6 [label = \"1.19\"] dem65->y7 [label = \"1.28\"] dem65->y8 [label = \"1.27\"] y5 -> y1 [label = \"0.62\", dir = \"both\"] y4 -> y2 [label = \"1.31\", dir = \"both\"] y6 -> y2 [label = \"2.15\", dir = \"both\"] y7 -> y3 [label = \"0.79\", dir = \"both\"] y8 -> y4 [label = \"0.35\", dir = \"both\"] y8 -> y6 [label = \"1.36\", dir = \"both\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-84bcdc8bbae617c1d64e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-84bcdc8bbae617c1d64e">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1; y2; y3; y4; y5; y6; y7; y8 \n node [shape = oval] \n ind60; dem60; dem65 \n \n edge [ color = grey ] \n ind60->dem60 [label = \"1.48***\"] ind60->dem65 [label = \"0.57**\"] dem60->dem65 [label = \"0.84***\"] ind60->x1 [label = \"1\"] ind60->x2 [label = \"2.18\"] ind60->x3 [label = \"1.82\"] dem60->y1 [label = \"1\"] dem60->y2 [label = \"1.26\"] dem60->y3 [label = \"1.06\"] dem60->y4 [label = \"1.26\"] dem65->y5 [label = \"1\"] dem65->y6 [label = \"1.19\"] dem65->y7 [label = \"1.28\"] dem65->y8 [label = \"1.27\"] y5 -> y1 [label = \"0.62\", dir = \"both\"] y4 -> y2 [label = \"1.31\", dir = \"both\"] y6 -> y2 [label = \"2.15\", dir = \"both\"] y7 -> y3 [label = \"0.79\", dir = \"both\"] y8 -> y4 [label = \"0.35\", dir = \"both\"] y8 -> y6 [label = \"1.36\", dir = \"both\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Uma forma de analisar o ajuste do modelo é pelo qui-quadrado. A estatística desse teste é calculada a partir do <em>score</em> da função de máxima verossimilhança</p>
@@ -1136,7 +1136,6 @@ H_0: \Sigma(\theta) = \Sigma
 \]</span> <span class="math display">\[
 H_1: \Sigma(\theta) \ne \Sigma
 \]</span></p>
-<p>No nosso exemplo acima rejeita-se a hipótese nula a 5% (p-valor de 0,023 e estatística do teste de 37,157)</p>
 <p>Como no teste qui-quadrado, a estatística é computada pelo produto do número de observações e do <em>score</em> da função de máxima verossimilhança, dizemos que é um teste sensível ao tamanho da amostra (amostras muito grandes tendem a gerar estatísticas do teste maiores e p-valores menores).</p>
 <p>Por esse motivo é comum a utilização de medidas de ajuste do modelo comparativas. O <code>lavaan</code> reporta 2:</p>
 <ol type="1">
