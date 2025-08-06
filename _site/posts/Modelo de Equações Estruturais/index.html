@@ -261,15 +261,11 @@ Observação Importante
 <section id="quando-usar-o-sem" class="level2">
 <h2 class="anchored" data-anchor-id="quando-usar-o-sem">Quando usar o SEM?</h2>
 <p>A Modelagem de Equações Estruturais é uma ferramenta estatística confirmatória, não exploratória. Ela pode ser aplicada de três maneiras distintas:</p>
-<ul>
-<li><p>I. <em>Confirmação Direta</em>: Testar um único modelo teórico para validá-lo ou invalidá-lo.</p></li>
-<li><ol start="2" type="I">
-<li><em>Modelos Alternativos</em>: Comparar modelos concorrentes para ver qual explica melhor os dados.</li>
-</ol></li>
-<li><ol start="3" type="I">
-<li><em>Desenvolvimento do Modelo</em>: Iniciar com um modelo teórico e, caso ele não se ajuste bem, modificá-lo em busca de uma versão melhor e mais simples (parcimoniosa).</li>
-</ol></li>
-</ul>
+<ol type="I">
+<li><p><em>Confirmação Direta</em>: Testar um único modelo teórico para validá-lo ou invalidá-lo.</p></li>
+<li><p><em>Modelos Alternativos</em>: Comparar modelos concorrentes para ver qual explica melhor os dados.</p></li>
+<li><p><em>Desenvolvimento do Modelo</em>: Iniciar com um modelo teórico e, caso ele não se ajuste bem, modificá-lo em busca de uma versão melhor e mais simples (parcimoniosa).</p></li>
+</ol>
 </section>
 <section id="vantagem-do-sem" class="level2">
 <h2 class="anchored" data-anchor-id="vantagem-do-sem">Vantagem do SEM</h2>
@@ -527,11 +523,24 @@ Observação Importante
 <p>O SEM, com sua capacidade de modelar relações complexas e variáveis latentes, tem diversas aplicações.</p>
 <section id="exemplos-de-aplicações" class="level2">
 <h2 class="anchored" data-anchor-id="exemplos-de-aplicações">Exemplos de Aplicações</h2>
-<p>Dois exemplos clássicos de aplicação são:</p>
+<p>Dois exemplos de aplicação, retirados de Neves (2018) são:</p>
 <ol type="1">
-<li><p><strong>Modelo de Realização de Status Socioeconômico</strong>: Um modelo da teoria da estratificação social que investiga como a origem socioeconômica (variáveis como escolaridade dos pais e status socioeconômico da ocupação do pai) influencia o destino socioeconômico (medido por variáveis como escolaridade do próprio indivíduo, status socioeconômico da ocupação e rendimento do trabalho). Este modelo é relevante para entender a <strong>transmissão intergeracional da desigualdade</strong>, muitas vezes revelando que os efeitos indiretos são mais proeminentes que os diretos .</p></li>
+<li><p><strong>Modelo de Realização de Status Socioeconômico</strong>: Um modelo da teoria da estratificação social que investiga como a origem socioeconômica (variáveis como escolaridade dos pais e status socioeconômico da ocupação do pai) influencia o destino socioeconômico (medido por variáveis como escolaridade do próprio indivíduo, status socioeconômico da ocupação e rendimento do trabalho). Este modelo é relevante para entender a transmissão intergeracional da desigualdade, muitas vezes revelando que os efeitos indiretos são mais proeminentes que os diretos .</p></li>
 <li><p><strong>Modelo de Determinação do Índice de Gestão Descentralizada Municipal (IGD-M)</strong>: Aplicado na área de políticas sociais, este modelo busca explicar os fatores que determinam a qualidade da gestão de programas sociais em nível municipal. Pode incluir variáveis como renda per capita, PIB per capita e a proporção de beneficiários de programas sociais, revelando a dependência municipal de recursos externos e a complexa relação entre desenvolvimento econômico e qualidade da gestão social.</p></li>
 </ol>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Atividade
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Explique os modelos acima com suas palavras a partir dos diagramas contidos no capítulo 5 de Neves (2018)</strong></p>
+</div>
+</div>
 </section>
 <section id="hands-on-aplicação-do-sem-em-software-estatístico-e-interpretação" class="level2">
 <h2 class="anchored" data-anchor-id="hands-on-aplicação-do-sem-em-software-estatístico-e-interpretação">Hands-on: Aplicação do SEM em Software Estatístico e Interpretação</h2>
@@ -548,17 +557,17 @@ Observação Importante
 <h3 class="anchored" data-anchor-id="a-base-de-dados-industriaçização-e-economia-política">A Base de dados: Industriaçização e Economia Política</h3>
 <p>Esta base de dados, <strong>que está contida no pacote <code>lavaan</code></strong>, é utilizada ao longo do livro de Bollen de 1989 (<em>Structural equations with latent variables</em>). A base de dados contém várias medidas de democracia política e industrialização em países em desenvolvimento. As variáveis podem ser descritas por:</p>
 <ul>
-<li><p>y1: Avaliações de especialistas sobre a liberdade de imprensa em 1960 <em>(em escala:0 a 10)</em></p></li>
-<li><p>y2: A liberdade de oposição política em 1960 <em>(em escala:0 a 10)</em></p></li>
-<li><p>y3: A imparcialidade das eleições em 1960 <em>(em escala:0 a 10)</em></p></li>
-<li><p>y4: A eficácia da legislatura eleita em 1960 <em>(em escala:0 a 10)</em></p></li>
+<li><p>y1: Avaliações de especialistas sobre a liberdade de imprensa em 1960 <em>(em escala: 0 a 10)</em></p></li>
+<li><p>y2: A liberdade de oposição política em 1960 <em>(em escala: 0 a 10)</em></p></li>
+<li><p>y3: A imparcialidade das eleições em 1960 <em>(em escala: 0 a 10)</em></p></li>
+<li><p>y4: A eficácia da legislatura eleita em 1960 <em>(em escala: 0 a 10)</em></p></li>
 </ul>
 <p>Variáveis de Democracia Política (1965)</p>
 <ul>
-<li><p>y5: Avaliações de especialistas sobre a liberdade de imprensa em 1965 <em>(em escala:0 a 10)</em></p></li>
-<li><p>y6: A liberdade de oposição política em 1965 <em>(em escala:0 a 10)</em></p></li>
-<li><p>y7: A imparcialidade das eleições em 1965 <em>(em escala:0 a 10)</em></p></li>
-<li><p>y8: A eficácia da legislatura eleita em 1965 <em>(em escala:0 a 10)</em></p></li>
+<li><p>y5: Avaliações de especialistas sobre a liberdade de imprensa em 1965 <em>(em escala: 0 a 10)</em></p></li>
+<li><p>y6: A liberdade de oposição política em 1965 <em>(em escala: 0 a 10)</em></p></li>
+<li><p>y7: A imparcialidade das eleições em 1965 <em>(em escala: 0 a 10)</em></p></li>
+<li><p>y8: A eficácia da legislatura eleita em 1965 <em>(em escala: 0 a 10)</em></p></li>
 </ul>
 <p>Variáveis de Industrialização (1960)</p>
 <ul>
@@ -630,8 +639,8 @@ Variances:
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>), </span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-42ac6d80d3ebb36c032b" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-42ac6d80d3ebb36c032b">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.81\"] x2->y1 [label = \"0.02\"] x3->y1 [label = \"-0.31\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-951ec3a05dd3bcac6207" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-951ec3a05dd3bcac6207">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.81\"] x2->y1 [label = \"0.02\"] x3->y1 [label = \"-0.31\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Perceba que os valores do coeficientes estimados serão os mesmo que quando usamos o <code>lm</code>. As estimativas dos erros-padrão dos coeficientes são diferentes, pois o comando <code>sem</code> utiliza outro estimador da variância do erro do modelo. <em>Lembre-se que o estimador da variância dos parâmetros é uma função do estimador da variância do modelo</em></p>
@@ -1117,16 +1126,90 @@ Variances:
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">covs =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-19d4d6d20bfc5d1904e9" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-19d4d6d20bfc5d1904e9">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1; y2; y3; y4; y5; y6; y7; y8 \n node [shape = oval] \n ind60; dem60; dem65 \n \n edge [ color = grey ] \n ind60->dem60 [label = \"1.48***\"] ind60->dem65 [label = \"0.57**\"] dem60->dem65 [label = \"0.84***\"] ind60->x1 [label = \"1\"] ind60->x2 [label = \"2.18\"] ind60->x3 [label = \"1.82\"] dem60->y1 [label = \"1\"] dem60->y2 [label = \"1.26\"] dem60->y3 [label = \"1.06\"] dem60->y4 [label = \"1.26\"] dem65->y5 [label = \"1\"] dem65->y6 [label = \"1.19\"] dem65->y7 [label = \"1.28\"] dem65->y8 [label = \"1.27\"] y5 -> y1 [label = \"0.62\", dir = \"both\"] y4 -> y2 [label = \"1.31\", dir = \"both\"] y6 -> y2 [label = \"2.15\", dir = \"both\"] y7 -> y3 [label = \"0.79\", dir = \"both\"] y8 -> y4 [label = \"0.35\", dir = \"both\"] y8 -> y6 [label = \"1.36\", dir = \"both\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-098f30f31f5e26464948" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-098f30f31f5e26464948">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1; y2; y3; y4; y5; y6; y7; y8 \n node [shape = oval] \n ind60; dem60; dem65 \n \n edge [ color = grey ] \n ind60->dem60 [label = \"1.48***\"] ind60->dem65 [label = \"0.57**\"] dem60->dem65 [label = \"0.84***\"] ind60->x1 [label = \"1\"] ind60->x2 [label = \"2.18\"] ind60->x3 [label = \"1.82\"] dem60->y1 [label = \"1\"] dem60->y2 [label = \"1.26\"] dem60->y3 [label = \"1.06\"] dem60->y4 [label = \"1.26\"] dem65->y5 [label = \"1\"] dem65->y6 [label = \"1.19\"] dem65->y7 [label = \"1.28\"] dem65->y8 [label = \"1.27\"] y5 -> y1 [label = \"0.62\", dir = \"both\"] y4 -> y2 [label = \"1.31\", dir = \"both\"] y6 -> y2 [label = \"2.15\", dir = \"both\"] y7 -> y3 [label = \"0.79\", dir = \"both\"] y8 -> y4 [label = \"0.35\", dir = \"both\"] y8 -> y6 [label = \"1.36\", dir = \"both\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Uma forma de analisar o ajuste do modelo é pelo qui-quadrado. A estatística desse teste é calculada a partir do <em>score</em> da função de máxima verossimilhança</p>
-<p>Quanto maior o valor do qui-quadrado, maior a diferença entre as matrizes de covariância observada e implícita do modelo, indicando um pior ajuste.</p>
-
-
+<p>Quanto maior o valor do qui-quadrado, maior a diferença entre a matriz de covariância implícita da amostra <span class="math inline">\(\Sigma(\theta)\)</span> e a matriz de covariância observada da amostra <span class="math inline">\(S\)</span>, e maior a probabilidade de você rejeitar seu modelo. A hipótese nula é: <span class="math display">\[
+H_0: \Sigma(\theta) = \Sigma
+\]</span> <span class="math display">\[
+H_1: \Sigma(\theta) \ne \Sigma
+\]</span></p>
+<p>No nosso exemplo acima rejeita-se a hipótese nula a 5% (p-valor de 0,023 e estatística do teste de 37,157)</p>
+<p>Como no teste qui-quadrado, a estatística é computada pelo produto do número de observações e do <em>score</em> da função de máxima verossimilhança, dizemos que é um teste sensível ao tamanho da amostra (amostras muito grandes tendem a gerar estatísticas do teste maiores e p-valores menores).</p>
+<p>Por esse motivo é comum a utilização de medidas de ajuste do modelo comparativas. O <code>lavaan</code> reporta 2:</p>
+<ol type="1">
+<li>Comparative Fit Index (CFI)</li>
+</ol>
+<ul>
+<li>O teste compara a estatística do teste qui-quadrado entre 2 modelos: o modelo utilizado e o modelo <em>baseline</em>, isto é, aquele que não admite relações/covariâncias entre as variáveis (apenas variância). Seja <span class="math inline">\(\delta\)</span> = <span class="math inline">\(\chi^2 - df\)</span> a diferença entre a estatística qui-quadrado e graus de liberdade, o CFI é calculado por:</li>
+</ul>
+<p><span class="math display">\[
+CFI = \frac{\delta_{baseline}-\delta_{usado}}{\delta_{baseline}}
+\]</span> Quanto mais próximo o valor do CFI de 1, melhor o ajuste do modelo: no limite queremos minimizar a diferença entre a matriz de covariância implícita da amostra <span class="math inline">\(\Sigma(\theta)\)</span> e a matriz de covariância observada da amostra <span class="math inline">\(S\)</span>, ou seja, <span class="math inline">\(\chi^2 \rightarrow 0\)</span> modelando todas as relações entre as variáveis, <span class="math inline">\(df \rightarrow 0\)</span></p>
+<ol start="2" type="1">
+<li>Tucker Lewis Index (TLI)</li>
+</ol>
+<ul>
+<li>O teste tem a mesma ideia do CFI, mas a ponderação pelos graus de liberdade é diferente. Seja <span class="math inline">\(\Delta\)</span> = <span class="math inline">\(\frac{\chi^2}{df}\)</span> a diferença entre a estatística qui-quadrado e graus de liberdade, o TLI é calculado por:</li>
+</ul>
+<p><span class="math display">\[
+TLI = \frac{\Delta_{baseline}-\Delta_{usado}}{\Delta_{baseline}-1}
+\]</span> Quanto mais próximo o valor do TLI de 1, melhor o ajuste do modelo</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Atividade
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Compute o TLI e o CFI na mão. Compare com os resultados obtidos no ‘lavaan’</strong></p>
+</div>
+</div>
 </section>
 </section>
+<section id="discussão-limitações-e-desafios-do-sem" class="level2">
+<h2 class="anchored" data-anchor-id="discussão-limitações-e-desafios-do-sem">Discussão: Limitações e Desafios do SEM</h2>
+<p>A grande limitação do SEM nas Ciências Econômicas diz respeito à sua capacidade como instrumento para inferência causal</p>
+<p>Na discussão <strong>Resultados Potenciais vs SEM</strong>, encabeçada por Judea Pearl, o SEM sai em desvantagem, pois a Economia ainda é uma ciência preocupada em provar causação (devido aos seus paradigmas de pensamento). O SEM não é adequado para provar causação, mas pode interpretar parâmetros como efeitos causais.</p>
+<p>Nesse sentido, o SEM seria mais adequado como uma abordagem complementar a um experimento realizado anteriormente para garantir a causação.</p>
+</section>
+</section>
+<section id="avaliação" class="level1">
+<h1>Avaliação</h1>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Como parte da nota da disciplina responda às seguintes questões:</p>
+<ol type="1">
+<li><p>Qual é a principal diferença entre uma variável observada e uma variável latente em um Modelo de Equações Estruturais (SEM)? Forneça um exemplo em um contexto econômico.</p></li>
+<li><p>Explique a distinção entre o modelo de mensuração e o modelo estrutural em um SEM.</p></li>
+<li><p>Quais são as vantagens de se utilizar um SEM em comparação com uma análise de regressão múltipla tradicional para analisar relações complexas na Economia?</p></li>
+<li><p>Utilize o pacote lavaan para exemplificar o modelo de equações estruturais (os dados não precisam ser reais). Compartilhe o projeto com o professor via Posit Cloud.</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="referências" class="level1">
+<h1>Referências</h1>
+<ul>
+<li><p>NEVES, J. A. B. <strong>Modelo de equações estruturais: uma introdução aplicada</strong>. Brasília: Enap, 2018.</p></li>
+<li><p>RAYKOV, T.; MARCOULIDES, G. A. A first course in structural equation modeling. routledge, 2012.</p></li>
+<li><p>UNIVERSITY OF CALIFORNIA, LOS ANGELES. Statistical Consulting Group. <strong>Introduction to Structural Equation Modeling (SEM) in R with lavaan</strong>. Disponível em: https://stats.oarc.ucla.edu/r/seminars/rsem/introduction-to-sem-in-r-with-lavaan/. Acesso em: 9 jul. 2025.</p></li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->

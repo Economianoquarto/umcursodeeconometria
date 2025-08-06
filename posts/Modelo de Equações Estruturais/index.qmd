@@ -60,11 +60,11 @@ A SEM é ideal para medir conceitos abstratos (variáveis latentes) como "satisf
 
 A Modelagem de Equações Estruturais é uma ferramenta estatística confirmatória, não exploratória. Ela pode ser aplicada de três maneiras distintas:
 
-- I. *Confirmação Direta*: Testar um único modelo teórico para validá-lo ou invalidá-lo.
+   I.  *Confirmação Direta*: Testar um único modelo teórico para validá-lo ou invalidá-lo.
 
-- II. *Modelos Alternativos*: Comparar modelos concorrentes para ver qual explica melhor os dados.
+   II. *Modelos Alternativos*: Comparar modelos concorrentes para ver qual explica melhor os dados.
 
-- III. *Desenvolvimento do Modelo*: Iniciar com um modelo teórico e, caso ele não se ajuste bem, modificá-lo em busca de uma versão melhor e mais simples (parcimoniosa).
+   III.  *Desenvolvimento do Modelo*: Iniciar com um modelo teórico e, caso ele não se ajuste bem, modificá-lo em busca de uma versão melhor e mais simples (parcimoniosa).
 
 ## Vantagem do SEM
 
@@ -279,16 +279,20 @@ As estatísticas de qualidade do ajuste avaliam o quão bem o modelo populaciona
     
 # Aplicações do SEM na Economia
 
-O SEM, com sua capacidade de modelar relações complexas e variáveis latentes, tem diversas aplicações.
+O SEM, com sua capacidade de modelar relações complexas e variáveis latentes, tem diversas aplicações. 
 
 ## Exemplos de Aplicações
 
-Dois exemplos clássicos de aplicação são:  
+Dois exemplos de aplicação, retirados de Neves (2018) são:  
 
-1) **Modelo de Realização de Status Socioeconômico**: Um modelo da teoria da estratificação social que investiga como a origem socioeconômica (variáveis como escolaridade dos pais e status socioeconômico da ocupação do pai) influencia o destino socioeconômico (medido por variáveis como escolaridade do próprio indivíduo, status socioeconômico da ocupação e rendimento do trabalho). Este modelo é relevante para entender a **transmissão intergeracional da desigualdade**, muitas vezes revelando que os efeitos indiretos são mais proeminentes que os diretos . 
+1) **Modelo de Realização de Status Socioeconômico**: Um modelo da teoria da estratificação social que investiga como a origem socioeconômica (variáveis como escolaridade dos pais e status socioeconômico da ocupação do pai) influencia o destino socioeconômico (medido por variáveis como escolaridade do próprio indivíduo, status socioeconômico da ocupação e rendimento do trabalho). Este modelo é relevante para entender a transmissão intergeracional da desigualdade, muitas vezes revelando que os efeitos indiretos são mais proeminentes que os diretos . 
 
 2) **Modelo de Determinação do Índice de Gestão Descentralizada Municipal (IGD-M)**: Aplicado na área de políticas sociais, este modelo busca explicar os fatores que determinam a qualidade da gestão de programas sociais em nível municipal. Pode incluir variáveis como renda per capita, PIB per capita e a proporção de beneficiários de programas sociais, revelando a dependência municipal de recursos externos e a complexa relação entre desenvolvimento econômico e qualidade da gestão social.
 
+:::{.callout-note}
+## Atividade
+**Explique os modelos acima com suas palavras a partir dos diagramas contidos no capítulo 5 de Neves (2018)**  
+:::
 
 ## Hands-on: Aplicação do SEM em Software Estatístico e Interpretação
 
@@ -314,23 +318,23 @@ A sintaxe no `lavaan` é intuitiva:
 
 Esta base de dados, **que está contida no pacote `lavaan`**, é utilizada ao longo do livro de Bollen de 1989 (*Structural equations with latent variables*). A base de dados contém várias medidas de democracia política e industrialização em países em desenvolvimento. As variáveis podem ser descritas por:
 
- - y1: Avaliações de especialistas sobre a liberdade de imprensa em 1960 *(em escala:0 a 10)*
+ - y1: Avaliações de especialistas sobre a liberdade de imprensa em 1960 *(em escala: 0 a 10)*
 
- - y2: A liberdade de oposição política em 1960 *(em escala:0 a 10)*
+ - y2: A liberdade de oposição política em 1960 *(em escala: 0 a 10)*
 
- - y3: A imparcialidade das eleições em 1960 *(em escala:0 a 10)*
+ - y3: A imparcialidade das eleições em 1960 *(em escala: 0 a 10)*
 
- - y4: A eficácia da legislatura eleita em 1960 *(em escala:0 a 10)*
+ - y4: A eficácia da legislatura eleita em 1960 *(em escala: 0 a 10)*
 
 Variáveis de Democracia Política (1965)
 
- - y5: Avaliações de especialistas sobre a liberdade de imprensa em 1965 *(em escala:0 a 10)*
+ - y5: Avaliações de especialistas sobre a liberdade de imprensa em 1965 *(em escala: 0 a 10)*
 
- - y6: A liberdade de oposição política em 1965 *(em escala:0 a 10)*
+ - y6: A liberdade de oposição política em 1965 *(em escala: 0 a 10)*
 
- - y7: A imparcialidade das eleições em 1965 *(em escala:0 a 10)*
+ - y7: A imparcialidade das eleições em 1965 *(em escala: 0 a 10)*
 
- - y8: A eficácia da legislatura eleita em 1965 *(em escala:0 a 10)*
+ - y8: A eficácia da legislatura eleita em 1965 *(em escala: 0 a 10)*
 
 Variáveis de Industrialização (1960)
 
@@ -552,5 +556,73 @@ lavaanPlot(model = fit,
 
 Uma forma de analisar o ajuste do modelo é pelo qui-quadrado. A estatística desse teste é calculada a partir do *score* da função de máxima verossimilhança
 
-Quanto maior o valor do qui-quadrado, maior a diferença entre as matrizes de covariância observada e implícita do modelo, indicando um pior ajuste.
+Quanto maior o valor do qui-quadrado, maior a diferença entre a matriz de covariância implícita da amostra $\Sigma(\theta)$ e a matriz de covariância observada da amostra $S$, e maior a probabilidade de você rejeitar seu modelo. A hipótese nula é: 
+$$
+H_0: \Sigma(\theta) = \Sigma 
+$$
+$$
+H_1: \Sigma(\theta) \ne \Sigma
+$$
+
+No nosso exemplo acima rejeita-se a hipótese nula a 5\% (p-valor de 0,023 e estatística do teste de 37,157)
+
+Como no teste qui-quadrado, a estatística é computada pelo produto do número de observações e do *score* da função de máxima verossimilhança, dizemos que é um teste sensível ao tamanho da amostra (amostras muito grandes tendem a gerar estatísticas do teste maiores e p-valores menores). 
+
+Por esse motivo é comum a utilização de medidas de ajuste do modelo comparativas. O `lavaan` reporta 2: 
+
+1. Comparative Fit Index (CFI)
+
+  * O teste compara a estatística do teste qui-quadrado entre 2 modelos: o modelo utilizado e o modelo *baseline*, isto é, aquele que não admite relações/covariâncias entre as variáveis (apenas variância). Seja $\delta$ = $\chi^2 - df$ a diferença entre a estatística qui-quadrado e graus de liberdade, o CFI é calculado por:  
+  
+$$
+CFI = \frac{\delta_{baseline}-\delta_{usado}}{\delta_{baseline}}
+$$
+Quanto mais próximo o valor do CFI de 1, melhor o ajuste do modelo: no limite queremos minimizar a diferença entre a matriz de covariância implícita da amostra $\Sigma(\theta)$ e a matriz de covariância observada da amostra $S$, ou seja, $\chi^2 \rightarrow 0$ modelando todas as relações entre as variáveis, $df \rightarrow 0$
+
+2. Tucker Lewis Index (TLI)
+
+  * O teste tem a mesma ideia do CFI, mas a ponderação pelos graus de liberdade é diferente. Seja $\Delta$ = $\frac{\chi^2}{df}$ a diferença entre a estatística qui-quadrado e graus de liberdade, o TLI é calculado por: 
+  
+$$
+TLI = \frac{\Delta_{baseline}-\Delta_{usado}}{\Delta_{baseline}-1}
+$$
+Quanto mais próximo o valor do TLI de 1, melhor o ajuste do modelo
+
+:::{.callout-note}
+## Atividade
+**Compute o TLI e o CFI na mão. Compare com os resultados obtidos no 'lavaan'** 
+:::
+
+## Discussão: Limitações e Desafios do SEM
+
+A grande limitação do SEM nas Ciências Econômicas diz respeito à sua capacidade como instrumento para inferência causal
+
+Na discussão **Resultados Potenciais vs SEM**, encabeçada por Judea Pearl, o SEM sai em desvantagem, pois a Economia ainda é uma ciência preocupada em provar causação (devido aos seus paradigmas de pensamento). O SEM não é adequado para provar causação, mas pode interpretar parâmetros como efeitos causais.
+
+Nesse sentido, o SEM seria mais adequado como uma abordagem complementar a um experimento realizado anteriormente para garantir a causação.
+
+
+
+# Avaliação 
+:::{.callout-note}
+
+Como parte da nota da disciplina responda às seguintes questões:
+
+1. Qual é a principal diferença entre uma variável observada e uma variável latente em um Modelo de Equações Estruturais (SEM)? Forneça um exemplo em um contexto econômico.
+
+2. Explique a distinção entre o modelo de mensuração e o modelo estrutural em um SEM.
+
+3. Quais são as vantagens de se utilizar um SEM em comparação com uma análise de regressão múltipla tradicional para analisar relações complexas na Economia?  
+
+4. Utilize o pacote lavaan para exemplificar o modelo de equações estruturais (os dados não precisam ser reais). Compartilhe o projeto com o professor via Posit Cloud.
+:::
+
+
+# Referências
+
+- NEVES, J. A. B. **Modelo de equações estruturais: uma introdução aplicada**. Brasília: Enap, 2018.
+
+- RAYKOV, T.; MARCOULIDES, G. A. A first course in structural equation modeling. routledge, 2012.
+
+- UNIVERSITY OF CALIFORNIA, LOS ANGELES. Statistical Consulting Group. **Introduction to Structural Equation Modeling (SEM) in R with lavaan**. Disponível em: https://stats.oarc.ucla.edu/r/seminars/rsem/introduction-to-sem-in-r-with-lavaan/. Acesso em: 9 jul. 2025.
 
