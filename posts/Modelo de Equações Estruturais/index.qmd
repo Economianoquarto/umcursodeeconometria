@@ -401,7 +401,7 @@ summary(fit1lm)
 ## Atividade
 1. **Como você interpretaria as estimativas dos parâmetros obtidos via comando `sem` do `lavaan`: de maneira diferente ou idêntica a um MQO?**
 
-2. **No caso da estimação via `sem` de uma única equação de regressão linear como está, existe a possibilidade do modelo não ser saturado ?**
+2. **No caso da estimação via `sem` de uma única equação de regressão linear como esta, existe a possibilidade do modelo não ser saturado ?**
 :::
 
 
