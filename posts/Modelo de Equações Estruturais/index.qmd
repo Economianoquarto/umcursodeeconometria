@@ -168,7 +168,7 @@ O **modelo de mensuração** ou modelo de análise fatorial é essencialmente um
 
 $$y_1 = \tau_1 + \lambda_1\eta + \epsilon_1$$
 
-onde $\tau_1$ é o intercepto do primeiro item e $\lambda_1$ é a carga ou peso de regressão do primeiro fator sobre o primeiro item, e $\epsilon_1$ é o resíduo para o primeiro item. Existem duas diferenças principais entre o modelo de análise fatorial e a regressão linear:
+onde $\tau_1$ é o intercepto do primeiro item e $\lambda_1$ é a carga ou peso de regressão do primeiro fator sobre o primeiro item, e $\epsilon_1$ é o termo de erro para o primeiro item. Existem duas diferenças principais entre o modelo de análise fatorial e a regressão linear:
 
 - 1. A primeira e mais importante é que o preditor ou fator, $\eta$ ("eta"), não é observado, enquanto em uma regressão linear os preditores são observados.
 
@@ -176,7 +176,7 @@ onde $\tau_1$ é o intercepto do primeiro item e $\lambda_1$ é a carga ou peso 
 
 Podemos representar um modelo mensuração (com 3 itens) como uma equação matricial:
 
-$$\begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = \begin{pmatrix} \tau_1 \\ \tau_2 \\ \tau_3 \end{pmatrix} + \begin{pmatrix} \lambda_1 \\ \lambda_2 \\ \lambda_3 \end{pmatrix} (\eta_1) + \begin{pmatrix} \epsilon_1 \\ \epsilon_2 \\ \epsilon_3 \end{pmatrix}$$
+$$\begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = \begin{pmatrix} \tau_1 \\ \tau_2 \\ \tau_3 \end{pmatrix} + \begin{pmatrix} \lambda_1 \\ \lambda_2 \\ \lambda_3 \end{pmatrix} (\eta) + \begin{pmatrix} \epsilon_1 \\ \epsilon_2 \\ \epsilon_3 \end{pmatrix}$$
 
 Vamos definir cada um dos termos no modelo:
 
