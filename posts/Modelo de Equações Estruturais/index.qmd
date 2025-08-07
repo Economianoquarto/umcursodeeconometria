@@ -198,7 +198,7 @@ A seguir, a descrição de cada **parâmetro**, definido como um termo no modelo
 
 *   $\Lambda$ ("lambda") matriz de **cargas fatoriais** (consistindo dos mesmos $\lambda$'s do modelo de mensuração)
 *   $\Psi$ ("psi") matriz de **variância-covariância dos fatores latentes** (ou seja, variância de $\eta$; para um fator, é um escalar)
-*   $\Theta_\epsilon$ ("theta-epsilon") matriz de **variância-covariância dos resíduos**
+*   $\Theta_\epsilon$ ("theta-epsilon") matriz de **variância-covariância dos erros**
 
 As dimensões desta matriz correspondem às mesmas da matriz de covariância observada $\Sigma$; para três itens, é 3x3. Lembre-se que a matriz de covariância do modelo pode ser definida pelo seguinte:
 
@@ -206,7 +206,7 @@ No caso de três itens e um fator:
 
 $$\Sigma(\theta_y) = \begin{pmatrix} \lambda_1 \\ \lambda_2 \\ \lambda_3 \end{pmatrix} (\psi_{11}) \begin{pmatrix} \lambda_1 & \lambda_2 & \lambda_3 \end{pmatrix} + \begin{pmatrix} \theta_{11} & \theta_{12} & \theta_{13} \\ \theta_{21} & \theta_{22} & \theta_{23} \\ \theta_{31} & \theta_{32} & \theta_{33} \end{pmatrix}$$
 
-Note que as cargas $\lambda$ são os mesmos parâmetros compartilhados entre o modelo de mensuração e a matriz de covariância implícita. Isso significa que os únicos novos parâmetros envolvem $\Psi$ e $\Theta_\epsilon$, que são as matrizes de covariância dos fatores latentes e dos erros residuais, respectivamente. 
+Note que as cargas $\lambda$ são os mesmos parâmetros compartilhados entre o modelo de mensuração e a matriz de covariância implícita. Isso significa que os únicos novos parâmetros envolvem $\Psi$ e $\Theta_\epsilon$, que são as matrizes de covariância dos fatores latentes e dos erros, respectivamente. 
 
 Usualmente negligenciamos os interceptos ($\tau$\'s) do modelo estrutural (raramente possui uma interpretação útil). Para isso, o pesquisador padroniza os itens (subtrai a média e divide pelo desvio-padrão). 
 
