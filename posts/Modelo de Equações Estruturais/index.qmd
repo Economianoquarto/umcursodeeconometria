@@ -11,7 +11,8 @@ image: "image.jpg"
 Este material aborda os Modelos de Equações Estruturais (MEE) ou *Structural Equation Model* (SEM)
 
 # Plano de aula
-[Visualizar Plano de Aula Completo](Plano_de_Aula_tema_8.pdf){target="_blank"}
+
+[Visualizar Plano de Aula Completo](Plano_de_Aula_SEM.pdf){target="_blank"}
 
 # Introdução
 
@@ -19,87 +20,84 @@ Este material aborda os Modelos de Equações Estruturais (MEE) ou *Structural E
 
 A Modelagem de Equações Estruturais (SEM) é uma metodologia para testar e estimar relações causais entre múltiplas variáveis.
 
-:::{.callout-note}
+::: callout-note
 ## Observação Importante
-**O SEM pode ser entendido como uma combinação de 2 técnicas e trabalha essencialmente com 2 tipos de variáveis** 
+
+**O SEM pode ser entendido como uma combinação de 2 técnicas e trabalha essencialmente com 2 tipos de variáveis**
 :::
 
-  * **Das técnicas**: O SEM pode ser visto como uma combinação da:
-  
-  1. **Análise fatorial**, que busca mesurar **variáveis latentes** por meio de variáveis observadas;
-  
-  2. **Análise de regressão**, que analisa as inter-relações das variáveis.
+-   **Das técnicas**: O SEM pode ser visto como uma combinação da:
+
+1.  **Análise fatorial**, que busca mesurar **variáveis latentes** por meio de variáveis observadas;
+
+2.  **Análise de regressão**, que analisa as inter-relações das variáveis.
 
 ### Sobre a Análise Fatorial
 
 A análise fatorial pode ser dividida em dois tipos principais: exploratória e confirmatória.
 
-- A **Análise Fatorial Exploratória** é utilizada quando o pesquisador não possui uma teoria pré-existente forte ou uma hipótese clara sobre a estrutura subjacente de um conjunto de variáveis. O objetivo da AFE é identificar e entender os traços latentes (também chamados de fatores ou construtos) que podem explicar as correlações observadas entre um grande número de variáveis manifestas (itens de um questionário, por exemplo)
+-   A **Análise Fatorial Exploratória** é utilizada quando o pesquisador não possui uma teoria pré-existente forte ou uma hipótese clara sobre a estrutura subjacente de um conjunto de variáveis. O objetivo da AFE é identificar e entender os traços latentes (também chamados de fatores ou construtos) que podem explicar as correlações observadas entre um grande número de variáveis manifestas (itens de um questionário, por exemplo)
 
-- **A análise fatorial confirmatória** empresta muitos dos mesmos conceitos da análise fatorial exploratória, exceto que, em vez de deixar os dados nos dizerem a estrutura fatorial, nós pré-determinamos a estrutura fatorial. É geralmente baseada em pesquisas anteriores, teorias estabelecidas ou no próprio resultado de uma AFE prévia.
+-   **A análise fatorial confirmatória** empresta muitos dos mesmos conceitos da análise fatorial exploratória, exceto que, em vez de deixar os dados nos dizerem a estrutura fatorial, nós pré-determinamos a estrutura fatorial. É geralmente baseada em pesquisas anteriores, teorias estabelecidas ou no próprio resultado de uma AFE prévia.
 
-**A análise fatorial confirmatória - ou confirmatory factor analysis  (CFA) - faz parte frequentemente da abordagem abrangente do SEM**
+**A análise fatorial confirmatória - ou confirmatory factor analysis (CFA) - faz parte frequentemente da abordagem abrangente do SEM**
 
 Um modelo SEM é geralmente representado por um diagrama que mostra as relações hipotéticas entre: **Variáveis Latentes** e **Variáveis Observadas**
 
-- **Variáveis Latentes**: Conceitos abstratos que não podem ser medidos diretamente (ex: bem-estar, inteligência, burnout).
+-   **Variáveis Latentes**: Conceitos abstratos que não podem ser medidos diretamente (ex: bem-estar, inteligência, burnout).
 
-- **Variáveis Observadas (ou Indicadores)**: Dados que podem ser medidos diretamente e que servem como indicadores das variáveis latentes (ex: respostas a perguntas de um questionário).
-
-
+-   **Variáveis Observadas (ou Indicadores)**: Dados que podem ser medidos diretamente e que servem como indicadores das variáveis latentes (ex: respostas a perguntas de um questionário).
 
 ## Por que utilizar o SEM?
 
-**Visão Holística do Modelo**
-Use a SEM para testar um sistema completo de relações de uma só vez. Em vez de analisar cada hipótese separadamente (o que aumenta o risco de erro), a SEM avalia se o seu modelo teórico como um todo é compatível com os dados, oferecendo uma visão global e integrada do fenômeno.
+**Visão Holística do Modelo** Use a SEM para testar um sistema completo de relações de uma só vez. Em vez de analisar cada hipótese separadamente (o que aumenta o risco de erro), a SEM avalia se o seu modelo teórico como um todo é compatível com os dados, oferecendo uma visão global e integrada do fenômeno.
 
-**Medição Precisa de Conceitos Abstratos**
-A SEM é ideal para medir conceitos abstratos (variáveis latentes) como "satisfação" ou "ansiedade". Ela faz isso usando múltiplos indicadores (perguntas de um questionário) e, crucialmente, separa a medição do conceito do seu erro de medição. Isso resulta em estimativas muito mais confiáveis das relações entre as variáveis.
+**Medição Precisa de Conceitos Abstratos** A SEM é ideal para medir conceitos abstratos (variáveis latentes) como "satisfação" ou "ansiedade". Ela faz isso usando múltiplos indicadores (perguntas de um questionário) e, crucialmente, separa a medição do conceito do seu erro de medição. Isso resulta em estimativas muito mais confiáveis das relações entre as variáveis.
 
 ## Quando usar o SEM?
 
 A Modelagem de Equações Estruturais é uma ferramenta estatística confirmatória, não exploratória. Ela pode ser aplicada de três maneiras distintas:
 
-   I.  *Confirmação Direta*: Testar um único modelo teórico para validá-lo ou invalidá-lo.
+I.  *Confirmação Direta*: Testar um único modelo teórico para validá-lo ou invalidá-lo.
 
-   II. *Modelos Alternativos*: Comparar modelos concorrentes para ver qual explica melhor os dados.
+II. *Modelos Alternativos*: Comparar modelos concorrentes para ver qual explica melhor os dados.
 
-   III.  *Desenvolvimento do Modelo*: Iniciar com um modelo teórico e, caso ele não se ajuste bem, modificá-lo em busca de uma versão melhor e mais simples (parcimoniosa).
+III. *Desenvolvimento do Modelo*: Iniciar com um modelo teórico e, caso ele não se ajuste bem, modificá-lo em busca de uma versão melhor e mais simples (parcimoniosa).
 
 ## Vantagem do SEM
 
-Os Modelos de Equações Estruturais englobam uma ampla gama de abordagens: 
+Os Modelos de Equações Estruturais englobam uma ampla gama de abordagens:
 
--  **Regressão linear e multivariada**
--  **Análise de trajetória (path analysis)**
--  **Análise fatorial confirmatória (CFA)**
--  **Regressão estrutural** (relacionar variáveis latentes)
+-   **Regressão linear e multivariada**
+-   **Análise de trajetória (path analysis)**
+-   **Análise fatorial confirmatória (CFA)**
+-   **Regressão estrutural** (relacionar variáveis latentes)
 
-Essa capacidade de integração é o que torna a SEM tão poderosa, permitindo: 
+Essa capacidade de integração é o que torna a SEM tão poderosa, permitindo:
 
-- **Medir e quantificar relações entre conceitos abstratos e dados concretos**
+-   **Medir e quantificar relações entre conceitos abstratos e dados concretos**
 
-- **Transformar relações complexas em diagramas visuais compreensíveis**
+-   **Transformar relações complexas em diagramas visuais compreensíveis**
 
-- **Computar efeitos diretos e indiretos de uma variável sobre a outra**
+-   **Computar efeitos diretos e indiretos de uma variável sobre a outra**
 
 ## Breve histórico do SEM
 
-* Um dos principais autores (talvez o principal) do SEM foi **Karl Joreskög** (Seus artigos seminais datam da década de 1970)
+-   Um dos principais autores (talvez o principal) do SEM foi **Karl Joreskög** (Seus artigos seminais datam da década de 1970)
 
-  + Propôs a metodologia CFA via máxima verossimilhança e análise da matriz de variância-covariancia
+    -   Propôs a metodologia CFA via máxima verossimilhança e análise da matriz de variância-covariancia
 
-  + Colaborou para o desenvolvimento do diagrama de caminho
+    -   Colaborou para o desenvolvimento do diagrama de caminho
 
-  + Ele foi um dos responsáveis pelo desenvolvimento do software LISREL para modelagem de equações estruturais no início da década de 1970
+    -   Ele foi um dos responsáveis pelo desenvolvimento do software LISREL para modelagem de equações estruturais no início da década de 1970
 
-**Charles Spearman** e **Sewall Wright** são creditados com os primeiros modelos  (análise fatorial e análise de caminho) que influenciaram diretamente o desenvolvimento do SEM
+**Charles Spearman** e **Sewall Wright** são creditados com os primeiros modelos (análise fatorial e análise de caminho) que influenciaram diretamente o desenvolvimento do SEM
 
 Yves Rosseel desenvolveu o pacote lavaan de código aberto para o R
 
 Atualmente, **Judea Pearl** é um grande defensor da interpretação causal dos parametros estimados via SEM
 
-  - A abordagem de resultados potenciais é amplamente reconhecida como a principal abordagem para inferência causal nas Ciências Econômicas.
+-   A abordagem de resultados potenciais é amplamente reconhecida como a principal abordagem para inferência causal nas Ciências Econômicas.
 
 ![](pearl_imbens.png)
 
@@ -110,7 +108,7 @@ Para trabalhar com SEM, é essencial compreender seus componentes e a terminolog
 Este quadro-resumo apresenta os principais termos utilizados em Modelagem de Equações Estruturais (SEM) de forma concisa e visual.
 
 | Termo | Definição | Exemplo |
-|:---|:---|:---|
+|:-----------------------|:-----------------------|:-----------------------|
 | **Variável Observada** | Variável que **existe no banco de dados**, diretamente medida ou coletada. Também chamada de **item** ou **variável manifesta**. | Resposta a "Qual sua nota em matemática?" ou "De 1 a 5, quão satisfeito você está?". |
 | **Variável Latente** | **Conceito abstrato não medido diretamente**, inferido a partir de variáveis observadas. | "Inteligência", "Ansiedade", "Satisfação no Trabalho". |
 | **Variável Exógena** | **Variável independente** no modelo, funciona como "causa" e não é explicada por outras variáveis no modelo. | Ponto de partida de uma seta causal. |
@@ -123,29 +121,29 @@ Este quadro-resumo apresenta os principais termos utilizados em Modelagem de Equ
 
 ## Variáveis Observadas vs. Variáveis Latentes
 
-No SEM, distinguimos entre dois tipos principais de variáveis: **Variáveis Observadas**: São variáveis que **existem diretamente nos dados** e podem ser medidas sem erro. 
+No SEM, distinguimos entre dois tipos principais de variáveis: **Variáveis Observadas**: São variáveis que **existem diretamente nos dados** e podem ser medidas sem erro.
 
 **Variáveis Latentes**: São variáveis **construídas que não existem diretamente nos dados**; são hipóteses teóricas. Elas são mensuradas indiretamente através de suas variáveis observadas (indicadores) por meio de análise fatorial confirmatória
 
-Além disso, as variáveis podem ser classificadas como: 
+Além disso, as variáveis podem ser classificadas como:
 
-**Variável Exógena**: Uma variável **independente** que explica uma variável endógena. Pode ser observada (representada por 'x') ou latente (representada por '$\xi$').  
+**Variável Exógena**: Uma variável **independente** que explica uma variável endógena. Pode ser observada (representada por 'x') ou latente (representada por '$\xi$').
 
 **Variável Endógena**: Uma variável **dependente** que é explicada por outras variáveis no modelo. Pode ser observada (representada por 'y') ou latente (representada por '$\eta$'). Em modelos de análise de trajetória, uma variável endógena pode predizer outra variável endógena.
 
-## Diagramas de Caminho ou Diagramas de Trajetória 
+## Diagramas de Caminho ou Diagramas de Trajetória
 
 Os **diagramas de trajetória** são representações visuais essenciais dos modelos SEM, facilitando a compreensão das relações complexas que podem ser difíceis de visualizar apenas com equações matriciais.
 
 ![Exemplo de diagrama de trajetória](legenda_diagrama.png)
 
-Os símbolos utilizados nos diagramas são padronizados: 
+Os símbolos utilizados nos diagramas são padronizados:
 
-- **Círculos**: Representam **variáveis latentes** (fatores ou construtos). 
-- **Quadrados**: Representam **variáveis observadas** (indicadores ou itens).
-- **Triângulos**: Representam **interceptos** ou médias (geralmente não explicitados por padrão no `lavaan` a menos que solicitados). 
-- **Setas únicas (de uma via)**: Indicam **caminhos de regressão** ou relações causais diretas (ex: uma variável predizendo outra). 
-- **Setas duplas (de duas vias)**: Indicam **variâncias** (se a seta aponta para a própria variável, formando um loop) ou **covariâncias** (se a seta conecta duas variáveis).
+-   **Círculos**: Representam **variáveis latentes** (fatores ou construtos).
+-   **Quadrados**: Representam **variáveis observadas** (indicadores ou itens).
+-   **Triângulos**: Representam **interceptos** ou médias (geralmente não explicitados por padrão no `lavaan` a menos que solicitados).
+-   **Setas únicas (de uma via)**: Indicam **caminhos de regressão** ou relações causais diretas (ex: uma variável predizendo outra).
+-   **Setas duplas (de duas vias)**: Indicam **variâncias** (se a seta aponta para a própria variável, formando um loop) ou **covariâncias** (se a seta conecta duas variáveis).
 
 ## Modelo de Mensuração e Modelo Estrutural
 
@@ -157,12 +155,11 @@ O SEM é singular por abranger tanto **modelos de medida ou de mensuração** qu
 -   **Modelo Estrutural**: A parte do SEM que **especifica as relações causais entre variáveis**, sejam elas observadas ou latentes. Pode envolver relações de variáveis exógenas para endógenas, e até mesmo de variáveis endógenas para outras variáveis endógenas.
     -   O tipo mais abrangente de modelo estrutural, a **regressão estrutural**, lida com as relações entre **variáveis latentes**.
 
-
 ## Estimação, Identificação e Teste de Modelos (Goodness-of-Fit)
 
 Para entender os conceitos de estimação, identificação e teste de ajuste de modelos tomaremos como exemplo um modelo de mensuração.
 
-### O modelo de mensuração 
+### O modelo de mensuração
 
 O **modelo de mensuração** ou modelo de análise fatorial é essencialmente um modelo de regressão linear onde o preditor principal, o fator, é latente ou não observado. Para um único *item*, o modelo de análise fatorial é:
 
@@ -170,9 +167,13 @@ $$y_1 = \tau_1 + \lambda_1\eta + \epsilon_1$$
 
 onde $\tau_1$ é o intercepto do primeiro item e $\lambda_1$ é a carga ou peso de regressão do primeiro fator sobre o primeiro item, e $\epsilon_1$ é o termo de erro para o primeiro item. Existem duas diferenças principais entre o modelo de análise fatorial e a regressão linear:
 
-- 1. A primeira e mais importante é que o preditor ou fator, $\eta$ ("eta"), não é observado, enquanto em uma regressão linear os preditores são observados.
+-   
 
-- 2.  A análise fatorial tende a ser um modelo multivariado: vários itens (resultados) por indivíduo)
+    1.  A primeira e mais importante é que o preditor ou fator, $\eta$ ("eta"), não é observado, enquanto em uma regressão linear os preditores são observados.
+
+-   
+
+    2.  A análise fatorial tende a ser um modelo multivariado: vários itens (resultados) por indivíduo)
 
 Podemos representar um modelo mensuração (com 3 itens) como uma equação matricial:
 
@@ -180,13 +181,12 @@ $$\begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = \begin{pmatrix} \tau_1 \\ \t
 
 Vamos definir cada um dos termos no modelo:
 
-*   $\tau$ ("tau") os **interceptos** ou médias dos itens
-*   $\lambda$ ("lambda") as **cargas**, que podem ser interpretadas como a correlação do item com o fator
-*   $\eta$ ("eta"), o preditor latente dos itens, ou seja, o **fator** 
-*   $\epsilon$ ("epsilon") os **resíduos** do modelo fatorial, o que sobra depois de considerar o fator ou o que explica o item além do fator 
+-   $\tau$ ("tau") os **interceptos** ou médias dos itens
+-   $\lambda$ ("lambda") as **cargas**, que podem ser interpretadas como a correlação do item com o fator
+-   $\eta$ ("eta"), o preditor latente dos itens, ou seja, o **fator**
+-   $\epsilon$ ("epsilon") os **resíduos** do modelo fatorial, o que sobra depois de considerar o fator ou o que explica o item além do fator
 
 O índice refere-se ao número do item. Assim, por exemplo, $\tau_1$ significa o intercepto do primeiro item, $\lambda_2$ é a carga do segundo item com o fator e $\epsilon_3$ é o resíduo do terceiro item, após considerar o fator.
-
 
 ## A Matriz de Covariância Implícita no Modelo
 
@@ -196,9 +196,9 @@ $$\Sigma(\theta_{y}) = \Lambda\Psi\Lambda' + \Theta_\epsilon$$
 
 A seguir, a descrição de cada **parâmetro**, definido como um termo no modelo a ser estimado:
 
-*   $\Lambda$ ("lambda") matriz de **cargas fatoriais** (consistindo dos mesmos $\lambda$'s do modelo de mensuração)
-*   $\Psi$ ("psi") matriz de **variância-covariância dos fatores latentes** (ou seja, variância de $\eta$; para um fator, é um escalar)
-*   $\Theta_\epsilon$ ("theta-epsilon") matriz de **variância-covariância dos erros**
+-   $\Lambda$ ("lambda") matriz de **cargas fatoriais** (consistindo dos mesmos $\lambda$'s do modelo de mensuração)
+-   $\Psi$ ("psi") matriz de **variância-covariância dos fatores latentes** (ou seja, variância de $\eta$; para um fator, é um escalar)
+-   $\Theta_\epsilon$ ("theta-epsilon") matriz de **variância-covariância dos erros**
 
 As dimensões desta matriz correspondem às mesmas da matriz de covariância observada $\Sigma$; para três itens, é 3x3. Lembre-se que a matriz de covariância do modelo pode ser definida pelo seguinte:
 
@@ -206,60 +206,67 @@ No caso de três itens e um fator:
 
 $$\Sigma(\theta_y) = \begin{pmatrix} \lambda_1 \\ \lambda_2 \\ \lambda_3 \end{pmatrix} (\psi_{11}) \begin{pmatrix} \lambda_1 & \lambda_2 & \lambda_3 \end{pmatrix} + \begin{pmatrix} \theta_{11} & \theta_{12} & \theta_{13} \\ \theta_{21} & \theta_{22} & \theta_{23} \\ \theta_{31} & \theta_{32} & \theta_{33} \end{pmatrix}$$
 
-Note que as cargas $\lambda$ são os mesmos parâmetros compartilhados entre o modelo de mensuração e a matriz de covariância implícita. Isso significa que os únicos novos parâmetros envolvem $\Psi$ e $\Theta_\epsilon$, que são as matrizes de covariância dos fatores latentes e dos erros, respectivamente. 
+Note que as cargas $\lambda$ são os mesmos parâmetros compartilhados entre o modelo de mensuração e a matriz de covariância implícita. Isso significa que os únicos novos parâmetros envolvem $\Psi$ e $\Theta_\epsilon$, que são as matrizes de covariância dos fatores latentes e dos erros, respectivamente.
 
-Usualmente negligenciamos os interceptos ($\tau$\'s) do modelo estrutural (raramente possui uma interpretação útil). Para isso, o pesquisador padroniza os itens (subtrai a média e divide pelo desvio-padrão). 
+Usualmente negligenciamos os interceptos ($\tau$'s) do modelo estrutural (raramente possui uma interpretação útil). Para isso, o pesquisador padroniza os itens (subtrai a média e divide pelo desvio-padrão).
 
-## Valores Conhecidos, Parâmetros, Graus de Liberdade e Identificação 
+## Valores Conhecidos, Parâmetros, Graus de Liberdade e Identificação
 
-O conceito de parâmetro fixo ou livre é essencial na CFA (Análise Fatorial Confirmatória). O número total de parâmetros em um modelo CFA é determinado pelo número de **valores conhecidos** em sua matriz de variância-covariância populacional $\Sigma$, dada pela fórmula $p(p+1)/2$, onde $p$ é o número de itens em sua pesquisa. Para obter a matriz de covariância amostral $S = \hat{\Sigma}$, que é uma estimativa da matriz de covariância populacional $\Sigma$, use o comando `cov` no `R`. 
+O conceito de parâmetro fixo ou livre é essencial na CFA (Análise Fatorial Confirmatória). O número total de parâmetros em um modelo CFA é determinado pelo número de **valores conhecidos** em sua matriz de variância-covariância populacional $\Sigma$, dada pela fórmula $p(p+1)/2$, onde $p$ é o número de itens em sua pesquisa. Para obter a matriz de covariância amostral $S = \hat{\Sigma}$, que é uma estimativa da matriz de covariância populacional $\Sigma$, use o comando `cov` no `R`.
 
 As células fora da diagonal em $S$ correspondem às **covariâncias amostrais** entre dois pares de itens; e as células diagonais em $S$ correspondem à **variância amostral** de cada item.
 
-Como as covariâncias são duplicadas, o número de parâmetros livres na CFA é determinado pelo número de variâncias e covariâncias **únicas**. Com três itens, o número de valores conhecidos é $3(4)/2 = 6$. 
+Como as covariâncias são duplicadas, o número de parâmetros livres na CFA é determinado pelo número de variâncias e covariâncias **únicas**. Com três itens, o número de valores conhecidos é $3(4)/2 = 6$.
 
 Os valores conhecidos servem como a restrição principal em termos de quantos parâmetros **totais** podemos estimar. Para simplificar, vamos assumir que o número total de parâmetros vem **apenas** da matriz de covariância implícita no modelo. Dado que temos 6 valores conhecidos, quantos parâmetros totais (únicos) temos da matriz de covariância implícita no modelo (com 3 itens e 1 fator latente)?
 
 $$\Sigma(\theta) = \begin{pmatrix} \lambda_1 \\ \lambda_2 \\ \lambda_3 \end{pmatrix} (\psi_{11}) \begin{pmatrix} \lambda_1 & \lambda_2 & \lambda_3 \end{pmatrix} + \begin{pmatrix} \theta_{11} & \theta_{12} & \theta_{13} \\ \theta_{21} & \theta_{22} & \theta_{23} \\ \theta_{31} & \theta_{32} & \theta_{33} \end{pmatrix}$$
 
-Se fôssemos estimar cada parâmetro na matriz de covariância implícita no modelo, haveria 3 $\lambda$\'s, 1 $\psi$, e 6 $\theta$\'s, o que nos dá um total de 10 parâmetros, mas temos apenas 6 valores conhecidos! A solução é permitir **parâmetros fixos**, que são parâmetros pré-determinados.
+Se fôssemos estimar cada parâmetro na matriz de covariância implícita no modelo, haveria 3 $\lambda$'s, 1 $\psi$, e 6 $\theta$'s, o que nos dá um total de 10 parâmetros, mas temos apenas 6 valores conhecidos! A solução é permitir **parâmetros fixos**, que são parâmetros pré-determinados.
 
 N$^{o}$ **de parâmetros livres** = N$^{o}$ **de parâmetros de interesse** - N$^{o}$ **de parâmetros fixos**.
 
 **df** = N$^{o}$ **de valores conhecidos** - N$^{o}$ **de parâmetros livres**
 
-- Os modelos são **justamente identificados** ou **saturados** com zero graus de liberdade. Isso significa que o número de parâmetros livres ocupa todos os valores conhecidos em $\Sigma$. Isso é comumente visto em modelos de regressão linear, e a principal desvantagem é que não podemos avaliar o ajuste do modelo porque ele supostamente é o melhor que podemos fazer. 
+-   Os modelos são **justamente identificados** ou **saturados** com zero graus de liberdade. Isso significa que o número de parâmetros livres ocupa todos os valores conhecidos em $\Sigma$. Isso é comumente visto em modelos de regressão linear, e a principal desvantagem é que não podemos avaliar o ajuste do modelo porque ele supostamente é o melhor que podemos fazer.
 
-- Um **modelo subidentificado** significa que o número de valores conhecidos é menor que o número de parâmetros livres, o que é indesejável.
+-   Um **modelo subidentificado** significa que o número de valores conhecidos é menor que o número de parâmetros livres, o que é indesejável.
 
-- Em **modelos superidentificados**, o número de valores conhecidos é maior que o número de parâmetros livres. Modelos superidentificados nos permitem avaliar o ajuste do modelo (a ser discutido posteriormente). Para resumir:
+-   Em **modelos superidentificados**, o número de valores conhecidos é maior que o número de parâmetros livres. Modelos superidentificados nos permitem avaliar o ajuste do modelo (a ser discutido posteriormente). Para resumir:
 
-*   df negativo, valores conhecidos < parâmetros livres 
-*   df = 0, valores conhecidos = parâmetros livres 
-*   df positivo, valores conhecidos > parâmetros livres 
+-   df negativo, valores conhecidos \< parâmetros livres
+
+-   df = 0, valores conhecidos = parâmetros livres
+
+-   df positivo, valores conhecidos \> parâmetros livres
 
 Usualmente existem 2 formas de garantir a identificação do modelo:
 
-- 1. **Método do Marcador**: Fixa a **primeira carga fatorial de cada fator em 1**. Este é o método padrão no `lavaan` .
+-   
 
-- 2. **Método de Padronização da Variância **: Fixa a **variância de cada fator em 1**, mas estima livremente todas as cargas fatoriais.
+    1.  **Método do Marcador**: Fixa a **primeira carga fatorial de cada fator em 1**. Este é o método padrão no `lavaan` .
 
-:::{.callout-note}
+-   
+
+    2.  **Método de Padronização da Variância** : Fixa a **variância de cada fator em 1**, mas estima livremente todas as cargas fatoriais.
+
+::: callout-note
 ## Observação Importante
-**Se for do interesse do pesquisador encontrar os valores dos interceptos ele terá problema de identificação?** 
 
-**Resposta**: Não. Apesar dos parâmetros de interesse aumentarem, o número de valores conhecidos também irá aumentar, pois a matriz de variância-covariância amostral deverá incorporar os vetores de 1\'s dos interceptos
+**Se for do interesse do pesquisador encontrar os valores dos interceptos ele terá problema de identificação?**
+
+**Resposta**: Não. Apesar dos parâmetros de interesse aumentarem, o número de valores conhecidos também irá aumentar, pois a matriz de variância-covariância amostral deverá incorporar os vetores de 1's dos interceptos
 :::
 
 ### Estimação
 
-No SEM, os modelos são tipicamente estimados utilizando o método de **Máxima Verossimilhança (ML)**. A ML busca os parâmetros que tornam a amostra observada mais provável, ou seja, maximiza a função de verossimilhança para determinar os parâmetros que têm maior probabilidade de produzir os dados observados. 
+No SEM, os modelos são tipicamente estimados utilizando o método de **Máxima Verossimilhança (ML)**. A ML busca os parâmetros que tornam a amostra observada mais provável, ou seja, maximiza a função de verossimilhança para determinar os parâmetros que têm maior probabilidade de produzir os dados observados.
 
 É importante notar que, embora os coeficientes de regressão de uma estimação por Mínimos Quadrados Ordinários (MQO) sejam equivalentes aos da Máxima Verossimilhança, as estimativas das variâncias do modelo diferem entre os 2 estimadores.
 
 O componente mais essencial de um modelo de equações estruturais é a **matriz de covariância**. O objetivo do SEM é **reproduzir a matriz de covariância da população** ($\Sigma$), usando os parâmetros que o modelo hipotetiza ($\Sigma(\theta)$), pela matriz de covariância implicita do modelo. Se o modelo se ajusta perfeitamente, então $\Sigma = \Sigma(\theta)$.
 
-Na prática, a função máxima verossimilhança busca os valores dos parâmetros de interesse que maximizam a probabilidade de que a matriz de covariância amostral ($\Sigma$) coincida com a matriz de covariância implícita do modelo ($\Sigma(\theta)$). 
+Na prática, a função máxima verossimilhança busca os valores dos parâmetros de interesse que maximizam a probabilidade de que a matriz de covariância amostral ($\Sigma$) coincida com a matriz de covariância implícita do modelo ($\Sigma(\theta)$).
 
 ### Estatísticas de Qualidade do Ajuste (Model Fit Statistics)
 
@@ -271,80 +278,78 @@ As estatísticas de qualidade do ajuste avaliam o quão bem o modelo populaciona
 
     -   Um **valor de qui-quadrado maior indica uma maior diferença** (pior ajuste) entre as matrizes e, consequentemente, uma maior probabilidade de rejeitar a hipótese nula .
 
-- Por ser um teste sensível ao tamanho da amostra é comum a utilização de outros testes incrementais (comparativos): 
+-   Por ser um teste sensível ao tamanho da amostra é comum a utilização de outros testes incrementais (comparativos):
 
-    - CFI (Comparative Fit Index)
-    - TLI (Tucker Lewis Index)
-    
-    
+    -   CFI (Comparative Fit Index)
+    -   TLI (Tucker Lewis Index)
+
 # Aplicações do SEM na Economia
 
-O SEM, com sua capacidade de modelar relações complexas e variáveis latentes, tem diversas aplicações. 
+O SEM, com sua capacidade de modelar relações complexas e variáveis latentes, tem diversas aplicações.
 
 ## Exemplos de Aplicações
 
-Dois exemplos de aplicação, retirados de Neves (2018) são:  
+Dois exemplos de aplicação, retirados de Neves (2018) são:
 
-1) **Modelo de Realização de Status Socioeconômico**: Um modelo da teoria da estratificação social que investiga como a origem socioeconômica (variáveis como escolaridade dos pais e status socioeconômico da ocupação do pai) influencia o destino socioeconômico (medido por variáveis como escolaridade do próprio indivíduo, status socioeconômico da ocupação e rendimento do trabalho). Este modelo é relevante para entender a transmissão intergeracional da desigualdade, muitas vezes revelando que os efeitos indiretos são mais proeminentes que os diretos . 
+1)  **Modelo de Realização de Status Socioeconômico**: Um modelo da teoria da estratificação social que investiga como a origem socioeconômica (variáveis como escolaridade dos pais e status socioeconômico da ocupação do pai) influencia o destino socioeconômico (medido por variáveis como escolaridade do próprio indivíduo, status socioeconômico da ocupação e rendimento do trabalho). Este modelo é relevante para entender a transmissão intergeracional da desigualdade, muitas vezes revelando que os efeitos indiretos são mais proeminentes que os diretos .
 
-2) **Modelo de Determinação do Índice de Gestão Descentralizada Municipal (IGD-M)**: Aplicado na área de políticas sociais, este modelo busca explicar os fatores que determinam a qualidade da gestão de programas sociais em nível municipal. Pode incluir variáveis como renda per capita, PIB per capita e a proporção de beneficiários de programas sociais, revelando a dependência municipal de recursos externos e a complexa relação entre desenvolvimento econômico e qualidade da gestão social.
+2)  **Modelo de Determinação do Índice de Gestão Descentralizada Municipal (IGD-M)**: Aplicado na área de políticas sociais, este modelo busca explicar os fatores que determinam a qualidade da gestão de programas sociais em nível municipal. Pode incluir variáveis como renda per capita, PIB per capita e a proporção de beneficiários de programas sociais, revelando a dependência municipal de recursos externos e a complexa relação entre desenvolvimento econômico e qualidade da gestão social.
 
-:::{.callout-note}
+::: callout-note
 ## Atividade
-**Explique os modelos acima com suas palavras a partir dos diagramas contidos no capítulo 5 de Neves (2018)**  
+
+**Explique os modelos acima com suas palavras a partir dos diagramas contidos no capítulo 5 de Neves (2018)**
 :::
 
 ## Hands-on: Aplicação do SEM em Software Estatístico e Interpretação
 
 A aplicação prática do SEM é comumente realizada em softwares estatísticos. O pacote **`lavaan` no R** é amplamente utilizado por ser **gratuito, de código aberto e relativamente fácil de usar**. O **STATA** também emprega a abordagem por meio do comando `sem`.
 
-A sintaxe no `lavaan` é intuitiva: 
+A sintaxe no `lavaan` é intuitiva:
 
-`~`: Usado para **previsão** (regressão), onde o resultado observado é previsto por preditores observados (e.g., `y ~ x`). 
+`~`: Usado para **previsão** (regressão), onde o resultado observado é previsto por preditores observados (e.g., `y ~ x`).
 
-`=~`: Usado para **indicadores** em modelos de mensuração, ligando uma variável latente aos seus indicadores observados (e.g., `f =~ q + r + s`). 
+`=~`: Usado para **indicadores** em modelos de mensuração, ligando uma variável latente aos seus indicadores observados (e.g., `f =~ q + r + s`).
 
-`~~`: Usado para **covariância** (e.g., `x ~~ x` para variância, `x ~~ y` para covariância). 
+`~~`: Usado para **covariância** (e.g., `x ~~ x` para variância, `x ~~ y` para covariância).
 
 `~1`: Usado para estimar o **intercepto** ou média de uma variável (e.g., `x ~ 1`).
 
 `1*`: fixa o parâmetro ou carga fatorial em 1 (e.g., `f =~ 1*q`)
 
-`NA*`: deixa o parâmetro ou carga fatorial livre (subscreve o método padrão *marker method*, (e.g., f =~ NA*q)
+`NA*`: deixa o parâmetro ou carga fatorial livre (subscreve o método padrão *marker method*, (e.g., f =\~ NA\*q)
 
-`a*`: fixa um valor `a` para o parâmetro (e.g., f =~ a*q)
+`a*`: fixa um valor `a` para o parâmetro (e.g., f =\~ a\*q)
 
 ### A Base de dados: Industriaçização e Economia Política
 
 Esta base de dados, **que está contida no pacote `lavaan`**, é utilizada ao longo do livro de Bollen de 1989 (*Structural equations with latent variables*). A base de dados contém várias medidas de democracia política e industrialização em países em desenvolvimento. As variáveis podem ser descritas por:
 
- - y1: Avaliações de especialistas sobre a liberdade de imprensa em 1960 *(em escala: 0 a 10)*
+-   y1: Avaliações de especialistas sobre a liberdade de imprensa em 1960 *(em escala: 0 a 10)*
 
- - y2: A liberdade de oposição política em 1960 *(em escala: 0 a 10)*
+-   y2: A liberdade de oposição política em 1960 *(em escala: 0 a 10)*
 
- - y3: A imparcialidade das eleições em 1960 *(em escala: 0 a 10)*
+-   y3: A imparcialidade das eleições em 1960 *(em escala: 0 a 10)*
 
- - y4: A eficácia da legislatura eleita em 1960 *(em escala: 0 a 10)*
+-   y4: A eficácia da legislatura eleita em 1960 *(em escala: 0 a 10)*
 
 Variáveis de Democracia Política (1965)
 
- - y5: Avaliações de especialistas sobre a liberdade de imprensa em 1965 *(em escala: 0 a 10)*
+-   y5: Avaliações de especialistas sobre a liberdade de imprensa em 1965 *(em escala: 0 a 10)*
 
- - y6: A liberdade de oposição política em 1965 *(em escala: 0 a 10)*
+-   y6: A liberdade de oposição política em 1965 *(em escala: 0 a 10)*
 
- - y7: A imparcialidade das eleições em 1965 *(em escala: 0 a 10)*
+-   y7: A imparcialidade das eleições em 1965 *(em escala: 0 a 10)*
 
- - y8: A eficácia da legislatura eleita em 1965 *(em escala: 0 a 10)*
+-   y8: A eficácia da legislatura eleita em 1965 *(em escala: 0 a 10)*
 
 Variáveis de Industrialização (1960)
 
- - x1: O produto nacional bruto (PNB) per capita em 1960
+-   x1: O produto nacional bruto (PNB) per capita em 1960
 
- - x2: O consumo de energia per capita em 1960
+-   x2: O consumo de energia per capita em 1960
 
- - x3: A porcentagem da força de trabalho na indústria em 1960
-
-
+-   x3: A porcentagem da força de trabalho na indústria em 1960
 
 ### Regressão linear:
 
@@ -353,7 +358,6 @@ Imagine que queremos estimar a relação entre: liberdade de imprensa e industri
 $$
 y_1 = \alpha_1 + \gamma_1 x_1 + \gamma_2 x_2 + \gamma_3 x_3 + \zeta_1 
 $$
-
 
 ```{r}
 #| echo: true
@@ -372,7 +376,7 @@ m1 <- 'y1 ~ 1 + x1 + x2 + x3'
 fit1 <- sem(m1, data=PoliticalDemocracy)
 ```
 
-Os resultados obtidos são: 
+Os resultados obtidos são:
 
 ```{r}
 #| echo: true
@@ -397,13 +401,13 @@ fit1lm <- lm(y1 ~ x1 + x2 + x3, data=PoliticalDemocracy)
 summary(fit1lm)
 ```
 
-:::{.callout-note}
+::: callout-note
 ## Atividade
-1. **Como você interpretaria as estimativas dos parâmetros obtidos via comando `sem` do `lavaan`: de maneira diferente ou idêntica a um MQO?**
 
-2. **No caso da estimação via `sem` de uma única equação de regressão linear como esta, existe a possibilidade do modelo não ser saturado ?**
+1.  **Como você interpretaria as estimativas dos parâmetros obtidos via comando `sem` do `lavaan`: de maneira diferente ou idêntica a um MQO?**
+
+2.  **No caso da estimação via `sem` de uma única equação de regressão linear como esta, existe a possibilidade do modelo não ser saturado ?**
 :::
-
 
 ### Regressão Multivariada
 
@@ -449,13 +453,14 @@ m2 <- '
 fit2 <- sem(m2, data=PoliticalDemocracy)
 ```
 
-Os resultados obtidos são: 
+Os resultados obtidos são:
+
 ```{r}
 #| echo: true
 summary(fit2)
 ```
 
-Por padrão (default) o comando `sem` admite covariação entre  as variáveis endógenas, mas podemos forçar uma covariância nula:
+Por padrão (default) o comando `sem` admite covariação entre as variáveis endógenas, mas podemos forçar uma covariância nula:
 
 ```{r}
 m2_1 <- '
@@ -471,24 +476,26 @@ m2_1 <- '
 fit2_1 <- sem(m2_1, data=PoliticalDemocracy)
 ```
 
-Os resultados obtidos são: 
+Os resultados obtidos são:
+
 ```{r}
 #| echo: true
 summary(fit2_1)
 ```
 
-:::{.callout-note}
+::: callout-note
 ## Atividade
-1. **Compare os modelos fit2 com o fit2_1. Explique o que aconteceu com os graus de liberdade?**
 
-2. **Proponha uma especificação no `lavaan` que torne a regressão multivariada saturada.**
+1.  **Compare os modelos fit2 com o fit2_1. Explique o que aconteceu com os graus de liberdade?**
 
-3. **Proponha uma especificação no `lavaan`que gere as mesmas estimativas que 2 regressões independentes por `lm`.**  
+2.  **Proponha uma especificação no `lavaan` que torne a regressão multivariada saturada.**
+
+3.  **Proponha uma especificação no `lavaan`que gere as mesmas estimativas que 2 regressões independentes por `lm`.**\
 :::
 
 ### Modelo de Mensuração
-Imagine que a intenção seja, a partir, das variáveis $x_1$, $x_2$ e $x_3$, mensurar um fator latente da industrialização em 1960.  
 
+Imagine que a intenção seja, a partir, das variáveis $x_1$, $x_2$ e $x_3$, mensurar um fator latente da industrialização em 1960.
 
 ```{r}
 m3 <- '
@@ -502,9 +509,8 @@ fit3 <- sem(m3, data=PoliticalDemocracy)
 #| echo: true
 summary(fit3)
 ```
- 
-Perceba que a interpretação das cargas fatoriais é pouco informativa: **a unidade de medida de $x_2$ e $x_3$ não é a mesma** 
-Por isso é comum a padronização das variáveis para tornar a unidade de medida em desvios-padrão: 
+
+Perceba que a interpretação das cargas fatoriais é pouco informativa: **a unidade de medida de** $x_2$ e $x_3$ não é a mesma Por isso é comum a padronização das variáveis para tornar a unidade de medida em desvios-padrão:
 
 ```{r}
 #| echo: true
@@ -513,14 +519,15 @@ summary(fit3, standardized=TRUE)
 
 `Std.lv` padroniza apenas o fator latente, deixando as variáveis observadas em suas escalas originais, permitindo interpretar o impacto de 1 desvio padrão no construto sobre os indicadores. Já `Std.all` padroniza tanto o fator quanto os indicadores, tornando as cargas fatoriais coeficientes de correlação entre -1 e +1, ideal para comparar a força relativa dos indicadores e avaliar sua validade.
 
-:::{.callout-note}
+::: callout-note
 ## Atividade
-1. **Ao invés de utilizar o método do marcador replique o modelo `m3` utilizando o método de padronização da variância.**  
+
+1.  **Ao invés de utilizar o método do marcador replique o modelo `m3` utilizando o método de padronização da variância.**\
 :::
 
 ### Modelo de Regressão Estrutural
 
-Vamos agora rodar um modelo de regrassão estrutural. Imagine que a teoria nos diga que a industrialização em 1960 seja um preditor do ambiente democrático em 1960 e em 1965. Imagine, também, que o ambiente democrático em 1960 explique o ambiente democrático em 1965.    
+Vamos agora rodar um modelo de regrassão estrutural. Imagine que a teoria nos diga que a industrialização em 1960 seja um preditor do ambiente democrático em 1960 e em 1965. Imagine, também, que o ambiente democrático em 1960 explique o ambiente democrático em 1965.
 
 ```{r}
 model <- '
@@ -556,40 +563,36 @@ lavaanPlot(model = fit,
 
 Uma forma de analisar o ajuste do modelo é pelo qui-quadrado. A estatística desse teste é calculada a partir do *score* da função de máxima verossimilhança
 
-Quanto maior o valor do qui-quadrado, maior a diferença entre a matriz de covariância implícita da amostra $\Sigma(\theta)$ e a matriz de covariância observada da amostra $S$, e maior a probabilidade de você rejeitar seu modelo. A hipótese nula é: 
-$$
+Quanto maior o valor do qui-quadrado, maior a diferença entre a matriz de covariância implícita da amostra $\Sigma(\theta)$ e a matriz de covariância observada da amostra $S$, e maior a probabilidade de você rejeitar seu modelo. A hipótese nula é: $$
 H_0: \Sigma(\theta) = \Sigma 
-$$
-$$
+$$ $$
 H_1: \Sigma(\theta) \ne \Sigma
 $$
 
+Como no teste qui-quadrado, a estatística é computada pelo produto do número de observações e do *score* da função de máxima verossimilhança, dizemos que é um teste sensível ao tamanho da amostra (amostras muito grandes tendem a gerar estatísticas do teste maiores e p-valores menores).
 
-Como no teste qui-quadrado, a estatística é computada pelo produto do número de observações e do *score* da função de máxima verossimilhança, dizemos que é um teste sensível ao tamanho da amostra (amostras muito grandes tendem a gerar estatísticas do teste maiores e p-valores menores). 
+Por esse motivo é comum a utilização de medidas de ajuste do modelo comparativas. O `lavaan` reporta 2:
 
-Por esse motivo é comum a utilização de medidas de ajuste do modelo comparativas. O `lavaan` reporta 2: 
+1.  Comparative Fit Index (CFI)
 
-1. Comparative Fit Index (CFI)
+-   O teste compara a estatística do teste qui-quadrado entre 2 modelos: o modelo utilizado e o modelo *baseline*, isto é, aquele que não admite relações/covariâncias entre as variáveis (apenas variância). Seja $\delta$ = $\chi^2 - df$ a diferença entre a estatística qui-quadrado e graus de liberdade, o CFI é calculado por:
 
-  * O teste compara a estatística do teste qui-quadrado entre 2 modelos: o modelo utilizado e o modelo *baseline*, isto é, aquele que não admite relações/covariâncias entre as variáveis (apenas variância). Seja $\delta$ = $\chi^2 - df$ a diferença entre a estatística qui-quadrado e graus de liberdade, o CFI é calculado por:  
-  
 $$
 CFI = \frac{\delta_{baseline}-\delta_{usado}}{\delta_{baseline}}
-$$
-Quanto mais próximo o valor do CFI de 1, melhor o ajuste do modelo: no limite queremos minimizar a diferença entre a matriz de covariância implícita da amostra $\Sigma(\theta)$ e a matriz de covariância observada da amostra $S$, ou seja, $\chi^2 \rightarrow 0$ modelando todas as relações entre as variáveis, $df \rightarrow 0$
+$$ Quanto mais próximo o valor do CFI de 1, melhor o ajuste do modelo: no limite queremos minimizar a diferença entre a matriz de covariância implícita da amostra $\Sigma(\theta)$ e a matriz de covariância observada da amostra $S$, ou seja, $\chi^2 \rightarrow 0$ modelando todas as relações entre as variáveis, $df \rightarrow 0$
 
-2. Tucker Lewis Index (TLI)
+2.  Tucker Lewis Index (TLI)
 
-  * O teste tem a mesma ideia do CFI, mas a ponderação pelos graus de liberdade é diferente. Seja $\Delta$ = $\frac{\chi^2}{df}$ a diferença entre a estatística qui-quadrado e graus de liberdade, o TLI é calculado por: 
-  
+-   O teste tem a mesma ideia do CFI, mas a ponderação pelos graus de liberdade é diferente. Seja $\Delta$ = $\frac{\chi^2}{df}$ a diferença entre a estatística qui-quadrado e graus de liberdade, o TLI é calculado por:
+
 $$
 TLI = \frac{\Delta_{baseline}-\Delta_{usado}}{\Delta_{baseline}-1}
-$$
-Quanto mais próximo o valor do TLI de 1, melhor o ajuste do modelo
+$$ Quanto mais próximo o valor do TLI de 1, melhor o ajuste do modelo
 
-:::{.callout-note}
+::: callout-note
 ## Atividade
-**Compute o TLI e o CFI na mão. Compare com os resultados obtidos no 'lavaan'** 
+
+**Compute o TLI e o CFI na mão. Compare com os resultados obtidos no 'lavaan'**
 :::
 
 ## Discussão: Limitações e Desafios do SEM
@@ -600,28 +603,24 @@ Na discussão **Resultados Potenciais vs SEM**, encabeçada por Judea Pearl, o S
 
 Nesse sentido, o SEM seria mais adequado como uma abordagem complementar a um experimento realizado anteriormente para garantir a causação.
 
+# Avaliação
 
-
-# Avaliação 
-:::{.callout-note}
-
+::: callout-note
 Como parte da nota da disciplina responda às seguintes questões:
 
-1. Qual é a principal diferença entre uma variável observada e uma variável latente em um Modelo de Equações Estruturais (SEM)? Forneça um exemplo em um contexto econômico.
+1.  Qual é a principal diferença entre uma variável observada e uma variável latente em um Modelo de Equações Estruturais (SEM)? Forneça um exemplo em um contexto econômico.
 
-2. Explique a distinção entre o modelo de mensuração e o modelo estrutural em um SEM.
+2.  Explique a distinção entre o modelo de mensuração e o modelo estrutural em um SEM.
 
-3. Quais são as vantagens de se utilizar um SEM em comparação com uma análise de regressão múltipla tradicional para analisar relações complexas na Economia?  
+3.  Quais são as vantagens de se utilizar um SEM em comparação com uma análise de regressão múltipla tradicional para analisar relações complexas na Economia?
 
-4. Utilize o pacote lavaan para exemplificar o modelo de equações estruturais (os dados não precisam ser reais). Compartilhe o projeto com o professor via Posit Cloud.
+4.  Utilize o pacote lavaan para exemplificar o modelo de equações estruturais (os dados não precisam ser reais). Compartilhe o projeto com o professor via Posit Cloud.
 :::
-
 
 # Referências
 
-- NEVES, J. A. B. **Modelo de equações estruturais: uma introdução aplicada**. Brasília: Enap, 2018.
+-   NEVES, J. A. B. **Modelo de equações estruturais: uma introdução aplicada**. Brasília: Enap, 2018.
 
-- RAYKOV, T.; MARCOULIDES, G. A. A first course in structural equation modeling. routledge, 2012.
+-   RAYKOV, T.; MARCOULIDES, G. A. A first course in structural equation modeling. routledge, 2012.
 
-- UNIVERSITY OF CALIFORNIA, LOS ANGELES. Statistical Consulting Group. **Introduction to Structural Equation Modeling (SEM) in R with lavaan**. Disponível em: https://stats.oarc.ucla.edu/r/seminars/rsem/introduction-to-sem-in-r-with-lavaan/. Acesso em: 9 jul. 2025.
-
+-   UNIVERSITY OF CALIFORNIA, LOS ANGELES. Statistical Consulting Group. **Introduction to Structural Equation Modeling (SEM) in R with lavaan**. Disponível em: https://stats.oarc.ucla.edu/r/seminars/rsem/introduction-to-sem-in-r-with-lavaan/. Acesso em: 9 jul. 2025.

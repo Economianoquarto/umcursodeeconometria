@@ -211,7 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="plano-de-aula" class="level1">
 <h1>Plano de aula</h1>
-<p><a href="Plano_de_Aula_tema_8.pdf" target="_blank">Visualizar Plano de Aula Completo</a></p>
+<p><a href="Plano_de_Aula_SEM.pdf" target="_blank">Visualizar Plano de Aula Completo</a></p>
 </section>
 <section id="introdução" class="level1">
 <h1>Introdução</h1>
@@ -450,7 +450,7 @@ Observação Importante
 <p>No caso de três itens e um fator:</p>
 <p><span class="math display">\[\Sigma(\theta_y) = \begin{pmatrix} \lambda_1 \\ \lambda_2 \\ \lambda_3 \end{pmatrix} (\psi_{11}) \begin{pmatrix} \lambda_1 &amp; \lambda_2 &amp; \lambda_3 \end{pmatrix} + \begin{pmatrix} \theta_{11} &amp; \theta_{12} &amp; \theta_{13} \\ \theta_{21} &amp; \theta_{22} &amp; \theta_{23} \\ \theta_{31} &amp; \theta_{32} &amp; \theta_{33} \end{pmatrix}\]</span></p>
 <p>Note que as cargas <span class="math inline">\(\lambda\)</span> são os mesmos parâmetros compartilhados entre o modelo de mensuração e a matriz de covariância implícita. Isso significa que os únicos novos parâmetros envolvem <span class="math inline">\(\Psi\)</span> e <span class="math inline">\(\Theta_\epsilon\)</span>, que são as matrizes de covariância dos fatores latentes e dos erros, respectivamente.</p>
-<p>Usualmente negligenciamos os interceptos (<span class="math inline">\(\tau\)</span>'s) do modelo estrutural (raramente possui uma interpretação útil). Para isso, o pesquisador padroniza os itens (subtrai a média e divide pelo desvio-padrão).</p>
+<p>Usualmente negligenciamos os interceptos (<span class="math inline">\(\tau\)</span>’s) do modelo estrutural (raramente possui uma interpretação útil). Para isso, o pesquisador padroniza os itens (subtrai a média e divide pelo desvio-padrão).</p>
 </section>
 <section id="valores-conhecidos-parâmetros-graus-de-liberdade-e-identificação" class="level2">
 <h2 class="anchored" data-anchor-id="valores-conhecidos-parâmetros-graus-de-liberdade-e-identificação">Valores Conhecidos, Parâmetros, Graus de Liberdade e Identificação</h2>
@@ -459,7 +459,7 @@ Observação Importante
 <p>Como as covariâncias são duplicadas, o número de parâmetros livres na CFA é determinado pelo número de variâncias e covariâncias <strong>únicas</strong>. Com três itens, o número de valores conhecidos é <span class="math inline">\(3(4)/2 = 6\)</span>.</p>
 <p>Os valores conhecidos servem como a restrição principal em termos de quantos parâmetros <strong>totais</strong> podemos estimar. Para simplificar, vamos assumir que o número total de parâmetros vem <strong>apenas</strong> da matriz de covariância implícita no modelo. Dado que temos 6 valores conhecidos, quantos parâmetros totais (únicos) temos da matriz de covariância implícita no modelo (com 3 itens e 1 fator latente)?</p>
 <p><span class="math display">\[\Sigma(\theta) = \begin{pmatrix} \lambda_1 \\ \lambda_2 \\ \lambda_3 \end{pmatrix} (\psi_{11}) \begin{pmatrix} \lambda_1 &amp; \lambda_2 &amp; \lambda_3 \end{pmatrix} + \begin{pmatrix} \theta_{11} &amp; \theta_{12} &amp; \theta_{13} \\ \theta_{21} &amp; \theta_{22} &amp; \theta_{23} \\ \theta_{31} &amp; \theta_{32} &amp; \theta_{33} \end{pmatrix}\]</span></p>
-<p>Se fôssemos estimar cada parâmetro na matriz de covariância implícita no modelo, haveria 3 <span class="math inline">\(\lambda\)</span>'s, 1 <span class="math inline">\(\psi\)</span>, e 6 <span class="math inline">\(\theta\)</span>'s, o que nos dá um total de 10 parâmetros, mas temos apenas 6 valores conhecidos! A solução é permitir <strong>parâmetros fixos</strong>, que são parâmetros pré-determinados.</p>
+<p>Se fôssemos estimar cada parâmetro na matriz de covariância implícita no modelo, haveria 3 <span class="math inline">\(\lambda\)</span>’s, 1 <span class="math inline">\(\psi\)</span>, e 6 <span class="math inline">\(\theta\)</span>’s, o que nos dá um total de 10 parâmetros, mas temos apenas 6 valores conhecidos! A solução é permitir <strong>parâmetros fixos</strong>, que são parâmetros pré-determinados.</p>
 <p>N<span class="math inline">\(^{o}\)</span> <strong>de parâmetros livres</strong> = N<span class="math inline">\(^{o}\)</span> <strong>de parâmetros de interesse</strong> - N<span class="math inline">\(^{o}\)</span> <strong>de parâmetros fixos</strong>.</p>
 <p><strong>df</strong> = N<span class="math inline">\(^{o}\)</span> <strong>de valores conhecidos</strong> - N<span class="math inline">\(^{o}\)</span> <strong>de parâmetros livres</strong></p>
 <ul>
@@ -476,7 +476,7 @@ Observação Importante
 <li><strong>Método do Marcador</strong>: Fixa a <strong>primeira carga fatorial de cada fator em 1</strong>. Este é o método padrão no <code>lavaan</code> .</li>
 </ol></li>
 <li><ol start="2" type="1">
-<li><strong>Método de Padronização da Variância </strong>: Fixa a <strong>variância de cada fator em 1</strong>, mas estima livremente todas as cargas fatoriais.</li>
+<li><strong>Método de Padronização da Variância</strong> : Fixa a <strong>variância de cada fator em 1</strong>, mas estima livremente todas as cargas fatoriais.</li>
 </ol></li>
 </ul>
 <div class="callout-note callout callout-style-default callout-captioned">
@@ -490,7 +490,7 @@ Observação Importante
 </div>
 <div class="callout-body-container callout-body">
 <p><strong>Se for do interesse do pesquisador encontrar os valores dos interceptos ele terá problema de identificação?</strong></p>
-<p><strong>Resposta</strong>: Não. Apesar dos parâmetros de interesse aumentarem, o número de valores conhecidos também irá aumentar, pois a matriz de variância-covariância amostral deverá incorporar os vetores de 1's dos interceptos</p>
+<p><strong>Resposta</strong>: Não. Apesar dos parâmetros de interesse aumentarem, o número de valores conhecidos também irá aumentar, pois a matriz de variância-covariância amostral deverá incorporar os vetores de 1’s dos interceptos</p>
 </div>
 </div>
 <section id="estimação" class="level3">
@@ -639,8 +639,8 @@ Variances:
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>), </span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-bb0bf6ff54e8e0c47e53" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-bb0bf6ff54e8e0c47e53">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.81\"] x2->y1 [label = \"0.02\"] x3->y1 [label = \"-0.31\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-ac78631e0f34a777f259" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-ac78631e0f34a777f259">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1 \n node [shape = oval] \n  \n \n edge [ color = grey ] \n x1->y1 [label = \"1.81\"] x2->y1 [label = \"0.02\"] x3->y1 [label = \"-0.31\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Perceba que os valores do coeficientes estimados serão os mesmo que quando usamos o <code>lm</code>. As estimativas dos erros-padrão dos coeficientes são diferentes, pois o comando <code>sem</code> utiliza outro estimador da variância do erro do modelo. <em>Lembre-se que o estimador da variância dos parâmetros é uma função do estimador da variância do modelo</em></p>
@@ -930,7 +930,7 @@ Variances:
     ind60             0.446    0.087    5.135    0.000</code></pre>
 </div>
 </div>
-<p>Perceba que a interpretação das cargas fatoriais é pouco informativa: <strong>a unidade de medida de <span class="math inline">\(x_2\)</span> e <span class="math inline">\(x_3\)</span> não é a mesma</strong> Por isso é comum a padronização das variáveis para tornar a unidade de medida em desvios-padrão:</p>
+<p>Perceba que a interpretação das cargas fatoriais é pouco informativa: <strong>a unidade de medida de</strong> <span class="math inline">\(x_2\)</span> e <span class="math inline">\(x_3\)</span> não é a mesma Por isso é comum a padronização das variáveis para tornar a unidade de medida em desvios-padrão:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit3, <span class="at">standardized=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1126,8 +1126,8 @@ Variances:
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">covs =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-5694fefddc0616c6f134" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-5694fefddc0616c6f134">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1; y2; y3; y4; y5; y6; y7; y8 \n node [shape = oval] \n ind60; dem60; dem65 \n \n edge [ color = grey ] \n ind60->dem60 [label = \"1.48***\"] ind60->dem65 [label = \"0.57**\"] dem60->dem65 [label = \"0.84***\"] ind60->x1 [label = \"1\"] ind60->x2 [label = \"2.18\"] ind60->x3 [label = \"1.82\"] dem60->y1 [label = \"1\"] dem60->y2 [label = \"1.26\"] dem60->y3 [label = \"1.06\"] dem60->y4 [label = \"1.26\"] dem65->y5 [label = \"1\"] dem65->y6 [label = \"1.19\"] dem65->y7 [label = \"1.28\"] dem65->y8 [label = \"1.27\"] y5 -> y1 [label = \"0.62\", dir = \"both\"] y4 -> y2 [label = \"1.31\", dir = \"both\"] y6 -> y2 [label = \"2.15\", dir = \"both\"] y7 -> y3 [label = \"0.79\", dir = \"both\"] y8 -> y4 [label = \"0.35\", dir = \"both\"] y8 -> y6 [label = \"1.36\", dir = \"both\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-15890b4035a2ece6e90f" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-15890b4035a2ece6e90f">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n x1; x2; x3; y1; y2; y3; y4; y5; y6; y7; y8 \n node [shape = oval] \n ind60; dem60; dem65 \n \n edge [ color = grey ] \n ind60->dem60 [label = \"1.48***\"] ind60->dem65 [label = \"0.57**\"] dem60->dem65 [label = \"0.84***\"] ind60->x1 [label = \"1\"] ind60->x2 [label = \"2.18\"] ind60->x3 [label = \"1.82\"] dem60->y1 [label = \"1\"] dem60->y2 [label = \"1.26\"] dem60->y3 [label = \"1.06\"] dem60->y4 [label = \"1.26\"] dem65->y5 [label = \"1\"] dem65->y6 [label = \"1.19\"] dem65->y7 [label = \"1.28\"] dem65->y8 [label = \"1.27\"] y5 -> y1 [label = \"0.62\", dir = \"both\"] y4 -> y2 [label = \"1.31\", dir = \"both\"] y6 -> y2 [label = \"2.15\", dir = \"both\"] y7 -> y3 [label = \"0.79\", dir = \"both\"] y8 -> y4 [label = \"0.35\", dir = \"both\"] y8 -> y6 [label = \"1.36\", dir = \"both\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Uma forma de analisar o ajuste do modelo é pelo qui-quadrado. A estatística desse teste é calculada a partir do <em>score</em> da função de máxima verossimilhança</p>
