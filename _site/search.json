@@ -263,7 +263,7 @@
     "href": "about.html#ementa",
     "title": "Economia no Quarto",
     "section": "Ementa",
-    "text": "Ementa\nModelos econômicos e econométricos. Modelo de regressão simples. Regressão múltipla: estimação e Inferência; Erros gerais de especificação e multicolinearidade; heterocedasticidade; autocorrelação. Regressão múltipla com informação qualitativa: variáveis binárias."
+    "text": "Ementa\nIntrodução à econometria. Modelos de regressão simples e múltipla: estimação, interpretação, testes de hipóteses. Relaxando das hipóteses dos modelos e soluções. Equações simultâneas. Aplicações."
   },
   {
     "objectID": "about.html#conteúdo-por-aula-sugestão",
