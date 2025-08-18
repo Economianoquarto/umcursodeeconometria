@@ -1,5 +1,5 @@
 ---
-title: "Um Curso de Econometria"
+title: "Um Curso de Econometria by Gabs Gaze"
 listing:
   contents: posts
   sort: "date desc"
