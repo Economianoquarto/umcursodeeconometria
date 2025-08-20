@@ -5,6 +5,7 @@ date: "2025-07-22"
 categories: [Aulas]
 image: "thumbnail.jpg"
 ---
+
 # Descrição
 
 Este material discorre sobre ajuste do modelo, o valor previsto e os resíduos
