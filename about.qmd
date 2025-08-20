@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "aaa"
 image: profile.jpg
 about: 
   template: solana
@@ -17,7 +17,7 @@ about:
 
 **Semestre Ideal:** 5º
 
-**Requisitos:** 
+**Requisitos:**
 
 ## Objetivos
 

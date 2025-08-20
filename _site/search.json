@@ -254,14 +254,14 @@
   {
     "objectID": "about.html#objetivos",
     "href": "about.html#objetivos",
-    "title": "Economia no Quarto",
+    "title": "aaa",
     "section": "Objetivos",
     "text": "Objetivos\nOs estudantes deverão compreender os métodos econométricos de regressão linear simples, regressão múltipla e com variáveis qualitativas. Assim, o estudante deverá desenvolver a capacidade de aplicar esses métodos no estudo das relações entre as variáveis econômicas e em trabalhos empíricos de economia."
   },
   {
     "objectID": "about.html#ementa",
     "href": "about.html#ementa",
-    "title": "Economia no Quarto",
+    "title": "aaa",
     "section": "Ementa",
     "text": "Ementa\nIntrodução à econometria. Modelos de regressão simples e múltipla: estimação, interpretação, testes de hipóteses. Relaxando das hipóteses dos modelos e soluções. Equações simultâneas. Aplicações."
   },
@@ -275,14 +275,14 @@
   {
     "objectID": "about.html#metodologia",
     "href": "about.html#metodologia",
-    "title": "Economia no Quarto",
+    "title": "aaa",
     "section": "Metodologia",
     "text": "Metodologia\nO curso será desenvolvido através de aulas expositivas, discussões de casos práticos e resolução de exercícios. Será incentivada a participação ativa dos alunos na análise de dados econômicos reais utilizando softwares econométricos. A avaliação incluirá provas teóricas, listas de exercícios e um projeto empírico final."
   },
   {
     "objectID": "about.html#recursos-didáticos",
     "href": "about.html#recursos-didáticos",
-    "title": "Economia no Quarto",
+    "title": "aaa",
     "section": "Recursos Didáticos",
     "text": "Recursos Didáticos\nPincel, quadro, notebook, projetor e laboratório de informática"
   },
@@ -296,28 +296,28 @@
   {
     "objectID": "about.html#bibliografia-básica",
     "href": "about.html#bibliografia-básica",
-    "title": "Economia no Quarto",
+    "title": "aaa",
     "section": "Bibliografia Básica",
     "text": "Bibliografia Básica\n\nGUJARATI, D. Econometria Básica. Rio de Janeiro: Campus-Elsevier, 2006.\nHILL, R. C.; GRIFFITHS, W.E.; JUDGE, G.G. Econometria. Alfredo Alves de Faria (Trad.). 2 ed. São Paulo: Saraiva, 2003.\nWOOLDRIDGE, J.M. Introdução à Econometria: uma abordagem moderna. São Paulo: Thomson Pioneira, 2005."
   },
   {
     "objectID": "about.html#formação",
     "href": "about.html#formação",
-    "title": "Economia no Quarto",
+    "title": "aaa",
     "section": "Formação",
     "text": "Formação\nDoutorado em Desenvolvimento Econômico. Universidade Federal do Paraná, UFPR, Brasil | 2016 - 2020\nMestrado em Economia. Universidade de São Paulo, USP-RP, Brasil | 2013 - 2015\nGraduação em Ciências Econômicas. Universidade de São Paulo, USP, Brasil | 2009 - 2012"
   },
   {
     "objectID": "about.html#conteúdo-por-aula",
     "href": "about.html#conteúdo-por-aula",
-    "title": "Economia no Quarto",
+    "title": "aaa",
     "section": "Conteúdo por Aula",
     "text": "Conteúdo por Aula\n\nMódulo 1: Introdução à Econometria e Regressão Simples\n\nModelos Econômicos vs. Modelos Econométricos. Natureza da Econometria.\nRevisão de Probabilidade e Estatística para Econometria.\nO Modelo de Regressão Linear Simples: Suposições Clássicas.\nEstimação por Mínimos Quadrados Ordinários (MQO) no MRLS.\nPropriedades dos Estimadores de MQO. Testes de Hipóteses e Intervalos de Confiança.\n\n\n\nMódulo 2: Regressão Múltipla\n\nO Modelo de Regressão Linear Múltipla (MRLM): Introdução e Suposições.\nEstimação e Interpretação dos Coeficientes no MRLM.\nInferência no MRLM: Testes F e t.\nErros de Especificação: Variáveis Omitidas e Irrelevantes.\nMulticolinearidade: Detecção e Consequências.\n\n\n\nMódulo 3: Problemas Comuns e Variáveis Qualitativas\n\nHeterocedasticidade: Detecção e Correção.\nAutocorrelação: Detecção e Correção.\nRegressão com Variáveis Dummy: Modelos de Intercepto e Inclinação.\nAplicações de Variáveis Dummy em Economia.\n\n\n\nMódulo 4: Tópicos Especiais\n\nAbordagem de Resultados Potencias.\nVariáveis Dependentes Limitadas.\nModelo de Equações Equações Estrurais"
   },
   {
     "objectID": "about.html#bibliografia-complementar",
     "href": "about.html#bibliografia-complementar",
-    "title": "Economia no Quarto",
+    "title": "aaa",
     "section": "Bibliografia Complementar",
     "text": "Bibliografia Complementar\nANGRIST, J. D.; PISCHKE, J. S. Mostly harmless econometrics: An empiricist’s companion. Princeton university press, 2009.\nNEVES, J. A. B. Modelo de equações estruturais: uma introdução aplicada. Brasília: Enap, 2018.\nRAYKOV, T; MARCOULIDES, G. A. A first course in structural equation modeling. 2nd ed. New Jersey: Lawrence Erlbaum Associates, 2006. 238p.\nVERBEEK, M. A guide to modern econometrics. 2nd. ed. London: John Wiley e Sons, 2004."
   },
