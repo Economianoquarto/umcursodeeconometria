@@ -48,7 +48,7 @@ $$
  seja: 
 $$
 \begin{equation}
-cx_[1] + cx_{2} + cx_{3} \rightarrow c(x_{1} + x_{2} + x_{3})
+cx_{1} + cx_{2} + cx_{3} \rightarrow c(x_{1} + x_{2} + x_{3})
 \end{equation}
 $$
  Ao aplicar somatório: $\sum_{i=1}^nc . \sum_{i = 1}^n x_{i}$, observe que $c$ quando em evidência possui apenas uma observação, então $n = 1$ e $x$ possui 3 observações, então $n = 3$
