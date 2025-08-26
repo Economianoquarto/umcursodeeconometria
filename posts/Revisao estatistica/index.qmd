@@ -1,0 +1,156 @@
+---
+title: "Revisão: Ferramentas estisticas básicas"
+description: "Revisão de propriedades matemáticas básicas como operadores de somatório e esperança matemática"
+author: "Gabriel Bandeira"
+date: "2025-08-26"
+categories: [Aulas]
+image: "thumbnail.jpg"
+---
+
+
+O objetivo deste post é revisar algumas propriedades matemáticas básicas ccomo operadores de somatório e esperança matemática.
+
+## Operador de Somatório.
+
+O operador de somatório é uma ferramenta de caráter fundamental dentro dos estudos estatísticos e econométricos, ele permite a abreviação de expressões matemáticas que envolvem a soma de muitos elementos. Isto é, ecistindo uma sequência de números denotada como :
+$$\begin{equation}
+ \left\{ x_{i}: i = 1, 2, 3, ... , n \right\}
+\end{equation} $$
+
+Podemos então escrever a soma desses $n$ elementos como:
+
+$$\begin{equation}
+ x_{1} +  x_{2} + X_{3} + ... + x_{n} = \sum_{i = 1}^{n}x_{i}
+ \end{equation}
+$$
+A soma dos $n$ elementos pode ser entendida, ou melhor, escrita como o somatório  ($\sum_{i = 1}^{n}$) partindo de $1$ até $n$. 
+
+Agora abordaremos algumas das propriedades de somatório que fascilitam as demonstrações de alguns modelos econométricos.
+
+**1. Propriedade:** para qualquer contante $c$:
+$$ 
+\begin{equation}
+ \sum_{i = 1}^{n}c = n . c
+\end{equation}
+$$
+Ou seja, se $c$ é um número constante {2 , 2, 2, 2, ..., 2} então o somatório dessa lita será o valor desta constante $c$ vezes a quantidade de repeições da mesma. 
+
+**2. Propriedade:** Para qualquer constante $c$:
+ 
+$$ 
+\begin{equation}
+ \sum_{i = 1}^{n}c.x_{i} = c.\sum_{i = 1}^{n}x_{i} 
+\end{equation}
+$$
+
+ Em outras palaras, se tivermos um somatório de una $variável$ vezes uma $constante$, podemos "tirar" essa constante do somatório.
+
+ seja: 
+$$
+\begin{equation}
+cx_[1] + cx_{2} + cx_{3} \rightarrow c(x_{1} + x_{2} + x_{3})
+\end{equation}
+$$
+ Ao aplicar somatório: $ \sum_{i=1}^nc . \sum_{i = 1}^n x_{i}$, observe que $c$ quando em evidência possui apenas uma observação, então $n = 1$ e $x$ possui 3 observações, então $n = 3$
+
+ $$
+\begin{equation}
+\sum_{i = 1}^nc . \sum_{i = 1}^nx_{i} = \sum_{i = 1}^{n = 1}c . \sum_{i = 1}^{n = 3}x_{i}
+\end{equation}
+ $$
+Note que como $\sum_{i = 1}^nc$ só tem uma observação, então:
+ $$
+\begin{equation}
+\sum_{i = 1}^c = c \leftarrow \sum_{i = 1}^{n = 1}c . \sum_{i = 1}^{n = 3}x_{i} = c\sum_{i = 1}^{n = 3}x_{i}
+\end{equation}
+ $$
+
+**3. Propriedade:** Se ${(x_{i}, y_{i}): i = 1, 2, 3, ... , n}$ for um conjunto de n pares de números, e $a$ e $b$ forem constantes, temos que:
+$$
+\begin{equation}
+\sum_{i = 1}^n(ax_{i} + by_{i}) = a\sum_{i = 1}^nx_{i}+ b\sum_{i=1}^ny_{i}
+\end{equation}
+$$
+"A soma de uma combinação linear é igual à combinação linear das somas". Em outras palavras, essa propriedade mostra que a sima é uma operação em que é possivel "distribuir" o operador de somatório na adição e "tirar" as constantes $a$ e $b$ para fora do somatório. Isso é verdade devido a segunda propriedade.
+
+**4. O que não pode ser feito:**
+Agora que já sabemos o que pode ser feito com o operador de somatório, mostraremos algumas coisas que *NÃO* podem ser feitas.
+Mais uma veis definimos um ambiente:
+sendo ${(x{i}, y_{i}): i = 1, 2, 3, ... , n}$, um conjunto de $n$ pares de números com $y_{i} \neq 0$ para todo $ i $, então:
+
+$$
+\begin{equation}
+\sum_{i=1}^n(x_{i}/y_{i}) \neq (\sum_{i=1}^nx_{i})/(\sum_{i=1}^ny_{i})
+\end{equation}
+$$
+"A soma das razoões é diferente da razão das somas."
+Um exemplo prático:
+seja: ${(1,3,7,9), (2,9,11,4)}$
+$$ 
+\begin{equation}
+( \frac{1}{2}+\frac{3}{9}+\frac{7}{11}+\frac{9}{4} ) = \sum_{i =1}^{n}(\frac{x_{i}}{y_{i}}) = 3,719
+\end{equation}
+$$
+
+por outro lado:
+$$ 
+\begin{equation}
+\frac{1 +3+7+9}{2+9+11+4} = \frac{(\sum_{i=1}^{n}x_{i})}{(\sum_{i =1}^{n}y_{i})} =0,769
+\end{equation}
+$$
+Perceba que os resultados são diferentes!
+Nesse mesmo raciocinio, temos também que "a soma dos quadrados é diferente do quadrado das somas". Isto é:
+$$
+\begin{equation}
+\sum_{i =1}^n x_{i}^{2} \neq (\sum_{i = 1}^n x_{i})^2
+\end{equation}
+$$
+
+## Esperança matemática
+
+A esperança é um dos coneitos mais usados dentro da econometria, ela representa a média ponderada de todos os possíveis calores de $x$. Ou seja, é uma média que você espera obter se repetir um determinado experimento aleatório inumeras vezes.
+
+Assumindo que $x$ é uma vvariável discreta que assume valores ${x_{1}, x_{2}, ... , x_{n}}$ com probabilidades ${p(x_{1}), p(x_{2}), ... , p(x_{n})}$ respectivamente. O valor esperado ou a esperaça pode ser definida como:
+$$
+\begin{equation}
+ \mu = E(x) = \sum_{i =i }^n x_{i}p(x_{i})
+\end{equation}
+$$
+E se $x$ for uma variável aleatória contínua com função de densidade $f(x)$, temos:
+$$
+\begin{equation}
+ \mu = E(x) = \int_{-\infty }^{\infty} xf(x)dx
+\end{equation}
+$$
+O valor esperado tem grande utilidade quando temos a necessidade de manipular equações, para tal, torna-se interessante conhecer algumas propriedades da esperança matemática.
+
+**1. propriedade:**
+Para qualquer constante $c$, $E(c)=c$.\
+"A esperança de uma constante é a propria constante."
+
+**2. propriedade:**
+Para quaisquer constantes $\alpha$ e $\beta$, $E(\alpha x + \beta) = \alpha E(x)+\beta$
+$$
+\begin{equation}
+E(\alpha x + \beta) = E(\alpha x) + E(\beta) = \alpha E(x) +\beta
+\end{equation}
+$$
+podemos "distribuir" a esperança e então depois usar a 1º propriedade.
+
+**3. Propriedade:** Se ${a_{1}, a_{2}, ... ,  a_{n}}$ forem constantes e ${x_{1}, x_{2}, ... ,  x_{n}}$ forem variáveis aleatórias, então:
+
+$$
+\begin{equation}
+E(a_{1}x_{1} + a_{2}x_{2}+ ... + a_{n}x_{n}) = a_{1}E(x_{1}) + a_{2}E(x_{2})+ ... + a_{n}E(x_{n})
+\end{equation}
+$$
+
+$$
+\begin{equation}
+E(\sum_{i =1}^n a_{i}x_{i}) = \sum_{i  =1 }^n a_{i}E(x_{i})
+\end{equation}
+$$
+"O valor esperado de uma combinação linear de variáveis aleatórias é igual à mesma combinação linear dos seus valores esperados individuais." Em outras palavras, a esperança é compatível com operações básicas de soma e multiplicação por constantes. Você pode "distribuir a esperança" e tirar as constantes para fora.
+
+## Referências:
+Wooldrige, jeffrey M. **Introdução à econometria: uma abordagem moderna**. São Paulo, Sp : Cengage Learning, 2016. 848. : il. ; 26 cm.
