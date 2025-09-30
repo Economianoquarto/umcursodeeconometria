@@ -1,0 +1,333 @@
+---
+title: "Estimação do Modelo de Regressão"
+description: " Estimação por MQO: Hipóteses, derivação dos estimadores, propriedades, teorema de Gauss-Markov, R2."
+author: "Gabriel Bandeira"
+date: "2025-09-30"
+categories: [Aulas]
+image: "thumbnail.jpg"
+---
+
+## Introdução:
+
+Um modelo de regressão linear pode ser escrito como:
+
+$$
+ Y_i = B_0 + B_1X_{1i} + B_2X_{2i} + \ldots + B_kX_{ki} + u_i  
+\tag{1.1}
+$$
+
+Podemos entender $Y_{i}$ como a variável dependente (ou como regressando) e as variáveis X como variáveis independentes (ou regressores), o termo $u$ é conhecido como um termo de erro estocástico (aleatório). O termo $i$ denota a i-ésima observação. As variáveis $B_{1}X_{1i} + B_{2}X_{2i} + ... + B_{k}X_{ki}$ podem ser entendidas como a média condicional de $Y_{i}$, ou seja, a $E[Y_{i}|X]$ (média de $Y_{i}$ condicionada aos valores de X). O termo de erro estocástico $u_{i}$ é um termo que represeta todas as variáveis que não podem ser quantificadas, em grosso modo, representa tudo que explica Y, mas que por algum motivo não pode estar na equação como um "X".
+
+------------------------------------------------------------------------
+
+## Hipoteses do modelo clássico de regressão linear.
+
+O modelo de regessão linear segue as seguintes premissas:
+
+1.  Lineariedade dos parâmetros:
+
+    $$
+    Y_{i}  =  X'B +  \varepsilon_{i}
+    $$
+
+2.  O vetor X é deterministico:
+
+Presumimos que as variáveis independentes sejam não estocásticos no sentido de que os valores de X sejam fixos na amostragem repetida.
+
+3.  Exogeneidade Restrita:
+
+    $$
+    E(\varepsilon_{i}|x_{i}) = 0 , i = 1 \dots n
+    $$
+
+    $$
+    E(\varepsilon_{i}|x_{i}) = E(\varepsilon_{i} = 0
+    $$
+
+    A esperança do termo de erro dato todos os valores de X é igual a zero, como o termo de erro representa a influência de fatores que podem ser puramente aleatórios, presumimos que sua média é zero.
+
+4.  Homocedasticidade:
+
+    A variância do termo de erro $u_{i}$ é constante, ou seja, $var(u_{i}|X) = \sigma^2$
+
+5.  Sem autocorrelação:
+
+    Não existe correlação entre os termos de erro, matematicamente:
+
+    $$
+    cov(u_{i},u_{j}|X) = 0
+    $$
+
+6.  Ausência de multicolineariedade:
+
+    Não existe relações lineares perfeitas entre as variáveis X.
+
+7.  Condição de normalidade dos erros:
+
+    Presumimos que o número de observações $n$ seja maior que o número de parâmetros estimados: $n \geqslant k$ (k represeta o nº de parâmetros).
+
+    Também presumimos que o erro siga uma distribuição normal com média zero e variância constante: $\varepsilon ~ N(0, \sigma^2 I)$.
+
+## Derivação dos estimadores:
+
+Em MQO, se considerarmos: $$
+\hat{y} = \hat{B}_{0} + \hat{B}_{1}X_{i} + u_{i}
+$$
+
+Sendo $\hat{y}_{i}$ o valor médio esperado, ou seja, a média condicional de $\hat{y}_{i}$ :
+
+$$
+\hat{y} = \hat{B}_{0} + \hat{B}_{1}X_{i} + u_{i} \rightarrow y_{i} = \hat{y}_{i} +  
+u_i
+$$
+
+logo o $y_{i}$ é igual ao $\hat{y}_{i}$ estimado mais o termo de erro.
+
+se reoranizarmos:
+
+$$
+y_{i} = \hat{y}_i + u_{i}
+$$
+
+$$
+u_i = y_{i} - \hat{y}_{i}
+$$
+
+substituindo $\hat{y}_i$ :
+
+$$
+u_{i} = y_{i} - \hat{B}_{0} - \hat{B}_{1}X_{i}
+$$
+
+Queremos minimizar o somatório dos erros ao quadrado, isto é,
+
+$min \sum_{i = 1}^{n} (u_{i})^2$
+
+$$
+= min \sum_{i=1}^{n} (y_{i} - \hat{y}_{i})^2
+$$
+
+$$
+= min  \sum_{i=1}^{n}(y_{i} - \hat{B}_{0} - \hat{B}_1 x_{i})^2
+$$
+
+### Estimando os betas por derivação:
+
+-   derivando em relação a $B_{0}$
+
+$$
+ \frac{\partial u_{i}^{2}}{\partial B_{0}} = \sum u_{i}^{2} = \sum (y_{i} - \hat{B}_{0} - \hat{B}_{1} x_{i})^{2}
+\tag{2.1}
+$$
+
+usando a regra da cadeia:
+
+$$
+\frac{\partial u_{i}^{2}}{\partial B_{0}} = 2 \sum (y_{i} - \hat{B}_{0} - \hat{B}_{1} x_{i}) (-1) 
+$$
+
+$$
+2 \sum (y_{i} - \hat{B}_{0} - \hat{B}_{1} x_{i}) (-1) = 0
+$$
+
+$$
+2 \sum (-y_{i} + \hat{B}_{0} + \hat{B}_{1} x_{i}) = 0
+$$
+
+$$
+\frac{2 (\sum (-y_{i} + \hat{B}_{0} + \hat{B}_{1} x_{i}))}{2} = \frac{0}{2} 
+$$
+
+$$
+\sum (-y_{i} + \hat{B}_{0} + \hat{B}_{1} x_{i}) = 0
+$$
+
+$$
+ \frac{\partial u_{i}^{2}}{\partial B_{0}} = \sum (-y_{i}) + \sum (\hat{B}_{0}) + \sum (\hat{B}_{1} x_{i}) = 0
+$$
+
+$$
+\frac{\partial u_{i}^{2}}{\partial B_{0}} = \sum -y_{i} + n\hat{B}_{0} + \hat{B}_{1}  \sum(x_{i}) = 0
+\tag{2.2}
+$$
+
+-   Derivando em relação a $B_{1}$
+
+$$
+\frac{\partial u_{i}^{2}}{\partial B_{1}} = \sum u_{i}^{2} = \sum (y_{i} - \hat{B}_{0} - \hat{B}_{1} x_{i})^{2}
+$$
+
+$$
+\frac{\partial u_{i}^{2}}{\partial B_{1}} = 2 \sum (y_{i} - \hat{B}_{0} - \hat{B}_{1} x_{i}) (-x_{i})  = 0
+$$
+
+$$
+2\frac{(\sum (-y_{i} + \hat{B}_{0} + \hat{B}_{1} x_{i})(-x_{i}))}{2} = \frac{0}{2}
+$$
+
+$$
+\sum (-y_{i} + \hat{B}_{0} + \hat{B}_{1} x_{i})(-x_{i}) = 0
+$$
+
+$$
+\sum -x_{i}y_{i} + \hat{B}_{0}\sum x_{i} + \hat{B}_{1} \sum x_{i}^{2} = 0
+\tag{2.3}
+$$
+
+-   Encontrando $\hat{B}_{0}$ :
+
+    Sabendo que :
+
+    $$
+    \frac{\partial u_{i}^{2}}{\partial B_{0}} = \sum -y_{i} + n\hat{B}_{0} + \hat{B}_{1}  \sum x_{i} = 0
+    $$
+
+$$
+\sum y_{i} = n \hat{B}_0 + \hat{B}_{1}\sum x_{i} = 0
+$$
+
+$$
+-n\hat{B}_{0} = \hat{B}_{1} \sum x_{i} - \sum y_{i} = 0
+$$
+
+$$
+-n\hat{B}_{0} = \hat{B}_{1} \sum x_{i} - \sum y_{i} (-1) = 0 (-1)
+$$
+
+$$
+n\hat{B}_{0} = -\hat{B}_{1} \sum x_{i} +\sum y_{i}
+$$
+
+$$
+n\hat{B}_{0} = \sum y_{i} -\hat{B}_{1} \sum x_{i}
+$$
+
+$$
+\hat{B}_{0} = \frac{\sum y_{i} - \hat{B}_{1} \sum x_{i}}{n}
+\tag{2.4}
+$$
+
+$$
+\hat{B}_{0} = \frac{\sum y_{i}}{n} - \frac{ \hat{B}_{1} \sum{x_{i}}}{n}
+$$
+
+Portanto, temos que: $\hat{B}_{0} = \bar{y} - \hat{B}_{1} \bar{x}$
+
+-   Encontrando $\hat{B}_{1}$ :
+
+    Sustituimos (2.4) em $\sum x_{i} y_{i} = \hat{B}_{0} \sum x_{i} + \hat{B}_{1} \sum x_{i}^{2}$
+
+$$
+\sum x_{i} y_{i} = (\bar{y} - \hat{B}_{1} \bar{x} ) \sum x_{i} + \hat{B}_{1} \sum x_{i}^{2} 
+$$
+
+Sabendo que: $\bar{y} = \frac{\sum y_{i}}{n}$ e $\bar{x} = \frac{\sum x_{i}}{n}$ , então:
+
+$$
+\sum x_{i} y_{i} = (\frac{\sum y_{i}}{n} - \frac{\hat{B}_{1} \sum x_{i}}{n}) \sum x_{i} + \hat{B}_{i} \sum  x_{i}^{2}
+$$
+
+$$
+\sum x_{i} y_{i} = \frac{\sum y_{i} \sum x_{i}}{n} - \frac{\hat{B}_{1} \sum x_{i} \sum x_{i}}{n} + \hat{B}_{1} \sum x_{i}^{2}
+$$
+
+$$
+\sum x_{i} y_{i} = \frac{\sum y_{i} \sum x_{i}}{n} - \left [ \frac{\hat{B}_{1} \sum x_{i} \sum x_{i}}{n} + \hat{B}_{1} \sum x_{i}^{2} \right]
+$$
+
+$$
+\sum x_{i} y_{i} = \frac{\sum y_{i} \sum x_{i}}{n} +\hat{B}_{1} \left [ -\frac{ \sum x_{i} \sum x_{i}}{n} +  \sum x_{i}^{2} \right]
+$$
+
+$$
+\sum x_{i} y_{i}-\frac{\sum y_{i} \sum x_{i}}{n} = + \hat{B}_{1} \left [ -\frac{ \sum x_{i} \sum x_{i}}{n} +  \sum x_{i}^{2} \right]
+$$
+
+$$
+\sum x_{i} y_{i}-\frac{\sum y_{i} \sum x_{i}}{n} = + \hat{B}_{1} \left [ -\frac{ \sum (x_{i})^2}{n} +  \sum x_{i}^{2} \right]
+$$
+
+$$
+\hat{B}_{1} = \frac{\sum x_{i} y_{i}-\frac{\sum y_{i} \sum x_{i}}{n}}{  \left [ -\frac{ \sum (x_{i})^2}{n} +  \sum x_{i}^{2} \right]}
+$$
+
+$$
+\hat{B}_{1} = \frac{\sum x_{i} y_{i}-\frac{\sum y_{i} \sum x_{i}}{n}}{   -\frac{ \sum (x_{i})^2}{n} +  \sum x_{i}^{2} }
+$$
+
+$$
+\hat{B}_{1} = \frac{\sum x_{i} y_{i}-\frac{\sum y_{i} \sum x_{i}}{n}}{ \sum x_{i}^{2}  -\frac{ \sum (x_{i})^2}{n}  }
+$$
+
+Aplicando MMC:
+
+$$
+\hat{B}_{1} = \frac{\frac{n\sum x_{i} y_{i} -\sum y_{i} \sum x_{i}}{n}
+}{
+\frac{n\sum x_{i}^{2} - \sum (x_{i})^2}{n}}
+$$
+
+$$
+\hat{B}_{1} = \frac{n \sum x_{i} y_{i} - \sum x_{i} \sum y_{i}}{n} .   \frac{n}{n \sum x_{i}^{2} - \sum(x_{i})^{2}}
+$$
+
+$$
+\hat{B}_{1} = \frac{n.n. \sum x_{i} y_{i} - \sum x_{i} \sum y_{i}}{n.n.\sum x_{i}^{2} - \sum(x_{i})^{2}} 
+$$
+
+$$
+\hat{B}_{1} = \frac{n.(n. \sum x_{i} y_{i} - \sum x_{i} \sum y_{i})}{n.(n.\sum x_{i}^{2} - \sum(x_{i})^{2})} 
+$$
+
+$$
+\hat{B}_{1} = \frac{n. \sum x_{i} y_{i} - \sum x_{i} \sum y_{i}}{n.\sum x_{i}^{2} - \sum(x_{i})^{2}} 
+$$
+
+$$
+\frac{n. \sum x_{i} y_{i} - \sum x_{i} \sum y_{i}}{n.\sum x_{i}^{2} - \sum(x_{i})^{2}} = \hat{B}_{1} =  \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}
+$$
+
+## Teorema de Gauss-Markov:
+
+O teorema de Gauss Markov estabelece que sob as hipóteses já mencionadas, o estimador de MQO é o melhor estimador dentre os estimadores lineares não viesados.
+
+Então de acordo com esse teorema o estimador de MQO é:
+
+1.  **Linear**: O estimador é linear nos parâmetros
+
+2.  **Não viesado**: $E(\hat{B}{j}) = E( B_{j})$
+
+3.  **Melhor**: Entre todos os estimadores lineares não viesados, o MQO tem a **menor variância.**
+
+## $R^{2}$ : Grau de ajuste.
+
+Neste tópico apresentamos uma maneira de mensurar o quanto bem a variável explicativa independente $x$ explica a variável dependente y, é importante mensurar o quão bom é o ajuste da reta de regressão de MQO ao dados.
+
+então:
+
+$$
+SQT = SQE + SQR
+$$
+
+se dividirmos ambos os lados por SQT:
+
+$$
+\frac{SQT}{SQT} = \frac{SQE}{SQT} + \frac{SQR}{SQT}
+$$
+
+$$
+1 = \frac{SQE}{SQT} + \frac{SQR}{SQT}
+$$
+
+$$
+1 - \frac{SQR}{SQT} = \frac{SQE}{SQT}
+$$
+
+$$
+1 - \frac{SQR}{SQT} = R^{2} = \frac{SQE}{SQT}
+$$
+
+## Referências:
+GUJARATI, Damodar N. Econometria: principios, teoria e aplicações práticas; tradução de Cristina Yamagam; revisão técnica de Salvatore Benito Virgilito. - São Paulo: Saraiva Educação, 2019.
+Notas de aula: prof. dr Julio Vicente Cateira.
+Notas de aula: prof. dr. Thibério Mota da Silva.
